@@ -1,5 +1,4 @@
 module.exports = async (req, res) => {
-  // Simple GET handler for quick browser diagnostics
   if (req.method === 'GET') {
     return res.status(200).json({
       status: 'API Active',
@@ -20,6 +19,8 @@ module.exports = async (req, res) => {
 
   try {
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    // El receptor por defecto será el del login de Resend si no se configura la variable
+    const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || 'lorenzo@homotec.com';
 
     if (!RESEND_API_KEY) {
       return res.status(200).json({
@@ -36,7 +37,7 @@ module.exports = async (req, res) => {
       },
       body: JSON.stringify({
         from: 'Kairos IA <onboarding@resend.dev>',
-        to: ['lorenzo@kairosia.digital'],
+        to: [RECIPIENT_EMAIL],
         subject: `Nueva solicitud de Demo: ${name}`,
         html: `
           <h1>Nueva solicitud de contacto</h1>
@@ -53,6 +54,7 @@ module.exports = async (req, res) => {
     if (response.ok) {
       return res.status(200).json({ success: true, message: 'Email enviado correctamente' });
     } else {
+      console.error('Resend API Error:', data);
       return res.status(response.status).json({
         error: 'Error de la API de Resend',
         details: data.message || 'Error desconocido'
