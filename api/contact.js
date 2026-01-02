@@ -57,7 +57,8 @@ module.exports = async (req, res) => {
       console.error('Resend API Error:', data);
       return res.status(response.status).json({
         error: 'Error de la API de Resend',
-        details: data.message || 'Error desconocido'
+        details: data.message || 'Error desconocido',
+        v: '1.2'
       });
     }
   } catch (error) {
