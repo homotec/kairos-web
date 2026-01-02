@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Kairos IA - Digitalización Inteligente de Documentos</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#334155",
+                        "secondary": "#94a3b8",
+                        "background-light": "#F8FAFC",
+                        "surface-light": "#FFFFFF",
+                        "border-clinical": "#E2E8F0",
+                        "text-main": "#1e293b",
+                        "text-muted": "#64748b",
+                        "clinical-accent": "#0ea5e9",
+                    },
+                    fontFamily: {
+                        "sans": ["Manrope", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    boxShadow: {
+                        "clinical": "0 1px 3px 0 rgba(0, 0, 0, 0.05)",
+                        "clinical-hover": "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)",
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #F8FAFC;
+            background-image: 
+                linear-gradient(#e2e8f0 1px, transparent 1px),
+                linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        h1, h2, h3, button {
+            letter-spacing: -0.02em;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            color: inherit;
+        }
+        .tech-border-corner {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-color: #94a3b8;
+            transition: all 0.3s ease;
+        }
+        html { scroll-behavior: smooth; }
+        
+        /* Animaciones al scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+        .animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+        .animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+        .animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+        .animate-on-scroll.delay-5 { transition-delay: 0.5s; }
+        
+        /* Menú móvil */
+        .mobile-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        .mobile-menu.open {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            animation: slideDown 0.2s ease-out forwards;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Flip cards flujo de trabajo */
+        .flip-card {
+            perspective: 1000px;
+            height: 160px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border: 1px solid #E2E8F0;
+            background: white;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+            color: white;
+        }
+        
+        /* Flujo de trabajo animado */
+        .flow-arrow {
+            position: relative;
+        }
+        .flow-arrow::after {
+            content: '→';
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 1.25rem;
+            animation: pulse-arrow 1.5s ease-in-out infinite;
+        }
+        @media (max-width: 1023px) {
+            .flow-arrow::after { display: none; }
+        }
+        @keyframes pulse-arrow {
+            0%, 100% { opacity: 0.4; transform: translateY(-50%) translateX(0); }
+            50% { opacity: 1; transform: translateY(-50%) translateX(3px); }
+        }
+        
+        /* Estados con colores */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.625rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .status-draft { background: #f1f5f9; color: #64748b; }
+        .status-processing { background: #fef3c7; color: #d97706; }
+        .status-review { background: #dbeafe; color: #2563eb; }
+        .status-error { background: #fee2e2; color: #dc2626; }
+        .status-completed { background: #dcfce7; color: #16a34a; }
+        .status-exported { background: #e0e7ff; color: #4f46e5; }
+        
+        /* Validación formulario */
+        .input-error { border-color: #dc2626 !important; }
+        .error-message { color: #dc2626; font-size: 0.75rem; margin-top: 0.25rem; display: none; }
+        .error-message.show { display: block; }
+        
+        /* Gradientes mejorados */
+        .gradient-hero {
+            background: linear-gradient(135deg, rgba(248,250,252,0) 0%, rgba(255,255,255,0.8) 50%, rgba(14,165,233,0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light text-text-main antialiased selection:bg-slate-200 selection:text-slate-900">
+
+<!-- HEADER -->
+<header class="border-b border-border-clinical bg-surface-light/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center justify-between whitespace-nowrap px-6 sm:px-10 lg:px-40 py-4">
+    <a href="#inicio" class="flex items-center">
+        <img src="logo2.jpeg" alt="Kairos IA" class="h-[120px] md:h-[144px] lg:h-[168px] w-auto mix-blend-multiply">
+    </a>
+        <nav class="hidden md:flex flex-1 justify-end gap-10 items-center">
+            <div class="flex items-center gap-8">
+                <a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full" href="#inicio">Inicio</a>
+                <a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full" href="#funcionalidades">Funcionalidades</a>
+                <a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full" href="#documentos">Documentos</a>
+                <a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full" href="#ventajas">Ventajas</a>
+            </div>
+            <a href="#contacto" class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-sm h-9 px-5 bg-primary text-white text-xs font-medium tracking-wide hover:bg-slate-800 transition-all uppercase shadow-clinical hover:shadow-clinical-hover">
+                Contactar
+            </a>
+        </nav>
+        <div class="md:hidden flex items-center">
+            <button id="mobile-menu-btn" class="text-text-main hover:bg-slate-100 p-2 rounded transition-colors">
+                <span class="material-symbols-outlined" id="menu-icon">menu</span>
+            </button>
+        </div>
+    </div>
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border-clinical bg-white">
+        <div class="flex flex-col py-4 px-6">
+            <a class="py-3 text-text-muted text-sm font-medium uppercase tracking-wide hover:text-primary transition-colors border-b border-border-clinical" href="#inicio" onclick="closeMobileMenu()">Inicio</a>
+            <a class="py-3 text-text-muted text-sm font-medium uppercase tracking-wide hover:text-primary transition-colors border-b border-border-clinical" href="#funcionalidades" onclick="closeMobileMenu()">Funcionalidades</a>
+            <a class="py-3 text-text-muted text-sm font-medium uppercase tracking-wide hover:text-primary transition-colors border-b border-border-clinical" href="#documentos" onclick="closeMobileMenu()">Documentos</a>
+            <a class="py-3 text-text-muted text-sm font-medium uppercase tracking-wide hover:text-primary transition-colors border-b border-border-clinical" href="#ventajas" onclick="closeMobileMenu()">Ventajas</a>
+            <a href="#contacto" onclick="closeMobileMenu()" class="mt-4 flex cursor-pointer items-center justify-center rounded-sm h-11 px-5 bg-primary text-white text-sm font-medium tracking-wide hover:bg-slate-800 transition-all uppercase">
+                Contactar
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section id="inicio" class="relative gradient-hero">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white via-white/50 to-transparent opacity-80 pointer-events-none z-0"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-clinical-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center py-12 lg:py-20 relative z-10">
+        <div class="flex flex-col max-w-[1200px] flex-1">
+            <div class="flex flex-col gap-12 lg:flex-row-reverse items-center">
+                <div class="w-full aspect-[4/3] rounded-sm border border-border-clinical bg-slate-50 p-2 lg:w-1/2 relative shadow-clinical">
+                    <div class="w-full h-full bg-center bg-cover overflow-hidden relative opacity-90 hover:grayscale hover:opacity-70 transition-all duration-700" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9CHSmAtcT8ZSSWR-4Xl2ags4lhmQSoA4ao0GLp7TF1RiVckFgQ03ZBtn1kFXgEVVuZN3-bkyazwV5ImDlz2KmnVHzNlTqL-ZOTxkb_83vxZXeKFSMiXjy-_83gzeL0BNNf2JJPslAs3f3ks9ntdlU45W61tLWnFgsbc4NdTByqjcO4rLMR5DLIZYLlmhVqobJToXsPVdLPxcUs3ex8iJItdq2WDe5HnLj2-JhXAixg0hHrNyu5-u_5lyDfXh225YWsIllxXvqgs0");'>
+                        <div class="absolute inset-0 bg-white/10"></div>
+                        <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-2 py-1 text-[10px] text-text-muted font-mono border border-border-clinical">FIG. 01 — SCAN</div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-8 lg:justify-center lg:w-1/2">
+                    <div class="flex flex-col gap-6 text-left">
+                        <div class="inline-flex items-center gap-3 px-3 py-1.5 rounded-full border border-border-clinical bg-white w-fit shadow-sm">
+                            <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                            <span class="text-text-muted text-[11px] font-medium uppercase tracking-widest font-mono">Sistema Operativo v18.0</span>
+                        </div>
+                        <h1 class="text-text-main text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] tracking-tight uppercase">
+                            Kairos IA<br/><span class="text-slate-400 font-extralight">Digitalización</span>
+                        </h1>
+                        <h2 class="text-text-muted text-base font-light leading-relaxed border-l border-slate-300 pl-6 max-w-md">
+                            Automatización de captura de datos de <strong>facturas, albaranes y partes de horas</strong>. Precisión clínica mediante IA con Google Gemini Vision integrada en <strong>Odoo 18</strong>.
+                        </h2>
+                    </div>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#contacto" class="flex items-center justify-center rounded-sm h-11 px-8 bg-surface-light border border-slate-300 text-text-main text-xs font-semibold tracking-widest hover:border-slate-800 hover:bg-slate-50 transition-all uppercase shadow-sm">
+                            Solicitar Demo
+                        </a>
+                        <a href="#funcionalidades" class="flex items-center justify-center h-11 px-6 text-text-muted text-xs font-medium tracking-widest hover:text-text-main transition-colors uppercase group">
+                            <span>Más Información</span>
+                            <span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROBLEMA QUE RESUELVE -->
+<section class="bg-surface-light border-y border-border-clinical">
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center py-20">
+        <div class="flex flex-col max-w-[1200px] flex-1">
+            <div class="flex flex-col gap-16 @container">
+                <div class="flex flex-col gap-4 text-center items-center animate-on-scroll">
+                    <h3 class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-2">El Problema</h3>
+                    <h2 class="text-text-main tracking-tight text-3xl sm:text-4xl font-light leading-tight max-w-[720px]">
+                        ¿Horas perdidas en <span class="font-semibold">entrada manual</span> de datos?
+                    </h2>
+                    <p class="text-text-muted text-sm font-light leading-relaxed max-w-[600px] mt-2">
+                        Las empresas dedican horas diarias a revisar documentos, transcribir datos y verificar información. Kairos automatiza todo este proceso.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="group flex flex-1 gap-6 p-8 flex-col bg-slate-50 border border-transparent hover:border-border-clinical hover:bg-white hover:shadow-clinical transition-all duration-500 relative">
+                        <div class="text-text-main w-10 h-10 flex items-center justify-center border border-slate-200 bg-white rounded-sm mb-2">
+                            <span class="material-symbols-outlined text-[20px] font-light">extension</span>
+                        </div>
+                        <div class="flex flex-col gap-3 relative z-10">
+                            <h4 class="text-text-main text-sm font-bold tracking-wide uppercase">Integración Odoo 18</h4>
+                            <p class="text-text-muted text-sm font-light leading-relaxed">Conexión nativa a nivel de API. Sin fricción en la implementación de flujos ERP.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700"></div>
+                    </div>
+                    <div class="group flex flex-1 gap-6 p-8 flex-col bg-slate-50 border border-transparent hover:border-border-clinical hover:bg-white hover:shadow-clinical transition-all duration-500 relative">
+                        <div class="text-text-main w-10 h-10 flex items-center justify-center border border-slate-200 bg-white rounded-sm mb-2">
+                            <span class="material-symbols-outlined text-[20px] font-light">psychology</span>
+                        </div>
+                        <div class="flex flex-col gap-3 relative z-10">
+                            <h4 class="text-text-main text-sm font-bold tracking-wide uppercase">IA Google Gemini</h4>
+                            <p class="text-text-muted text-sm font-light leading-relaxed">Redes neuronales de aprendizaje continuo con Gemini 2.0 Flash para máxima fidelidad de datos.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700"></div>
+                    </div>
+                    <div class="group flex flex-1 gap-6 p-8 flex-col bg-slate-50 border border-transparent hover:border-border-clinical hover:bg-white hover:shadow-clinical transition-all duration-500 relative">
+                        <div class="text-text-main w-10 h-10 flex items-center justify-center border border-slate-200 bg-white rounded-sm mb-2">
+                            <span class="material-symbols-outlined text-[20px] font-light">timer</span>
+                        </div>
+                        <div class="flex flex-col gap-3 relative z-10">
+                            <h4 class="text-text-main text-sm font-bold tracking-wide uppercase">Ahorro del 80-90%</h4>
+                            <p class="text-text-muted text-sm font-light leading-relaxed">Reducción drástica en tiempo de entrada de datos. Procesamiento en segundos, no minutos.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TIPOS DE DOCUMENTOS -->
+<section id="documentos" class="py-20 lg:py-28">
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center">
+        <div class="flex flex-col max-w-[1024px] flex-1">
+            <div class="flex flex-col gap-4 items-center text-center px-4 mb-16 relative animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3 py-1 border border-slate-300 bg-white text-text-muted text-[10px] tracking-[0.2em] uppercase font-mono">
+                    <span class="w-1.5 h-1.5 rounded-full bg-clinical-accent"></span>
+                    Sys.Status: Nominal
+                </div>
+                <h2 class="text-text-main text-3xl md:text-4xl font-bold leading-tight tracking-tight uppercase font-mono">
+                    Tipos de Documentos <span class="font-light text-slate-400">Soportados</span>
+                </h2>
+                <p class="text-text-muted text-base font-light leading-relaxed max-w-[720px]">
+                    <span class="font-mono text-xs text-clinical-accent uppercase mr-2">[ANALYSIS_MODE]</span>
+                    Kairos IA procesa automáticamente los documentos clave para tu negocio. Extracción de datos inicializada. Precisión: 99.9%.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+                <!-- Card Partes de Horas -->
+                <div class="group relative flex flex-col gap-0 bg-white shadow-clinical hover:shadow-soft transition-all duration-300 animate-on-scroll delay-1">
+                    <div class="absolute inset-0 border border-border-clinical transition-colors duration-300 group-hover:border-clinical-accent/30"></div>
+                    <div class="tech-border-corner top-0 left-0 border-t border-l group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner top-0 right-0 border-t border-r group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner bottom-0 left-0 border-b border-l group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner bottom-0 right-0 border-b border-r group-hover:border-clinical-accent"></div>
+                    <div class="p-6 border-b border-border-clinical/50 flex justify-between items-start bg-slate-50/50">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white border border-border-clinical text-slate-600">
+                            <span class="material-symbols-outlined text-[24px] font-light">schedule</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-text-muted uppercase tracking-widest opacity-60">ID_001</span>
+                    </div>
+                    <div class="p-6 flex flex-col gap-4 flex-grow">
+                        <h3 class="text-text-main text-lg font-bold uppercase tracking-wide font-mono group-hover:text-clinical-accent transition-colors">
+                            Partes de Horas
+                        </h3>
+                        <p class="text-text-muted text-sm font-light leading-relaxed">
+                            Digitalización de registros de tiempo para control de personal y proyectos. Integración directa con timesheets de Odoo.
+                        </p>
+                        <div class="mt-auto pt-4 relative">
+                            <div class="absolute top-0 left-0 w-full h-px border-t border-dashed border-border-clinical"></div>
+                            <div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-slate-500">
+                                <div class="flex items-center justify-between">
+                                    <span>INPUT_01</span>
+                                    <span class="h-px flex-grow bg-border-clinical mx-2"></span>
+                                    <span>[Empleado]</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span>INPUT_02</span>
+                                    <span class="h-px flex-grow bg-border-clinical mx-2"></span>
+                                    <span>[Proyecto]</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span>INPUT_03</span>
+                                    <span class="h-px flex-grow bg-border-clinical mx-2"></span>
+                                    <span>[Horas]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Albaranes -->
+                <div class="group relative flex flex-col gap-0 bg-white shadow-clinical hover:shadow-soft transition-all duration-300 animate-on-scroll delay-2">
+                    <div class="absolute inset-0 border border-border-clinical transition-colors duration-300 group-hover:border-clinical-accent/30"></div>
+                    <div class="tech-border-corner top-0 left-0 border-t border-l group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner top-0 right-0 border-t border-r group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner bottom-0 left-0 border-b border-l group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner bottom-0 right-0 border-b border-r group-hover:border-clinical-accent"></div>
+                    <div class="p-6 border-b border-border-clinical/50 flex justify-between items-start bg-slate-50/50">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white border border-border-clinical text-slate-600">
+                            <span class="material-symbols-outlined text-[24px] font-light">local_shipping</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-text-muted uppercase tracking-widest opacity-60">ID_002</span>
+                    </div>
+                    <div class="p-6 flex flex-col gap-4 flex-grow">
+                        <h3 class="text-text-main text-lg font-bold uppercase tracking-wide font-mono group-hover:text-clinical-accent transition-colors">
+                            Albaranes de Entrega
+                        </h3>
+                        <p class="text-text-muted text-sm font-light leading-relaxed">
+                            Gestión eficiente de la recepción de mercancías. Notas de entrega sin información fiscal procesadas automáticamente.
+                        </p>
+                        <div class="mt-auto pt-4 relative">
+                            <div class="absolute top-0 left-0 w-full h-px border-t border-dashed border-border-clinical"></div>
+                            <div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-slate-500">
+                                <div class="flex items-center justify-between">
+                                    <span>REF_NO</span>
+                                    <span class="h-px flex-grow bg-border-clinical mx-2"></span>
+                                    <span>Ref_Albarán</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span>DT_STMP</span>
+                                    <span class="h-px flex-grow bg-border-clinical mx-2"></span>
+                                    <span>Data:Fecha</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span>ARR_OBJ</span>
+                                    <span class="h-px flex-grow bg-border-clinical mx-2"></span>
+                                    <span>Array:Prods</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Facturas -->
+                <div class="group relative flex flex-col gap-0 bg-white shadow-clinical hover:shadow-soft transition-all duration-300 animate-on-scroll delay-3">
+                    <div class="absolute inset-0 border border-border-clinical transition-colors duration-300 group-hover:border-clinical-accent/30"></div>
+                    <div class="tech-border-corner top-0 left-0 border-t border-l group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner top-0 right-0 border-t border-r group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner bottom-0 left-0 border-b border-l group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner bottom-0 right-0 border-b border-r group-hover:border-clinical-accent"></div>
+                    <div class="p-6 border-b border-border-clinical/50 flex justify-between items-start bg-slate-50/50">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white border border-border-clinical text-slate-600">
+                            <span class="material-symbols-outlined text-[24px] font-light">receipt_long</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-text-muted uppercase tracking-widest opacity-60">ID_003</span>
+                    </div>
+                    <div class="p-6 flex flex-col gap-4 flex-grow">
+                        <h3 class="text-text-main text-lg font-bold uppercase tracking-wide font-mono group-hover:text-clinical-accent transition-colors">
+                            Facturas
+                        </h3>
+                        <p class="text-text-muted text-sm font-light leading-relaxed">
+                            Automatización contable completa. Extracción de datos fiscales, mapeo de impuestos y generación de asientos.
+                        </p>
+                        <div class="mt-auto pt-4 relative">
+                            <div class="absolute top-0 left-0 w-full h-px border-t border-dashed border-border-clinical"></div>
+                            <div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-slate-500">
+                                <div class="flex items-center justify-between">
+                                    <span>ENT_NAME</span>
+                                    <span class="h-px flex-grow bg-border-clinical mx-2"></span>
+                                    <span>&lt;Proveedor&gt;</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span>VAL_TOT</span>
+                                    <span class="h-px flex-grow bg-border-clinical mx-2"></span>
+                                    <span>&lt;Total&gt;</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span>TAX_CALC</span>
+                                    <span class="h-px flex-grow bg-border-clinical mx-2"></span>
+                                    <span>&lt;Impuestos&gt;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Documentos Personalizados -->
+                <div class="group relative flex flex-col gap-0 bg-gradient-to-br from-primary to-slate-700 shadow-clinical hover:shadow-soft transition-all duration-300 animate-on-scroll delay-4">
+                    <div class="absolute inset-0 border border-primary/50 transition-colors duration-300 group-hover:border-clinical-accent/50"></div>
+                    <div class="tech-border-corner top-0 left-0 border-t border-l border-white/30 group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner top-0 right-0 border-t border-r border-white/30 group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner bottom-0 left-0 border-b border-l border-white/30 group-hover:border-clinical-accent"></div>
+                    <div class="tech-border-corner bottom-0 right-0 border-b border-r border-white/30 group-hover:border-clinical-accent"></div>
+                    <div class="p-6 border-b border-white/10 flex justify-between items-start">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white/10 border border-white/20 text-white">
+                            <span class="material-symbols-outlined text-[24px] font-light">add_circle</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-white/60 uppercase tracking-widest">CUSTOM</span>
+                    </div>
+                    <div class="p-6 flex flex-col gap-4 flex-grow">
+                        <h3 class="text-white text-lg font-bold uppercase tracking-wide font-mono group-hover:text-clinical-accent transition-colors">
+                            Cualquier Documento
+                        </h3>
+                        <p class="text-white/80 text-sm font-light leading-relaxed">
+                            ¿Necesitas digitalizar otro tipo de documento? Configuramos prompts personalizados para extraer los datos que necesites.
+                        </p>
+                        <div class="mt-auto pt-4 relative">
+                            <div class="absolute top-0 left-0 w-full h-px border-t border-dashed border-white/20"></div>
+                            <div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-white/60">
+                                <div class="flex items-center justify-between">
+                                    <span>FORMAT</span>
+                                    <span class="h-px flex-grow bg-white/20 mx-2"></span>
+                                    <span>PDF / IMG</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span>CONFIG</span>
+                                    <span class="h-px flex-grow bg-white/20 mx-2"></span>
+                                    <span>Custom_Prompt</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span>OUTPUT</span>
+                                    <span class="h-px flex-grow bg-white/20 mx-2"></span>
+                                    <span>&lt;Tu_Data&gt;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FUNCIONALIDADES -->
+<section id="funcionalidades" class="bg-white border-y border-border-clinical py-20 lg:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none opacity-30" style="background-image: linear-gradient(#e2e8f0 1px, transparent 1px); background-size: 100% 60px;"></div>
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center relative z-10">
+        <div class="flex flex-col max-w-[1200px] flex-1">
+            <div class="flex flex-col items-center text-center gap-6 mb-20 animate-on-scroll">
+                <div class="inline-flex items-center justify-center px-4 py-1.5 border border-border-clinical bg-slate-50 text-text-muted text-[10px] font-bold uppercase tracking-[0.2em] font-mono rounded-full">
+                    Capacidades del Sistema
+                </div>
+                <h2 class="text-text-main text-3xl md:text-4xl font-bold leading-tight tracking-tight">
+                    Funcionalidades Principales
+                </h2>
+                <p class="text-text-muted text-base max-w-[600px] font-light">
+                    Arquitectura optimizada para la gestión documental de alto rendimiento con Inteligencia Artificial.
+                </p>
+            </div>
+            
+            <!-- Feature 1: Detección Automática -->
+            <div class="flex flex-col lg:flex-row gap-16 items-center mb-24">
+                <div class="flex-1 flex flex-col gap-8 order-2 lg:order-1">
+                    <div class="flex items-start gap-5">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 text-primary">
+                            <span class="material-symbols-outlined text-2xl font-light">document_scanner</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-2xl font-bold text-text-main">Detección Automática</h3>
+                            <p class="text-text-muted text-base leading-relaxed font-light">
+                                La IA identifica automáticamente el tipo de documento: factura, albarán o parte de horas, sin intervención manual.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 border border-border-clinical relative rounded-sm">
+                        <div class="absolute -top-3 left-4 text-[10px] bg-white px-2 font-mono text-slate-400 border border-slate-100 uppercase tracking-widest">Specs</div>
+                        <ul class="flex flex-col gap-3">
+                            <li class="flex items-center gap-3 text-text-muted font-mono text-xs">
+                                <div class="w-1.5 h-1.5 bg-clinical-accent rounded-full"></div>
+                                <span>Clasificación por tipo documental</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-text-muted font-mono text-xs">
+                                <div class="w-1.5 h-1.5 bg-clinical-accent rounded-full"></div>
+                                <span>Detección de estructura fiscal</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-text-muted font-mono text-xs">
+                                <div class="w-1.5 h-1.5 bg-clinical-accent rounded-full"></div>
+                                <span>Prompts personalizables por proveedor</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex-1 w-full order-1 lg:order-2 relative pl-4 pb-4">
+                    <div class="absolute top-0 right-0 w-[80%] h-[80%] border-t border-r border-slate-200 -z-10"></div>
+                    <div class="relative bg-white p-2 border border-slate-200 shadow-soft rounded-sm">
+                        <div class="aspect-video overflow-hidden border border-slate-100 relative bg-slate-100 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-8xl text-slate-300">document_scanner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Extracción Inteligente -->
+            <div class="flex flex-col lg:flex-row-reverse gap-16 items-center mb-24">
+                <div class="flex-1 flex flex-col gap-8">
+                    <div class="flex items-start gap-5">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 text-primary">
+                            <span class="material-symbols-outlined text-2xl font-light">memory</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-2xl font-bold text-text-main">Extracción Inteligente de Datos</h3>
+                            <p class="text-text-muted text-base leading-relaxed font-light">
+                                Algoritmos de aprendizaje profundo para extracción de entidades estructuradas con precisión superior al 99%.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 border border-border-clinical relative rounded-sm">
+                        <div class="absolute -top-3 right-4 text-[10px] bg-white px-2 font-mono text-slate-400 border border-slate-100 uppercase tracking-widest">Datos Extraídos</div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <ul class="flex flex-col gap-2">
+                                <li class="text-text-muted font-mono text-xs">• Número de documento</li>
+                                <li class="text-text-muted font-mono text-xs">• Fecha de emisión</li>
+                                <li class="text-text-muted font-mono text-xs">• Proveedor (CIF, dirección)</li>
+                                <li class="text-text-muted font-mono text-xs">• Totales y subtotales</li>
+                            </ul>
+                            <ul class="flex flex-col gap-2">
+                                <li class="text-text-muted font-mono text-xs">• Líneas de producto</li>
+                                <li class="text-text-muted font-mono text-xs">• Cantidades (3 decimales)</li>
+                                <li class="text-text-muted font-mono text-xs">• IVA/IGIC por línea</li>
+                                <li class="text-text-muted font-mono text-xs">• Lote y caducidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-full relative pr-4 pb-4">
+                    <div class="absolute top-0 left-0 w-[80%] h-[80%] border-t border-l border-slate-200 -z-10"></div>
+                    <div class="relative bg-white p-2 border border-slate-200 shadow-soft rounded-sm">
+                        <div class="aspect-video overflow-hidden border border-slate-100 relative bg-slate-100 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-8xl text-slate-300">table_chart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Gestión de Proveedores -->
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="flex-1 flex flex-col gap-8 order-2 lg:order-1">
+                    <div class="flex items-start gap-5">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 text-primary">
+                            <span class="material-symbols-outlined text-2xl font-light">group</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-2xl font-bold text-text-main">Gestión Inteligente de Proveedores</h3>
+                            <p class="text-text-muted text-base leading-relaxed font-light">
+                                Búsqueda automática y matching difuso para encontrar coincidencias aunque el nombre varíe ligeramente.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 border border-border-clinical relative rounded-sm">
+                        <div class="absolute -top-3 left-4 text-[10px] bg-white px-2 font-mono text-slate-400 border border-slate-100 uppercase tracking-widest">Capacidades</div>
+                        <ul class="flex flex-col gap-3">
+                            <li class="flex items-center gap-3 text-text-muted font-mono text-xs">
+                                <div class="w-1.5 h-1.5 bg-clinical-accent rounded-full"></div>
+                                <span>Búsqueda por nombre o CIF</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-text-muted font-mono text-xs">
+                                <div class="w-1.5 h-1.5 bg-clinical-accent rounded-full"></div>
+                                <span>Matching difuso (Levenshtein)</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-text-muted font-mono text-xs">
+                                <div class="w-1.5 h-1.5 bg-clinical-accent rounded-full"></div>
+                                <span>Creación automática de nuevos proveedores</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-text-muted font-mono text-xs">
+                                <div class="w-1.5 h-1.5 bg-clinical-accent rounded-full"></div>
+                                <span>Cuentas contables por proveedor</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex-1 w-full order-1 lg:order-2 relative pl-4 pb-4">
+                    <div class="absolute top-0 right-0 w-[80%] h-[80%] border-t border-r border-slate-200 -z-10"></div>
+                    <div class="relative bg-white p-2 border border-slate-200 shadow-soft rounded-sm">
+                        <div class="aspect-video overflow-hidden border border-slate-100 relative bg-slate-100 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-8xl text-slate-300">corporate_fare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VENTAJAS COMPETITIVAS -->
+<section id="ventajas" class="py-20 lg:py-28">
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center">
+        <div class="max-w-[1100px] w-full flex flex-col gap-12">
+            <div class="flex flex-col gap-4 text-center items-center animate-on-scroll">
+                <div class="flex items-center justify-center gap-2">
+                    <span class="inline-block w-1.5 h-1.5 bg-clinical-accent rounded-full"></span>
+                    <h3 class="text-text-muted font-mono text-[10px] font-medium tracking-[0.2em] uppercase">Tech_Spec: KAIROS_REV_18.0</h3>
+                    <span class="inline-block w-1.5 h-1.5 bg-clinical-accent rounded-full"></span>
+                </div>
+                <h2 class="text-text-main text-3xl md:text-4xl font-light leading-tight tracking-tight uppercase">
+                    Ventajas <span class="font-bold">Competitivas</span>
+                </h2>
+                <p class="text-text-muted text-base font-light leading-relaxed max-w-2xl border-l border-clinical-accent/30 pl-4 text-left">
+                    Arquitectura de digitalización inteligente. Precisión clínica.
+                    <span class="font-mono text-xs text-clinical-accent mt-1 block">Optimization_Module_Active</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Eficiencia -->
+                <div class="group relative flex flex-col gap-5 bg-white border border-border-clinical p-8 hover:border-clinical-accent/50 transition-all duration-300 shadow-clinical hover:shadow-soft">
+                    <div class="absolute top-4 right-4 font-mono text-[9px] text-text-muted/40 tracking-widest border border-border-clinical px-1">REF: 0x1A</div>
+                    <div class="relative z-10 flex h-10 w-10 items-center justify-center bg-slate-50 text-clinical-accent border border-border-clinical group-hover:bg-clinical-accent group-hover:text-white transition-colors rounded-full">
+                        <span class="material-symbols-outlined text-xl font-light">timer</span>
+                    </div>
+                    <div class="relative z-10 flex flex-col gap-2">
+                        <h4 class="text-lg font-semibold text-text-main uppercase tracking-wide">Eficiencia <span class="text-clinical-accent font-light">Extrema</span></h4>
+                        <p class="text-text-muted text-xs leading-relaxed font-mono">
+                            Reducción de latencia: <span class="text-text-main font-bold">90.0%</span>. Automatización inmediata. Reasignación de recursos a procesos críticos.
+                        </p>
+                    </div>
+                    <div class="relative z-10 mt-auto pt-6">
+                        <div class="flex justify-between text-[9px] font-mono text-text-muted mb-1 uppercase tracking-wider">
+                            <span>Status: Processing</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="h-px w-full bg-slate-100 overflow-hidden relative">
+                            <div class="absolute h-full bg-clinical-accent w-[90%] left-0 top-0"></div>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 right-0 w-3 h-3 border-r border-b border-text-muted/20"></div>
+                    <div class="absolute top-0 left-0 w-3 h-3 border-l border-t border-text-muted/20"></div>
+                </div>
+                <!-- Precisión -->
+                <div class="group relative flex flex-col gap-5 bg-white border border-border-clinical p-8 hover:border-clinical-accent/50 transition-all duration-300 shadow-clinical hover:shadow-soft">
+                    <div class="absolute top-4 right-4 font-mono text-[9px] text-text-muted/40 tracking-widest border border-border-clinical px-1">REF: 0x2B</div>
+                    <div class="relative z-10 flex h-10 w-10 items-center justify-center bg-slate-50 text-clinical-accent border border-border-clinical group-hover:bg-clinical-accent group-hover:text-white transition-colors rounded-full">
+                        <span class="material-symbols-outlined text-xl font-light">verified_user</span>
+                    </div>
+                    <div class="relative z-10 flex flex-col gap-2">
+                        <h4 class="text-lg font-semibold text-text-main uppercase tracking-wide">Precisión <span class="text-clinical-accent font-light">Certificada</span></h4>
+                        <p class="text-text-muted text-xs leading-relaxed font-mono">
+                            Red neuronal con validación checksum. Detección de anomalías pre-inyección ERP en tiempo real.
+                        </p>
+                    </div>
+                    <div class="relative z-10 mt-auto pt-4 flex flex-col gap-2 border-t border-dashed border-slate-100 pt-4">
+                        <div class="flex items-center gap-2 text-[10px] text-text-muted font-mono">
+                            <span class="w-2 h-2 border border-clinical-accent/50 flex items-center justify-center"><div class="w-1 h-1 bg-clinical-accent"></div></span>
+                            <span>Validación automática</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-[10px] text-text-muted font-mono">
+                            <span class="w-2 h-2 border border-clinical-accent/50 flex items-center justify-center"><div class="w-1 h-1 bg-clinical-accent"></div></span>
+                            <span>Machine Learning Activo</span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 right-0 w-3 h-3 border-r border-b border-text-muted/20"></div>
+                    <div class="absolute top-0 left-0 w-3 h-3 border-l border-t border-text-muted/20"></div>
+                </div>
+                <!-- Flexibilidad -->
+                <div class="group relative flex flex-col gap-5 bg-white border border-border-clinical p-8 hover:border-clinical-accent/50 transition-all duration-300 shadow-clinical hover:shadow-soft">
+                    <div class="absolute top-4 right-4 font-mono text-[9px] text-text-muted/40 tracking-widest border border-border-clinical px-1">REF: 0x3C</div>
+                    <div class="relative z-10 flex h-10 w-10 items-center justify-center bg-slate-50 text-clinical-accent border border-border-clinical group-hover:bg-clinical-accent group-hover:text-white transition-colors rounded-full">
+                        <span class="material-symbols-outlined text-xl font-light">account_tree</span>
+                    </div>
+                    <div class="relative z-10 flex flex-col gap-2">
+                        <h4 class="text-lg font-semibold text-text-main uppercase tracking-wide">Flexibilidad <span class="text-clinical-accent font-light">Modular</span></h4>
+                        <p class="text-text-muted text-xs leading-relaxed font-mono">
+                            Compatibilidad multi-formato. Arquitectura escalable. Sistema agnóstico al volumen de datos.
+                        </p>
+                    </div>
+                    <div class="relative z-10 mt-auto pt-6 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 border border-slate-200 text-[9px] font-mono text-text-muted bg-slate-50 uppercase">.pdf</span>
+                        <span class="px-2 py-1 border border-slate-200 text-[9px] font-mono text-text-muted bg-slate-50 uppercase">.jpg</span>
+                        <span class="px-2 py-1 border border-slate-200 text-[9px] font-mono text-text-main font-bold bg-slate-50 uppercase">Odoo_18</span>
+                    </div>
+                    <div class="absolute bottom-0 right-0 w-3 h-3 border-r border-b border-text-muted/20"></div>
+                    <div class="absolute top-0 left-0 w-3 h-3 border-l border-t border-text-muted/20"></div>
+                </div>
+            </div>
+
+            <!-- Integración Odoo -->
+            <div class="mt-12 relative bg-white border border-border-clinical overflow-hidden flex flex-col lg:flex-row shadow-sm">
+                <div class="absolute top-0 left-0 w-4 h-4 border-l border-t border-primary"></div>
+                <div class="absolute top-0 right-0 w-4 h-4 border-r border-t border-primary"></div>
+                <div class="absolute bottom-0 left-0 w-4 h-4 border-l border-b border-primary"></div>
+                <div class="absolute bottom-0 right-0 w-4 h-4 border-r border-b border-primary"></div>
+                <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center gap-6 relative z-10">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-clinical-accent material-symbols-outlined text-sm animate-spin" style="animation-duration: 3s;">sync</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-text-muted font-mono">Integración Nativa</span>
+                    </div>
+                    <h3 class="text-3xl font-light text-text-main leading-tight">
+                        Arquitectura diseñada para <br/><span class="font-semibold text-clinical-accent">Odoo 18</span>
+                    </h3>
+                    <p class="text-text-muted text-sm font-mono leading-relaxed border-l border-slate-200 pl-4">
+                        100% integrado con Odoo. No requiere exportaciones ni importaciones. Los datos fluyen directamente a contabilidad.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div class="bg-slate-50 border border-slate-200 p-4 relative">
+                            <div class="absolute top-2 right-2 w-1 h-1 bg-clinical-accent rounded-full"></div>
+                            <span class="block text-2xl font-light text-text-main">100%</span>
+                            <span class="text-[9px] text-text-muted uppercase tracking-wider font-mono">Compatibilidad</span>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-4 relative">
+                            <div class="absolute top-2 right-2 w-1 h-1 bg-clinical-accent rounded-full"></div>
+                            <span class="block text-2xl font-light text-text-main">&lt; 5min</span>
+                            <span class="text-[9px] text-text-muted uppercase tracking-wider font-mono">Setup Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 min-h-[300px] relative bg-slate-50 border-l border-border-clinical overflow-hidden">
+                    <div class="absolute inset-0 z-20 pointer-events-none opacity-20" style="background-image: linear-gradient(#cbd5e1 1px, transparent 1px), linear-gradient(90deg, #cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-9xl text-slate-300">integration_instructions</span>
+                    </div>
+                    <div class="absolute bottom-4 right-4 bg-white/80 px-2 py-1 border border-border-clinical z-30">
+                        <span class="text-[9px] font-mono text-text-main">FIG. 4.2 - ODOO INTEGRATION</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FLUJO DE TRABAJO -->
+<section class="bg-surface-light border-y border-border-clinical py-20">
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center">
+        <div class="max-w-[1100px] w-full flex flex-col gap-12">
+            <div class="flex flex-col gap-4 text-center items-center animate-on-scroll">
+                <h3 class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-2">Flujo de Trabajo</h3>
+                <h2 class="text-text-main text-3xl font-light leading-tight">
+                    Del documento al <span class="font-semibold">asiento contable</span>
+                </h2>
+                <p class="text-text-muted text-sm max-w-lg">Pipeline automatizado de 6 etapas con validación humana opcional</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-2">
+                <!-- Card 1: Documento -->
+                <div class="flip-card flow-arrow animate-on-scroll delay-1">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="material-symbols-outlined text-3xl text-slate-400">upload_file</span>
+                            <span class="text-xs font-mono text-text-muted text-center font-semibold mt-2">1. Documento</span>
+                            <span class="status-badge status-draft mt-2">📝 Borrador</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="text-xs font-mono text-slate-300 mb-2">PASO 1</span>
+                            <p class="text-xs text-center leading-relaxed">Sube PDF, escaneo o adjunto de email</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Detección IA -->
+                <div class="flip-card flow-arrow animate-on-scroll delay-2">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="material-symbols-outlined text-3xl text-amber-500">smart_toy</span>
+                            <span class="text-xs font-mono text-text-muted text-center font-semibold mt-2">2. Detección IA</span>
+                            <span class="status-badge status-processing mt-2">⚙️ En Proceso</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="text-xs font-mono text-slate-300 mb-2">PASO 2</span>
+                            <p class="text-xs text-center leading-relaxed">La IA identifica automáticamente si es factura, albarán o parte de horas</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Extracción -->
+                <div class="flip-card flow-arrow animate-on-scroll delay-3">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="material-symbols-outlined text-3xl text-blue-500">data_object</span>
+                            <span class="text-xs font-mono text-text-muted text-center font-semibold mt-2">3. Extracción</span>
+                            <span class="status-badge status-review mt-2">📊 Datos</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="text-xs font-mono text-slate-300 mb-2">PASO 3</span>
+                            <p class="text-xs text-center leading-relaxed">Gemini Vision extrae proveedor, líneas, importes, impuestos y más</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4: Revisión -->
+                <div class="flip-card flow-arrow animate-on-scroll delay-4">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="material-symbols-outlined text-3xl text-blue-600">visibility</span>
+                            <span class="text-xs font-mono text-text-muted text-center font-semibold mt-2">4. Revisión</span>
+                            <span class="status-badge status-review mt-2">👁️ Validación</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="text-xs font-mono text-slate-300 mb-2">PASO 4</span>
+                            <p class="text-xs text-center leading-relaxed">El usuario revisa y ajusta los datos extraídos si es necesario</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5: Confirmación -->
+                <div class="flip-card flow-arrow animate-on-scroll delay-5">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="material-symbols-outlined text-3xl text-green-500">check_circle</span>
+                            <span class="text-xs font-mono text-text-muted text-center font-semibold mt-2">5. Confirmación</span>
+                            <span class="status-badge status-completed mt-2">✅ Completado</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="text-xs font-mono text-slate-300 mb-2">PASO 5</span>
+                            <p class="text-xs text-center leading-relaxed">Se valida el documento y se crean los registros en Odoo</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6: Exportación -->
+                <div class="flip-card animate-on-scroll delay-5">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="material-symbols-outlined text-3xl text-indigo-500">account_balance</span>
+                            <span class="text-xs font-mono text-text-muted text-center font-semibold mt-2">6. Exportación</span>
+                            <span class="status-badge status-exported mt-2">📤 Contabilidad</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="text-xs font-mono text-slate-300 mb-2">PASO 6</span>
+                            <p class="text-xs text-center leading-relaxed">Se generan los asientos contables automáticamente en Odoo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Leyenda de estados -->
+            <div class="flex flex-wrap justify-center gap-4 mt-4 animate-on-scroll">
+                <div class="flex items-center gap-2 text-xs text-text-muted">
+                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                    <span>Error posible</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-text-muted">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                    <span>Procesando</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-text-muted">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span>Requiere revisión</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-text-muted">
+                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                    <span>Completado</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CASOS DE USO -->
+<section class="py-20">
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center">
+        <div class="max-w-[1100px] w-full flex flex-col gap-12">
+            <div class="flex flex-col gap-4 text-center items-center">
+                <h3 class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-2">Casos de Uso</h3>
+                <h2 class="text-text-main text-3xl font-light leading-tight">
+                    ¿Quién utiliza <span class="font-semibold">Kairos IA</span>?
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col gap-4 p-6 bg-white border border-border-clinical shadow-clinical">
+                    <span class="material-symbols-outlined text-4xl text-clinical-accent">warehouse</span>
+                    <h4 class="text-lg font-bold text-text-main">Distribuidoras y Mayoristas</h4>
+                    <p class="text-text-muted text-sm font-light leading-relaxed">
+                        Reciben decenas de albaranes diarios de múltiples proveedores. Kairos los digitaliza automáticamente, verificando productos, cantidades y precios.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4 p-6 bg-white border border-border-clinical shadow-clinical">
+                    <span class="material-symbols-outlined text-4xl text-clinical-accent">engineering</span>
+                    <h4 class="text-lg font-bold text-text-main">Empresas de Servicios</h4>
+                    <p class="text-text-muted text-sm font-light leading-relaxed">
+                        Gestionan partes de horas de técnicos y personal de campo. Kairos extrae horas trabajadas, servicios realizados y los integra en facturación.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4 p-6 bg-white border border-border-clinical shadow-clinical">
+                    <span class="material-symbols-outlined text-4xl text-clinical-accent">account_balance</span>
+                    <h4 class="text-lg font-bold text-text-main">Departamentos de Contabilidad</h4>
+                    <p class="text-text-muted text-sm font-light leading-relaxed">
+                        Procesan facturas de proveedores en volumen. Kairos extrae datos fiscales, mapea impuestos y prepara asientos contables.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DATOS EXTRAÍDOS - TABLA DETALLADA -->
+<section class="py-20 bg-white border-y border-border-clinical">
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center">
+        <div class="max-w-[1100px] w-full flex flex-col gap-12">
+            <div class="flex flex-col gap-4 text-center items-center animate-on-scroll">
+                <h3 class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-2">Extracción Detallada</h3>
+                <h2 class="text-text-main text-3xl font-light leading-tight">
+                    Datos que <span class="font-semibold">Kairos extrae</span> automáticamente
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 animate-on-scroll">
+                <!-- Datos del Documento -->
+                <div class="bg-slate-50 border border-border-clinical p-6 rounded-sm">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-border-clinical">
+                        <span class="material-symbols-outlined text-clinical-accent">description</span>
+                        <h4 class="font-bold text-text-main uppercase text-sm tracking-wide">Datos del Documento</h4>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center py-2 border-b border-dashed border-slate-200">
+                            <span class="text-sm text-text-muted">Número de documento</span>
+                            <span class="font-mono text-xs bg-white px-2 py-1 border border-slate-200">STRING</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-dashed border-slate-200">
+                            <span class="text-sm text-text-muted">Fecha de emisión</span>
+                            <span class="font-mono text-xs bg-white px-2 py-1 border border-slate-200">DATE</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-dashed border-slate-200">
+                            <span class="text-sm text-text-muted">Proveedor (nombre, CIF, dirección)</span>
+                            <span class="font-mono text-xs bg-white px-2 py-1 border border-slate-200">OBJECT</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2">
+                            <span class="text-sm text-text-muted">Totales y subtotales</span>
+                            <span class="font-mono text-xs bg-white px-2 py-1 border border-slate-200">DECIMAL</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Líneas de Producto -->
+                <div class="bg-slate-50 border border-border-clinical p-6 rounded-sm">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-border-clinical">
+                        <span class="material-symbols-outlined text-clinical-accent">list_alt</span>
+                        <h4 class="font-bold text-text-main uppercase text-sm tracking-wide">Líneas de Producto</h4>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center py-2 border-b border-dashed border-slate-200">
+                            <span class="text-sm text-text-muted">Descripción del producto</span>
+                            <span class="font-mono text-xs bg-white px-2 py-1 border border-slate-200">STRING</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-dashed border-slate-200">
+                            <span class="text-sm text-text-muted">Cantidad (3 decimales)</span>
+                            <span class="font-mono text-xs bg-white px-2 py-1 border border-slate-200">DECIMAL(3)</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-dashed border-slate-200">
+                            <span class="text-sm text-text-muted">Tipo IVA/IGIC + porcentaje</span>
+                            <span class="font-mono text-xs bg-white px-2 py-1 border border-slate-200">ENUM + %</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2">
+                            <span class="text-sm text-text-muted">Lote y fecha caducidad</span>
+                            <span class="font-mono text-xs bg-white px-2 py-1 border border-slate-200">STRING + DATE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECNOLOGÍA Y REQUISITOS -->
+<section class="bg-primary text-white py-16">
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center">
+        <div class="max-w-[1100px] w-full">
+            <div class="flex flex-col gap-8 text-center items-center mb-12 animate-on-scroll">
+                <h3 class="text-slate-400 text-xs font-bold tracking-[0.2em] uppercase">Stack Tecnológico</h3>
+                <h2 class="text-white text-2xl font-light leading-tight">
+                    Tecnología de <span class="font-semibold">Vanguardia</span>
+                </h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 animate-on-scroll">
+                <div class="flex flex-col items-center gap-2 p-4 border border-slate-600 bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                    <span class="text-xl font-bold">Odoo 18</span>
+                    <span class="text-xs text-slate-400 font-mono">ERP</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-4 border border-slate-600 bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                    <span class="text-xl font-bold">Gemini 2.0</span>
+                    <span class="text-xs text-slate-400 font-mono">IA Vision</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-4 border border-slate-600 bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                    <span class="text-xl font-bold">TheFuzz</span>
+                    <span class="text-xs text-slate-400 font-mono">Matching</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 p-4 border border-slate-600 bg-slate-800/50 hover:bg-slate-700/50 transition-colors">
+                    <span class="text-xl font-bold">Python 3.10+</span>
+                    <span class="text-xs text-slate-400 font-mono">Backend</span>
+                </div>
+            </div>
+            <!-- Requisitos Técnicos -->
+            <div class="border-t border-slate-600 pt-12 animate-on-scroll">
+                <h3 class="text-center text-slate-400 text-xs font-bold tracking-[0.2em] uppercase mb-8">Requisitos del Sistema</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="flex items-center gap-3 p-4 bg-slate-800/30 border border-slate-700">
+                        <span class="material-symbols-outlined text-clinical-accent">verified</span>
+                        <div>
+                            <span class="text-sm font-semibold block">Odoo 18</span>
+                            <span class="text-xs text-slate-400">Community o Enterprise</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 bg-slate-800/30 border border-slate-700">
+                        <span class="material-symbols-outlined text-clinical-accent">cloud</span>
+                        <div>
+                            <span class="text-sm font-semibold block">Google Cloud</span>
+                            <span class="text-xs text-slate-400">API Gemini habilitada</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 bg-slate-800/30 border border-slate-700">
+                        <span class="material-symbols-outlined text-clinical-accent">picture_as_pdf</span>
+                        <div>
+                            <span class="text-sm font-semibold block">Poppler</span>
+                            <span class="text-xs text-slate-400">Conversión PDF</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 bg-slate-800/30 border border-slate-700">
+                        <span class="material-symbols-outlined text-clinical-accent">terminal</span>
+                        <div>
+                            <span class="text-sm font-semibold block">Python Deps</span>
+                            <span class="text-xs text-slate-400 font-mono">pip install</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-slate-900/50 border border-slate-700 font-mono text-xs text-slate-300">
+                    <span class="text-clinical-accent">$</span> pip install google-generativeai thefuzz pdf2image
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-20 lg:py-28 relative">
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center">
+        <div class="max-w-[1100px] w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <div class="flex flex-col gap-10 pt-4">
+                    <div class="flex flex-col gap-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 border border-primary w-fit bg-white shadow-sm">
+                            <span class="material-symbols-outlined text-primary text-sm">architecture</span>
+                            <span class="text-primary text-xs font-bold tracking-widest uppercase font-mono">SPEC.V.2.4</span>
+                        </div>
+                        <h2 class="text-text-main text-4xl lg:text-5xl font-light leading-tight">
+                            Optimización de<br/><span class="font-bold">Gestión Documental</span>
+                        </h2>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-px h-24 bg-primary/30 mt-1"></div>
+                            <p class="text-text-muted text-lg font-light leading-relaxed max-w-md">
+                                Protocolo de digitalización activo. Únete a las empresas que automatizan sus facturas en Odoo 18, eliminando el error humano mediante precisión algorítmica.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-px border border-border-clinical bg-white shadow-soft">
+                        <div class="flex items-center gap-6 p-6 border-b border-border-clinical group hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-primary shrink-0">
+                                <span class="material-symbols-outlined text-xl">hub</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-text-main font-bold text-sm uppercase tracking-wide">Integración Odoo 18</span>
+                                <span class="text-slate-400 text-xs font-mono">NATIVE_COMPATIBILITY</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 border-b border-border-clinical group hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-primary shrink-0">
+                                <span class="material-symbols-outlined text-xl">schedule</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-text-main font-bold text-sm uppercase tracking-wide">Implementación Rápida</span>
+                                <span class="text-slate-400 text-xs font-mono">T &lt; 24H</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 group hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-primary shrink-0">
+                                <span class="material-symbols-outlined text-xl">encrypted</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-text-main font-bold text-sm uppercase tracking-wide">Seguridad Enterprise</span>
+                                <span class="text-slate-400 text-xs font-mono">AES-256 ENCRYPTION</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-12 -right-12 w-64 h-64 border border-border-clinical rounded-full opacity-40 pointer-events-none border-dashed animate-[spin_60s_linear_infinite]"></div>
+                    <div class="relative bg-white border border-border-clinical shadow-soft p-8 sm:p-10 lg:p-12">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+                        <div class="flex items-center justify-between mb-10 border-b border-slate-100 pb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-text-main uppercase tracking-tight">Solicitar Demo</h3>
+                                <p class="text-slate-400 text-xs font-mono mt-1">REF: FORM-REQ-01</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                                <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+                                <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+                            </div>
+                        </div>
+                        <form id="contact-form" class="flex flex-col gap-6" onsubmit="return validateForm(event)">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <label class="flex flex-col w-full group">
+                                    <span class="text-text-main text-xs font-bold uppercase tracking-wider mb-2 font-mono">Nombre <span class="text-red-500">*</span></span>
+                                    <input id="form-name" class="flex w-full bg-gray-50 border border-border-clinical text-text-main h-11 px-3 py-2 text-sm placeholder-gray-400 transition-all focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Nombre completo" type="text" required/>
+                                    <span class="error-message" id="name-error">Por favor, introduce tu nombre</span>
+                                </label>
+                                <label class="flex flex-col w-full group">
+                                    <span class="text-text-main text-xs font-bold uppercase tracking-wider mb-2 font-mono">Email <span class="text-red-500">*</span></span>
+                                    <input id="form-email" class="flex w-full bg-gray-50 border border-border-clinical text-text-main h-11 px-3 py-2 text-sm placeholder-gray-400 transition-all focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="email@empresa.com" type="email" required/>
+                                    <span class="error-message" id="email-error">Por favor, introduce un email válido</span>
+                                </label>
+                            </div>
+                            <label class="flex flex-col w-full group">
+                                <span class="text-text-main text-xs font-bold uppercase tracking-wider mb-2 font-mono">Empresa</span>
+                                <input id="form-company" class="flex w-full bg-gray-50 border border-border-clinical text-text-main h-11 px-3 py-2 text-sm placeholder-gray-400 transition-all focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Nombre de tu empresa" type="text"/>
+                            </label>
+                            <label class="flex flex-col w-full group">
+                                <span class="text-text-main text-xs font-bold uppercase tracking-wider mb-2 font-mono">Categoría</span>
+                                <select id="form-category" class="flex w-full bg-gray-50 border border-border-clinical text-text-main h-11 px-3 py-2 text-sm appearance-none transition-all focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+                                    <option value="demo">Solicitar Demo Técnica</option>
+                                    <option value="pricing">Consultar Tarifas</option>
+                                    <option value="support">Soporte Técnico</option>
+                                    <option value="other">Otras Consultas</option>
+                                </select>
+                            </label>
+                            <label class="flex flex-col w-full group">
+                                <span class="text-text-main text-xs font-bold uppercase tracking-wider mb-2 font-mono">Mensaje</span>
+                                <textarea id="form-message" class="flex w-full bg-gray-50 border border-border-clinical text-text-main min-h-[100px] px-3 py-2 text-sm placeholder-gray-400 transition-all focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Describa los requerimientos específicos del sistema..."></textarea>
+                            </label>
+                            <div class="flex items-center justify-between pt-4 mt-2 border-t border-slate-100 flex-wrap gap-4">
+                                <p class="text-[10px] text-slate-400 max-w-[200px] leading-tight font-mono">
+                                    Al procesar esta solicitud, confirma conformidad con el protocolo de Privacidad.
+                                </p>
+                                <button type="submit" id="submit-btn" class="bg-slate-200 hover:bg-primary text-text-main hover:text-white font-bold h-12 px-6 transition-all duration-300 flex items-center gap-3 text-sm tracking-wide uppercase font-mono border border-gray-300 hover:border-primary">
+                                    <span id="btn-text">Ejecutar</span>
+                                    <span class="material-symbols-outlined text-lg" id="btn-icon">arrow_forward</span>
+                                </button>
+                            </div>
+                            <!-- Mensaje de éxito -->
+                            <div id="success-message" class="hidden p-4 bg-green-50 border border-green-200 rounded-sm">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-green-600">check_circle</span>
+                                    <div>
+                                        <p class="text-green-800 font-semibold text-sm">¡Mensaje enviado!</p>
+                                        <p class="text-green-600 text-xs">Nos pondremos en contacto contigo pronto.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-border-clinical bg-white">
+    <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center py-10">
+        <div class="max-w-[1200px] w-full">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+                <div class="flex flex-col gap-2">
+                    <img src="logo2.jpeg" alt="Kairos IA" class="h-[180px] w-auto object-contain mix-blend-multiply">
+                    <p class="text-slate-400 text-[10px] font-mono leading-normal">© 2024 KAIROS DIGITALIZACIÓN. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-8">
+                    <a class="text-text-muted hover:text-text-main text-[11px] font-medium uppercase tracking-wide transition-colors" href="#">Privacidad</a>
+                    <a class="text-text-muted hover:text-text-main text-[11px] font-medium uppercase tracking-wide transition-colors" href="#">Términos</a>
+                    <a class="text-text-muted hover:text-text-main text-[11px] font-medium uppercase tracking-wide transition-colors" href="#">Soporte</a>
+                </div>
+                <div class="flex gap-4">
+                    <a class="group w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 hover:border-slate-800 transition-colors" href="#">
+                        <span class="material-symbols-outlined text-slate-400 group-hover:text-slate-800 text-sm">groups</span>
+                    </a>
+                    <a class="group w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 hover:border-slate-800 transition-colors" href="#">
+                        <span class="material-symbols-outlined text-slate-400 group-hover:text-slate-800 text-sm">chat_bubble</span>
+                    </a>
+                    <a class="group w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 hover:border-slate-800 transition-colors" href="#">
+                        <span class="material-symbols-outlined text-slate-400 group-hover:text-slate-800 text-sm">mail</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+// ===================
+// Menú Móvil
+// ===================
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
+
+if (mobileMenuBtn && mobileMenu && menuIcon) {
+    mobileMenuBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const isOpen = mobileMenu.classList.contains('open');
+        
+        if (isOpen) {
+            mobileMenu.classList.remove('open');
+            menuIcon.textContent = 'menu';
+        } else {
+            mobileMenu.classList.add('open');
+            menuIcon.textContent = 'close';
+        }
+    });
+}
+
+function closeMobileMenu() {
+    if (mobileMenu && menuIcon) {
+        mobileMenu.classList.remove('open');
+        menuIcon.textContent = 'menu';
+    }
+}
+
+// Cerrar menú al hacer clic fuera
+document.addEventListener('click', function(e) {
+    if (mobileMenu && mobileMenu.classList.contains('open')) {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            closeMobileMenu();
+        }
+    }
+});
+
+// ===================
+// Animaciones al Scroll
+// ===================
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+});
+
+// ===================
+// Validación del Formulario
+// ===================
+function validateForm(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('form-name');
+    const email = document.getElementById('form-email');
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnIcon = document.getElementById('btn-icon');
+    const successMessage = document.getElementById('success-message');
+    
+    let isValid = true;
+    
+    // Reset errores
+    name.classList.remove('input-error');
+    email.classList.remove('input-error');
+    nameError.classList.remove('show');
+    emailError.classList.remove('show');
+    
+    // Validar nombre
+    if (!name.value.trim()) {
+        name.classList.add('input-error');
+        nameError.classList.add('show');
+        isValid = false;
+    }
+    
+    // Validar email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim() || !emailRegex.test(email.value)) {
+        email.classList.add('input-error');
+        emailError.classList.add('show');
+        isValid = false;
+    }
+    
+    if (isValid) {
+        // Simular envío
+        btnText.textContent = 'Enviando...';
+        btnIcon.textContent = 'hourglass_empty';
+        btnIcon.classList.add('animate-spin');
+        submitBtn.disabled = true;
+        
+        setTimeout(() => {
+            btnText.textContent = '¡Enviado!';
+            btnIcon.textContent = 'check';
+            btnIcon.classList.remove('animate-spin');
+            submitBtn.classList.add('bg-green-600', 'border-green-600', 'text-white');
+            successMessage.classList.remove('hidden');
+            
+            // Reset después de 3 segundos
+            setTimeout(() => {
+                document.getElementById('contact-form').reset();
+                btnText.textContent = 'Ejecutar';
+                btnIcon.textContent = 'arrow_forward';
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('bg-green-600', 'border-green-600', 'text-white');
+                successMessage.classList.add('hidden');
+            }, 5000);
+        }, 1500);
+    }
+    
+    return false;
+}
+
+// Quitar error al escribir
+document.getElementById('form-name').addEventListener('input', function() {
+    this.classList.remove('input-error');
+    document.getElementById('name-error').classList.remove('show');
+});
+
+document.getElementById('form-email').addEventListener('input', function() {
+    this.classList.remove('input-error');
+    document.getElementById('email-error').classList.remove('show');
+});
+
+// ===================
+// Efecto parallax suave en hero
+// ===================
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.getElementById('inicio');
+    if (hero && scrolled < 600) {
+        hero.style.transform = `translateY(${scrolled * 0.1}px)`;
+    }
+});
+
+// ===================
+// Contador animado (stats)
+// ===================
+function animateValue(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        element.textContent = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+</script>
+
+</body>
+</html>
+
