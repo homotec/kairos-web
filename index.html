@@ -348,6 +348,70 @@
                 filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.3)) brightness(1.05);
             }
         }
+
+        /* --- PIPELINE ANIMATION --- */
+        .pipeline-node {
+            transition: all 0.5s ease;
+        }
+
+        .data-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #0ea5e9;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        @keyframes particle-flow {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: var(--travel);
+                opacity: 0;
+            }
+        }
+
+        .animate-flow-1 {
+            animation: particle-flow 3s infinite 0s;
+        }
+
+        .animate-flow-2 {
+            animation: particle-flow 3s infinite 0.5s;
+        }
+
+        .animate-flow-3 {
+            animation: particle-flow 3s infinite 1.0s;
+        }
+
+        .ai-core-glow {
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+            animation: core-pulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes core-pulse {
+            from {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+            }
+
+            to {
+                transform: scale(1.05);
+                box-shadow: 0 0 50px rgba(14, 165, 233, 0.4);
+            }
+        }
     </style>
 </head>
 
@@ -968,6 +1032,113 @@
                                     class="w-full h-full object-cover blue-glow-pulse">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIPELINE EXPLAINER -->
+    <section id="pipeline" class="bg-slate-900 py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(#0ea5e9 0.5px, transparent 0.5px); background-size: 30px 30px;">
+        </div>
+
+        <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center relative z-10">
+            <div class="max-w-[1200px] w-full flex flex-col gap-16">
+                <div class="flex flex-col items-center text-center gap-4 animate-on-scroll">
+                    <h2 class="text-white text-3xl md:text-5xl font-light tracking-tight uppercase">
+                        El Viaje del <span class="text-clinical-accent font-bold">Dato</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm font-mono tracking-widest uppercase">Secuencia de Procesamiento en
+                        Tiempo Real</p>
+                </div>
+
+                <div
+                    class="relative min-h-[400px] flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4 px-12">
+
+                    <!-- Fase 1: Captura -->
+                    <div class="flex flex-col items-center gap-6 relative z-20 w-48 animate-on-scroll delay-1">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center relative group">
+                            <span
+                                class="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform">cloud_upload</span>
+                            <div
+                                class="absolute -top-2 -right-2 bg-clinical-accent text-[9px] font-bold text-white px-2 py-0.5 rounded">
+                                INPUT</div>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-white font-bold text-sm uppercase">1. Captura</h4>
+                            <p class="text-slate-500 text-[11px] font-mono mt-1">PDF / IMG / PHOTO</p>
+                        </div>
+                    </div>
+
+                    <!-- Line Connection 1 -->
+                    <div
+                        class="hidden lg:block flex-grow h-px bg-gradient-to-r from-white/10 via-clinical-accent to-white/10 relative">
+                        <div class="data-particle animate-flow-1" style="--travel: translateX(300px)"></div>
+                        <div class="data-particle animate-flow-2" style="--travel: translateX(300px)"></div>
+                        <div class="data-particle animate-flow-3" style="--travel: translateX(300px)"></div>
+                    </div>
+
+                    <!-- Fase 2: IA Processing -->
+                    <div class="flex flex-col items-center gap-6 relative z-20 w-64 animate-on-scroll delay-2">
+                        <div
+                            class="w-32 h-32 rounded-full bg-clinical-accent/10 border border-clinical-accent/30 flex items-center justify-center relative ai-core-glow">
+                            <span class="material-symbols-outlined text-clinical-accent text-6xl">psychology</span>
+                            <!-- Rotating Ring -->
+                            <div
+                                class="absolute inset-[-10px] border border-dashed border-clinical-accent/20 rounded-full animate-[spin_10s_linear_infinite]">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-clinical-accent font-bold text-lg uppercase">2. Google Gemini</h4>
+                            <p class="text-slate-400 text-xs font-light max-w-[180px]">Visión Artificial y Razonamiento
+                                Contextual</p>
+                        </div>
+                    </div>
+
+                    <!-- Line Connection 2 -->
+                    <div
+                        class="hidden lg:block flex-grow h-px bg-gradient-to-r from-white/10 via-clinical-accent to-white/10 relative">
+                        <div class="data-particle animate-flow-1" style="--travel: translateX(300px)"></div>
+                        <div class="data-particle animate-flow-2" style="--travel: translateX(300px)"></div>
+                        <div class="data-particle animate-flow-3" style="--travel: translateX(300px)"></div>
+                    </div>
+
+                    <!-- Fase 3: Destinación -->
+                    <div class="flex flex-col items-center gap-6 relative z-20 w-48 animate-on-scroll delay-3">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group">
+                            <span
+                                class="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform">database</span>
+                            <div
+                                class="absolute -bottom-2 -right-2 bg-green-500 text-[9px] font-bold text-white px-2 py-0.5 rounded uppercase">
+                                Success</div>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-white font-bold text-sm uppercase">3. Odoo ERP</h4>
+                            <p class="text-slate-500 text-[11px] font-mono mt-1">Accounting / Stock</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                        <span class="text-clinical-accent font-mono text-xs mb-2 block">LATENCY_RED</span>
+                        <p class="text-slate-300 text-xs font-light">Procesamiento paralelo que reduce los tiempos de
+                            espera en un 94%.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                        <span class="text-clinical-accent font-mono text-xs mb-2 block">ACCURACY_CHK</span>
+                        <p class="text-slate-300 text-xs font-light">Validación cruzada mediante reglas de negocio
+                            predefinidas en el ERP.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                        <span class="text-clinical-accent font-mono text-xs mb-2 block">AUTO_LEARN</span>
+                        <p class="text-slate-300 text-xs font-light">El sistema aprende de las correcciones de usuario
+                            para futuros documentos.</p>
                     </div>
                 </div>
             </div>
