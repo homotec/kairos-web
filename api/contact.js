@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
         'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'Kairos IA <onboarding@resend.dev>',
+        from: 'Kairos IA <notificaciones@kairosia.digital>',
         to: [RECIPIENT_EMAIL],
         subject: `Nueva solicitud de Demo: ${name}`,
         html: `
