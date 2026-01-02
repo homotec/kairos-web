@@ -349,67 +349,129 @@
             }
         }
 
-        /* --- PIPELINE ANIMATION --- */
-        .pipeline-node {
-            transition: all 0.5s ease;
+        /* --- SPECTACULAR PIPELINE UPGRADE --- */
+        .hex-grid {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='104' viewBox='0 0 60 104' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 17.32v34.64L30 69.28 0 51.96V17.32L30 0z' fill='none' stroke='%230ea5e9' stroke-opacity='0.1' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: 60px 104px;
+            opacity: 0.3;
+            pointer-events: none;
         }
 
-        .data-particle {
+        .celestial-ring {
             position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #0ea5e9;
+            border: 1px solid rgba(14, 165, 233, 0.4);
             border-radius: 50%;
             pointer-events: none;
-            opacity: 0;
         }
 
-        @keyframes particle-flow {
+        .ring-1 {
+            width: 140%;
+            height: 140%;
+            animation: orbit 4s linear infinite;
+            transform: rotateX(70deg) rotateY(10deg);
+        }
+
+        .ring-2 {
+            width: 170%;
+            height: 170%;
+            animation: orbit 6s linear infinite reverse;
+            transform: rotateX(-30deg) rotateY(40deg);
+        }
+
+        .ring-3 {
+            width: 200%;
+            height: 200%;
+            animation: orbit 8s linear infinite;
+            transform: rotateX(20deg) rotateY(-60deg);
+        }
+
+        @keyframes orbit {
+            from {
+                transform: var(--initial-rot) rotate(0deg);
+            }
+
+            to {
+                transform: var(--initial-rot) rotate(360deg);
+            }
+        }
+
+        /* SVG Energy Path Animation */
+        .energy-path {
+            fill: none;
+            stroke: #0ea5e9;
+            stroke-width: 2;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 5s linear infinite;
+            filter: drop-shadow(0 0 5px #0ea5e9);
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -1000;
+            }
+        }
+
+        .path-glow {
+            filter: blur(4px);
+            opacity: 0.3;
+        }
+
+        .shockwave {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.4) 0%, transparent 70%);
+            animation: shock 2s ease-out infinite;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes shock {
             0% {
-                transform: translate(0, 0);
-                opacity: 0;
-            }
-
-            20% {
-                opacity: 1;
-            }
-
-            80% {
+                transform: scale(1);
                 opacity: 1;
             }
 
             100% {
-                transform: var(--travel);
+                transform: scale(3);
                 opacity: 0;
             }
         }
 
-        .animate-flow-1 {
-            animation: particle-flow 3s infinite 0s;
+        .tech-glitch {
+            animation: glitch-flicker 4s infinite;
         }
 
-        .animate-flow-2 {
-            animation: particle-flow 3s infinite 0.5s;
-        }
+        @keyframes glitch-flicker {
 
-        .animate-flow-3 {
-            animation: particle-flow 3s infinite 1.0s;
-        }
-
-        .ai-core-glow {
-            box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
-            animation: core-pulse 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes core-pulse {
-            from {
-                transform: scale(1);
-                box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+            0%,
+            95%,
+            100% {
+                opacity: 1;
+                filter: none;
             }
 
-            to {
-                transform: scale(1.05);
-                box-shadow: 0 0 50px rgba(14, 165, 233, 0.4);
+            96% {
+                opacity: 0.8;
+                filter: hue-rotate(90deg) skewX(2deg);
+            }
+
+            97% {
+                opacity: 0.9;
+                filter: hue-rotate(-90deg) blur(1px);
+            }
+
+            98% {
+                opacity: 0.7;
+                filter: contrast(200%);
+            }
+
+            99% {
+                opacity: 1;
+                filter: none;
             }
         }
     </style>
@@ -1039,106 +1101,153 @@
     </section>
 
     <!-- PIPELINE EXPLAINER -->
-    <section id="pipeline" class="bg-slate-900 py-24 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10"
-            style="background-image: radial-gradient(#0ea5e9 0.5px, transparent 0.5px); background-size: 30px 30px;">
+    <section id="pipeline" class="bg-slate-950 py-24 relative overflow-hidden">
+        <div class="hex-grid"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900 via-transparent to-slate-900 pointer-events-none">
         </div>
 
         <div class="px-6 sm:px-10 lg:px-40 flex flex-1 justify-center relative z-10">
             <div class="max-w-[1200px] w-full flex flex-col gap-16">
                 <div class="flex flex-col items-center text-center gap-4 animate-on-scroll">
-                    <h2 class="text-white text-3xl md:text-5xl font-light tracking-tight uppercase">
-                        El Viaje del <span class="text-clinical-accent font-bold">Dato</span>
+                    <h2 class="text-white text-3xl md:text-5xl font-light tracking-tight uppercase tech-glitch">
+                        Mecánica <span class="text-clinical-accent font-bold">Kairos IA</span>
                     </h2>
-                    <p class="text-slate-400 text-sm font-mono tracking-widest uppercase">Secuencia de Procesamiento en
-                        Tiempo Real</p>
+                    <p class="text-clinical-accent text-xs font-mono tracking-[0.4em] uppercase opacity-70">Neural
+                        Pipeline Sequence_v2.0</p>
                 </div>
 
                 <div
-                    class="relative min-h-[400px] flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4 px-12">
+                    class="relative min-h-[500px] flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4 px-4">
+
+                    <!-- SVG CONNECTION SYSTEM -->
+                    <div class="absolute inset-0 hidden lg:block pointer-events-none z-0">
+                        <svg class="w-full h-full" viewBox="0 0 1000 400" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:rgba(14,165,233,0);stop-opacity:0" />
+                                    <stop offset="50%" style="stop-color:rgba(14,165,233,0.5);stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:rgba(14,165,233,0);stop-opacity:0" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Path Capture to AI -->
+                            <path class="path-glow" d="M 200 200 C 350 200, 350 200, 500 200" stroke="url(#grad1)"
+                                stroke-width="4" fill="none" />
+                            <path class="energy-path" d="M 200 200 C 350 200, 350 200, 500 200" fill="none" />
+
+                            <!-- Path AI to Odoo -->
+                            <path class="path-glow" d="M 500 200 C 650 200, 650 200, 800 200" stroke="url(#grad1)"
+                                stroke-width="4" fill="none" />
+                            <path class="energy-path" d="M 500 200 C 650 200, 650 200, 800 200" fill="none"
+                                style="animation-delay: -2s;" />
+                        </svg>
+                    </div>
 
                     <!-- Fase 1: Captura -->
-                    <div class="flex flex-col items-center gap-6 relative z-20 w-48 animate-on-scroll delay-1">
+                    <div class="flex flex-col items-center gap-6 relative z-20 w-48 animate-on-scroll delay-1 group">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center relative group">
+                            class="w-24 h-24 rounded-2xl bg-white/5 border border-white/20 flex items-center justify-center relative backdrop-blur-sm group-hover:border-clinical-accent/50 transition-all duration-500">
                             <span
-                                class="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform">cloud_upload</span>
+                                class="material-symbols-outlined text-white text-5xl group-hover:scale-110 transition-transform duration-500">upload_file</span>
                             <div
-                                class="absolute -top-2 -right-2 bg-clinical-accent text-[9px] font-bold text-white px-2 py-0.5 rounded">
-                                INPUT</div>
+                                class="absolute -top-3 -right-3 bg-clinical-accent text-[10px] font-bold text-white px-3 py-1 rounded shadow-lg shadow-clinical-accent/20">
+                                INPUT_MOD</div>
+                            <!-- Pulse Effect -->
+                            <div class="absolute inset-0 rounded-2xl animate-ping bg-clinical-accent/10"></div>
                         </div>
                         <div class="text-center">
-                            <h4 class="text-white font-bold text-sm uppercase">1. Captura</h4>
-                            <p class="text-slate-500 text-[11px] font-mono mt-1">PDF / IMG / PHOTO</p>
+                            <h4
+                                class="text-white font-bold text-base uppercase tracking-wider group-hover:text-clinical-accent transition-colors">
+                                1. Captura Digital</h4>
+                            <p class="text-slate-500 text-[11px] font-mono mt-1">Multi-Format Extraction</p>
                         </div>
                     </div>
 
-                    <!-- Line Connection 1 -->
-                    <div
-                        class="hidden lg:block flex-grow h-px bg-gradient-to-r from-white/10 via-clinical-accent to-white/10 relative">
-                        <div class="data-particle animate-flow-1" style="--travel: translateX(300px)"></div>
-                        <div class="data-particle animate-flow-2" style="--travel: translateX(300px)"></div>
-                        <div class="data-particle animate-flow-3" style="--travel: translateX(300px)"></div>
-                    </div>
+                    <!-- Fase 2: AI Processing (SPECTACULAR CORE) -->
+                    <div class="flex flex-col items-center gap-8 relative z-20 w-80 animate-on-scroll delay-2">
+                        <div class="relative w-40 h-40 flex items-center justify-center">
+                            <!-- Celestial Rings -->
+                            <div class="celestial-ring ring-1" style="--initial-rot: rotateX(70deg) rotateY(10deg)">
+                            </div>
+                            <div class="celestial-ring ring-2" style="--initial-rot: rotateX(-30deg) rotateY(40deg)">
+                            </div>
+                            <div class="celestial-ring ring-3" style="--initial-rot: rotateX(20deg) rotateY(-60deg)">
+                            </div>
 
-                    <!-- Fase 2: IA Processing -->
-                    <div class="flex flex-col items-center gap-6 relative z-20 w-64 animate-on-scroll delay-2">
-                        <div
-                            class="w-32 h-32 rounded-full bg-clinical-accent/10 border border-clinical-accent/30 flex items-center justify-center relative ai-core-glow">
-                            <span class="material-symbols-outlined text-clinical-accent text-6xl">psychology</span>
-                            <!-- Rotating Ring -->
+                            <!-- Core Orbe -->
                             <div
-                                class="absolute inset-[-10px] border border-dashed border-clinical-accent/20 rounded-full animate-[spin_10s_linear_infinite]">
+                                class="w-20 h-20 rounded-full bg-clinical-accent border border-white/30 flex items-center justify-center relative ai-core-glow z-10 overflow-hidden">
+                                <span class="material-symbols-outlined text-white text-5xl relative z-10">bolt</span>
+                                <!-- Internal liquid effect -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                <div class="shockwave"></div>
+                            </div>
+
+                            <!-- External Particles Halo -->
+                            <div class="absolute inset-0 animate-[spin_20s_linear_infinite] opacity-50">
+                                <div class="absolute top-0 left-1/2 w-1 h-1 bg-white rounded-full"></div>
+                                <div class="absolute bottom-0 left-1/2 w-1 h-1 bg-white rounded-full"></div>
+                                <div class="absolute left-0 top-1/2 w-1 h-1 bg-white rounded-full"></div>
+                                <div class="absolute right-0 top-1/2 w-1 h-1 bg-white rounded-full"></div>
                             </div>
                         </div>
                         <div class="text-center">
-                            <h4 class="text-clinical-accent font-bold text-lg uppercase">2. Google Gemini</h4>
-                            <p class="text-slate-400 text-xs font-light max-w-[180px]">Visión Artificial y Razonamiento
-                                Contextual</p>
+                            <h4 class="text-clinical-accent font-bold text-xl uppercase tracking-[0.2em]">Cerebro Gemini
+                            </h4>
+                            <div class="flex items-center justify-center gap-3 mt-2">
+                                <span class="text-[10px] text-slate-400 font-mono">VISION_AI</span>
+                                <div class="w-1 h-1 bg-slate-600 rounded-full"></div>
+                                <span class="text-[10px] text-slate-400 font-mono">NEURAL_SYNC</span>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Line Connection 2 -->
-                    <div
-                        class="hidden lg:block flex-grow h-px bg-gradient-to-r from-white/10 via-clinical-accent to-white/10 relative">
-                        <div class="data-particle animate-flow-1" style="--travel: translateX(300px)"></div>
-                        <div class="data-particle animate-flow-2" style="--travel: translateX(300px)"></div>
-                        <div class="data-particle animate-flow-3" style="--travel: translateX(300px)"></div>
                     </div>
 
                     <!-- Fase 3: Destinación -->
-                    <div class="flex flex-col items-center gap-6 relative z-20 w-48 animate-on-scroll delay-3">
+                    <div class="flex flex-col items-center gap-6 relative z-20 w-48 animate-on-scroll delay-3 group">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group">
+                            class="w-24 h-24 rounded-2xl bg-white/5 border border-white/20 flex items-center justify-center relative backdrop-blur-sm group-hover:border-green-500/50 transition-all duration-500">
                             <span
-                                class="material-symbols-outlined text-white text-4xl group-hover:scale-110 transition-transform">database</span>
+                                class="material-symbols-outlined text-white text-5xl group-hover:scale-110 transition-transform duration-500">account_balance</span>
                             <div
-                                class="absolute -bottom-2 -right-2 bg-green-500 text-[9px] font-bold text-white px-2 py-0.5 rounded uppercase">
-                                Success</div>
+                                class="absolute -bottom-3 -right-3 bg-green-500 text-[10px] font-bold text-white px-3 py-1 rounded shadow-lg shadow-green-500/20 uppercase">
+                                Odoo_Ready</div>
                         </div>
                         <div class="text-center">
-                            <h4 class="text-white font-bold text-sm uppercase">3. Odoo ERP</h4>
-                            <p class="text-slate-500 text-[11px] font-mono mt-1">Accounting / Stock</p>
+                            <h4
+                                class="text-white font-bold text-base uppercase tracking-wider group-hover:text-green-500 transition-colors">
+                                3. Odoo Native</h4>
+                            <p class="text-slate-500 text-[11px] font-mono mt-1">Direct API Injection</p>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    <div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
-                        <span class="text-clinical-accent font-mono text-xs mb-2 block">LATENCY_RED</span>
-                        <p class="text-slate-300 text-xs font-light">Procesamiento paralelo que reduce los tiempos de
-                            espera en un 94%.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div
+                        class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-clinical-accent/50 transition-all duration-500 backdrop-blur-sm">
+                        <div
+                            class="text-clinical-accent font-mono text-[10px] mb-4 tracking-[0.3em] uppercase opacity-70">
+                            Extraction_Efficiency</div>
+                        <h5 class="text-white text-lg font-bold mb-2 uppercase">99.9% Fidelidad</h5>
+                        <p class="text-slate-400 text-xs font-light leading-relaxed">Elimina el error humano mediante
+                            validación neuronal multicapa en tiempo real.</p>
                     </div>
-                    <div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
-                        <span class="text-clinical-accent font-mono text-xs mb-2 block">ACCURACY_CHK</span>
-                        <p class="text-slate-300 text-xs font-light">Validación cruzada mediante reglas de negocio
-                            predefinidas en el ERP.</p>
+                    <div
+                        class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-clinical-accent/50 transition-all duration-500 backdrop-blur-sm">
+                        <div
+                            class="text-clinical-accent font-mono text-[10px] mb-4 tracking-[0.3em] uppercase opacity-70">
+                            Process_Velocity</div>
+                        <h5 class="text-white text-lg font-bold mb-2 uppercase">&lt; 3 Segundos</h5>
+                        <p class="text-slate-400 text-xs font-light leading-relaxed">Desde la foto hasta el asiento
+                            contable en segundos. Velocidad sin precedentes.</p>
                     </div>
-                    <div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
-                        <span class="text-clinical-accent font-mono text-xs mb-2 block">AUTO_LEARN</span>
-                        <p class="text-slate-300 text-xs font-light">El sistema aprende de las correcciones de usuario
-                            para futuros documentos.</p>
+                    <div
+                        class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-clinical-accent/50 transition-all duration-500 backdrop-blur-sm">
+                        <div
+                            class="text-clinical-accent font-mono text-[10px] mb-4 tracking-[0.3em] uppercase opacity-70">
+                            Native_Stack</div>
+                        <h5 class="text-white text-lg font-bold mb-2 uppercaseIntegración Total</h5>
+                        <p class=" text-slate-400 text-xs font-light leading-relaxed">Sin archivos intermedios. Kairos
+                            habla el mismo lenguaje que tu base de datos Odoo.</p>
                     </div>
                 </div>
             </div>
