@@ -2093,7 +2093,8 @@
                             successMessage.classList.add('hidden');
                         }, 5000);
                     } else {
-                        throw new Error('Error en el envío');
+                        const errorData = await response.json();
+                        throw new Error(errorData.details || errorData.error || 'Error en el servidor');
                     }
                 } catch (error) {
                     console.error('Error:', error);
@@ -2104,6 +2105,8 @@
 
                     if (window.location.protocol === 'file:') {
                         alert('⚠️ El formulario de contacto solo funciona en la web publicada de Vercel (no abriendo el archivo localmente).');
+                    } else {
+                        alert('❌ Error: ' + error.message);
                     }
 
                     setTimeout(() => {
