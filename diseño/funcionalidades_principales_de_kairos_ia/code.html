@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kairos IA - Funcionalidades Principales</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&amp;family=Noto+Sans:wght@300;400;500;700&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kairos IA - Funcionalidades Principales</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&amp;family=Noto+Sans:wght@300;400;500;700&amp;family=Share+Tech+Mono&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             theme: {
                 extend: {
@@ -32,8 +38,8 @@
             },
         }
     </script>
-<style type="text/tailwindcss">
-    @layer utilities {
+    <style type="text/tailwindcss">
+        @layer utilities {
         .grid-bg {
             background-color: #f8fafc;
             background-image: 
@@ -66,278 +72,348 @@
     }
 </style>
 </head>
-<body class="bg-clinical-bg text-clinical-dark font-body antialiased">
-<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden grid-bg">
-<div class="flex h-auto flex-col w-full bg-clinical-surface border-b border-clinical-light sticky top-0 z-50">
-<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-3">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap">
-<div class="flex items-center gap-3">
-<div class="size-8 text-clinical-accent">
-<span class="material-symbols-outlined !text-3xl font-light">token</span>
-</div>
-<h2 class="text-clinical-dark text-lg font-bold leading-tight tracking-tight font-display">KAIROS_IA</h2>
-</div>
-<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
-<div class="flex items-center gap-8 font-mono text-xs tracking-wider">
-<a class="text-clinical-med hover:text-clinical-dark transition-colors uppercase" href="#">Home</a>
-<a class="text-clinical-med hover:text-clinical-dark transition-colors uppercase" href="#">Modules</a>
-<a class="text-clinical-med hover:text-clinical-dark transition-colors uppercase" href="#">Cost</a>
-<a class="text-clinical-med hover:text-clinical-dark transition-colors uppercase" href="#">Contact</a>
-</div>
-<button class="flex cursor-pointer items-center justify-center border border-clinical-light bg-clinical-bg hover:bg-white hover:shadow-soft transition-all duration-300 h-9 px-6 text-xs font-bold font-mono text-clinical-dark uppercase tracking-wider rounded-sm">
-<span>Area_Cliente</span>
-</button>
-</div>
-<div class="md:hidden text-clinical-dark">
-<span class="material-symbols-outlined cursor-pointer">menu</span>
-</div>
-</header>
-</div>
-</div>
-</div>
-<div class="flex h-auto grow flex-col relative">
-<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-12 relative z-10">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<div class="@container">
-<div class="flex flex-col gap-12 px-4 py-10 @[864px]:flex-row items-center border-b border-clinical-light pb-20">
-<div class="flex flex-col gap-8 @[864px]:w-1/2 flex-1">
-<div class="flex flex-col gap-4 text-left">
-<div class="inline-flex items-center gap-2 mb-2">
-<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-<span class="text-xs font-mono text-clinical-med tracking-widest uppercase">Sistema Operativo v18.0</span>
-</div>
-<h1 class="text-clinical-dark text-4xl font-light leading-tight tracking-tight @[480px]:text-5xl font-display">
-                                    Digitalización <br/><span class="font-bold">Inteligente</span>
-</h1>
-<div class="text-clinical-med text-sm font-mono leading-relaxed pl-4 border-l border-clinical-light">
-<p> &gt; Inicializando protocolos de automatización...</p>
-<p> &gt; Integrando IA en núcleo ERP...</p>
-<p> &gt; Estado: ONLINE</p>
-</div>
-</div>
-<div class="flex flex-wrap gap-4">
-<button class="flex min-w-[140px] cursor-pointer items-center justify-center h-11 px-6 bg-clinical-dark text-white text-sm font-semibold tracking-wide hover:bg-slate-700 transition-all font-display rounded-sm shadow-soft">
-<span class="truncate">EJECUTAR DEMO</span>
-</button>
-<button class="flex min-w-[140px] cursor-pointer items-center justify-center h-11 px-6 bg-transparent border border-clinical-light text-clinical-dark text-sm font-semibold tracking-wide hover:bg-white transition-colors font-display rounded-sm hover:border-clinical-med">
-<span class="truncate">VER LOGS DE VIDEO</span>
-</button>
-</div>
-</div>
-<div class="w-full @[864px]:w-1/2 aspect-video bg-clinical-surface border border-clinical-light relative p-2 shadow-soft rounded-sm">
-<div class="absolute -top-3 -right-3 w-6 h-6 border-t border-r border-clinical-med"></div>
-<div class="absolute -bottom-3 -left-3 w-6 h-6 border-b border-l border-clinical-med"></div>
-<div class="h-full w-full relative overflow-hidden bg-slate-50 border border-slate-100">
-<div class="absolute top-0 left-0 w-full h-8 bg-white border-b border-slate-100 flex items-center px-3 gap-2 z-20">
-<div class="w-2 h-2 rounded-full bg-slate-300"></div>
-<div class="w-2 h-2 rounded-full bg-slate-300"></div>
-<div class="ml-2 text-[10px] font-mono text-slate-400">SYS_ADMIN_VIEW // 192.168.0.1</div>
-</div>
-<img alt="Dashboard interface" class="w-full h-full object-cover object-top pt-8 opacity-90 contrast-105 saturate-50 hover:saturate-100 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPRMGxR301-5FHI1pfnWl7Vs6Lud84YkwtfsJytfPfSBStN8pfkMyl-LQrkTWJ56u1cUqLkgLfuNAOXvXyD-aSWmyarBzHWtY2EYAWWxsW8tbdc5U0i_O0XWfIcX65VzUSFUf4viIWIfmkzPX1dpWxIKOaNaLdd1d2CF4MW_9NUpxkD1WxhmF-VX_ILeIWocO0qznJhNEbrrvJ_hjeheVEUs_yFPjTjJZfOf8Ewm6E9F7mYzcPQA3t7H3eJH_DUuOt0I1EmnRZVy4"/>
-<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur border border-slate-200 p-2 shadow-sm z-20">
-<div class="text-[9px] font-mono text-slate-500 leading-none">
-                                        CPU: 12%<br/>MEM: 4.2GB
-                                    </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="flex h-auto grow flex-col bg-white border-t border-clinical-light py-20 relative overflow-hidden">
-<div class="absolute inset-0 pointer-events-none opacity-30" style="background-image: linear-gradient(#e2e8f0 1px, transparent 1px); background-size: 100% 60px;">
-</div>
-<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center relative z-10">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<div class="flex flex-col items-center text-center gap-6 mb-24">
-<div class="inline-flex items-center justify-center px-4 py-1.5 border border-clinical-light bg-clinical-bg text-clinical-med text-[10px] font-bold uppercase tracking-[0.2em] font-mono rounded-full">
-                        Capacidades del Sistema
-                    </div>
-<h2 class="text-clinical-dark text-3xl md:text-4xl font-bold leading-tight tracking-tight font-display">
-                        Funcionalidades Principales
-                    </h2>
-<p class="text-clinical-med text-base md:text-lg max-w-[600px] font-light font-body">
-                        Arquitectura optimizada para la gestión documental de alto rendimiento.
-                    </p>
-</div>
-<div class="flex flex-col gap-32">
-<div class="flex flex-col lg:flex-row gap-16 items-center group">
-<div class="flex-1 flex flex-col gap-8 order-2 lg:order-1">
-<div class="flex items-start gap-5">
-<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 text-clinical-dark">
-<span class="material-symbols-outlined !text-2xl font-light">view_kanban</span>
-</div>
-<div class="flex flex-col gap-2">
-<h3 class="text-2xl font-bold text-clinical-dark font-display">Interfaz Kanban</h3>
-<p class="text-clinical-med text-base leading-relaxed font-light">
-                                        Navegación nativa sin fricción. Organiza flujos de datos visualmente con precisión milimétrica.
-                                    </p>
-</div>
-</div>
-<div class="bg-clinical-bg p-6 border border-clinical-light relative corner-tl corner-br crosshair-corner rounded-sm">
-<div class="absolute -top-3 left-4 text-[10px] bg-white px-2 font-mono text-slate-400 border border-slate-100 uppercase tracking-widest">Specs</div>
-<ul class="flex flex-col gap-3">
-<li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
-<div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
-<span>Renderizado visual de estados</span>
-</li>
-<li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
-<div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
-<span>Optimización de formularios</span>
-</li>
-<li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
-<div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
-<span>Core Integration: Odoo 18</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="flex-1 w-full order-1 lg:order-2 relative pl-4 pb-4">
-<div class="absolute top-0 right-0 w-[80%] h-[80%] border-t border-r border-slate-200 -z-10"></div>
-<div class="relative bg-white p-2 border border-slate-200 shadow-soft rounded-sm">
-<div class="aspect-video overflow-hidden border border-slate-100 relative">
-<img alt="Vista Kanban Kairos IA" class="w-full h-full object-cover saturate-[0.2] hover:saturate-100 transition-all duration-500 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA78BsHAK4G1C4i4mlr2fC0EN9jJDVo144U21CzBYLkkn-T1ycE6OgojmMof6bvFuuaHxynp2hFn_G6p4sGOa17wPVEytyqf8FOg-zj_A4niZmAzV4Dfh4T4Ln9Xz-YLkYrkP9pJQCpEgz7D216cKsPlWwrY1frwhLwKoBhHxKpIgIxmr7KhPXcp5XMNOwDFykIzwTdcr-Gt_BocgcE7XpNfwOFoD-ts_ymQHN8RbQsmi4BdCJm6-w9Qil5ZC8Juhc1ML9WCS01wnM"/>
-<div class="absolute bottom-0 left-0 w-full h-6 bg-white/90 border-t border-slate-100 flex items-center justify-between px-3">
-<span class="text-[9px] font-mono text-slate-400">IMG_SRC: 0x84A</span>
-<span class="text-[9px] font-mono text-slate-400">SCALE: 100%</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="flex flex-col lg:flex-row-reverse gap-16 items-center group">
-<div class="flex-1 flex flex-col gap-8">
-<div class="flex items-start gap-5">
-<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 text-clinical-dark">
-<span class="material-symbols-outlined !text-2xl font-light">youtube_searched_for</span>
-</div>
-<div class="flex flex-col gap-2">
-<h3 class="text-2xl font-bold text-clinical-dark font-display">Visualizador Avanzado</h3>
-<p class="text-clinical-med text-base leading-relaxed font-light">
-                                        Inspección de datos a nivel de píxel. Comparativa lado a lado activada para validación técnica.
-                                    </p>
-</div>
-</div>
-<div class="bg-clinical-bg p-6 border border-clinical-light relative corner-tr corner-bl crosshair-corner rounded-sm">
-<div class="absolute -top-3 right-4 text-[10px] bg-white px-2 font-mono text-slate-400 border border-slate-100 uppercase tracking-widest">Specs</div>
-<ul class="flex flex-col gap-3">
-<li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
-<div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
-<span>Renderizado instantáneo</span>
-</li>
-<li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
-<div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
-<span>Zoom de alta resolución</span>
-</li>
-<li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
-<div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
-<span>Manipulación geométrica</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="flex-1 w-full relative pr-4 pb-4">
-<div class="absolute top-0 left-0 w-[80%] h-[80%] border-t border-l border-slate-200 -z-10"></div>
-<div class="relative bg-white p-2 border border-slate-200 shadow-soft rounded-sm">
-<div class="aspect-video overflow-hidden border border-slate-100 relative">
-<div class="absolute top-4 left-4 border border-white/50 bg-white/30 backdrop-blur-md p-2 z-20 rounded-full shadow-sm">
-<span class="material-symbols-outlined text-slate-800 text-sm">zoom_in</span>
-</div>
-<img alt="Visualizador avanzado" class="w-full h-full object-cover saturate-[0.2] hover:saturate-100 transition-all duration-500 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUiWILmEeOuwMY_09uqi-6OGOLlJuilKkomtkViV9HnwiF71ithni0huIl9mOmxVHqLTWuyTaj0U1uLGBbbEbwTc5ANOayYNx11jAIw2_Hc0pSbQoQbSjwIX5n8vUy93dDmzQwwLG96cQN73nHSl1VraSf-Dpf5Hl2_nHX3IpGyaYOzF2W44mW-9suekfNHO5o8UWaW0yq3amZeJKtgmoVwD04GtiCAxHt-KX74KDuoPOT76oGHXeKfvEgZ10jHxN4O5-cv-fkBLQ"/>
-<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-30">
-<div class="w-full h-[1px] bg-slate-300"></div>
-<div class="h-full w-[1px] bg-slate-300 absolute"></div>
-<div class="w-20 h-20 border border-slate-300 rounded-full absolute"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="flex flex-col lg:flex-row gap-16 items-center group">
-<div class="flex-1 flex flex-col gap-8 order-2 lg:order-1">
-<div class="flex items-start gap-5">
-<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 text-clinical-dark">
-<span class="material-symbols-outlined !text-2xl font-light">memory</span>
-</div>
-<div class="flex flex-col gap-2">
-<h3 class="text-2xl font-bold text-clinical-dark font-display">IA: Extracción de Datos</h3>
-<p class="text-clinical-med text-base leading-relaxed font-light">
-                                        Algoritmos de aprendizaje profundo. Detección y extracción de entidades estructuradas.
-                                    </p>
-</div>
-</div>
-<div class="bg-clinical-bg p-6 border border-clinical-light relative corner-tl corner-br crosshair-corner rounded-sm">
-<div class="absolute -top-3 left-4 text-[10px] bg-white px-2 font-mono text-slate-400 border border-slate-100 uppercase tracking-widest">Specs</div>
-<ul class="flex flex-col gap-3">
-<li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
-<div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
-<span>Auto-detección de clase documental</span>
-</li>
-<li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
-<div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
-<span>Precisión OCR: &gt;99.8%</span>
-</li>
-<li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
-<div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
-<span>Parsing de líneas de detalle</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="flex-1 w-full order-1 lg:order-2 relative pl-4 pb-4">
-<div class="absolute top-0 right-0 w-[80%] h-[80%] border-t border-r border-slate-200 -z-10"></div>
-<div class="relative bg-white p-2 border border-slate-200 shadow-soft rounded-sm">
-<div class="aspect-video overflow-hidden border border-slate-100 relative group-hover:border-slate-300 transition-colors">
-<div class="absolute top-3 right-3 z-20">
-<span class="material-symbols-outlined text-slate-500 animate-spin text-sm opacity-50">settings</span>
-</div>
-<img alt="Extracción de datos" class="w-full h-full object-cover saturate-[0.2] hover:saturate-100 transition-all duration-500 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHFFYmkFlHiCubQei7-uvS7PgUcNHeRMpwKEM9mSgpdqORjXDZci-GvwMpMHtu9cZWnYeUy-BtpES4smjWVqgskZ5sC6UqwIVDyOmiY9J9NPM84rawWxwRWqp_2WDmo6QqG8SmCGjXoiBCpIAX_MjyNFtoK55Qu2Ho5XNgjebC35Y6oTJctBM-fRxrYIfHReFveb78whQLoRWNsuouHB8TEUNkQEcE3Xg1W5OSiJQ96TarWXQf5cDtQvMJ6Ph4OWI9M9iUdDlfCJA"/>
-<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 bg-[length:100%_200%] animate-[scan_2s_linear_infinite] pointer-events-none"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-32 border border-clinical-light bg-white p-8 md:p-12 relative overflow-hidden group shadow-soft rounded-sm">
-<div class="absolute inset-0 bg-clinical-bg opacity-50"></div>
-<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-<div class="flex flex-col gap-2 max-w-xl">
-<h3 class="text-2xl font-bold leading-tight font-display text-clinical-dark">¿Listo para modernizar su infraestructura?</h3>
-<p class="text-clinical-med font-body font-light">Experimente la velocidad de procesamiento de Kairos IA.</p>
-</div>
-<button class="flex min-w-[180px] cursor-pointer items-center justify-center h-12 px-8 bg-clinical-dark text-white text-sm font-bold tracking-wider hover:bg-slate-700 transition-all font-display rounded-sm shadow-md">
-<span>INICIAR DEMO GRATIS</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="flex h-auto flex-col bg-white border-t border-clinical-light">
-<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-10">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<div class="flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex items-center gap-2">
-<div class="size-6 text-clinical-accent">
-<span class="material-symbols-outlined font-light">token</span>
-</div>
-<span class="text-clinical-dark font-bold text-base font-display">Kairos_IA</span>
-</div>
-<div class="flex gap-8 text-xs text-clinical-med font-mono uppercase tracking-wider">
-<a class="hover:text-clinical-dark transition-colors" href="#">Privacy</a>
-<a class="hover:text-clinical-dark transition-colors" href="#">Terms</a>
-<a class="hover:text-clinical-dark transition-colors" href="#">Support</a>
-</div>
-<div class="text-xs text-slate-400 font-mono">
-                        © 2023 Kairos IA. All rights reserved.
-                    </div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
-</body></html>
+<body class="bg-clinical-bg text-clinical-dark font-body antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden grid-bg">
+        <div class="flex h-auto flex-col w-full bg-clinical-surface border-b border-clinical-light sticky top-0 z-50">
+            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-3">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <header class="flex items-center justify-between whitespace-nowrap">
+                        <div class="flex items-center gap-3">
+                            <div class="size-8 text-clinical-accent">
+                                <span class="material-symbols-outlined !text-3xl font-light">token</span>
+                            </div>
+                            <h2 class="text-clinical-dark text-lg font-bold leading-tight tracking-tight font-display">
+                                KAIROS_IA</h2>
+                        </div>
+                        <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                            <div class="flex items-center gap-8 font-mono text-xs tracking-wider">
+                                <a class="text-clinical-med hover:text-clinical-dark transition-colors uppercase"
+                                    href="#">Home</a>
+                                <a class="text-clinical-med hover:text-clinical-dark transition-colors uppercase"
+                                    href="#">Modules</a>
+                                <a class="text-clinical-med hover:text-clinical-dark transition-colors uppercase"
+                                    href="#">Cost</a>
+                                <a class="text-clinical-med hover:text-clinical-dark transition-colors uppercase"
+                                    href="#">Contact</a>
+                            </div>
+                            <button
+                                class="flex cursor-pointer items-center justify-center border border-clinical-light bg-clinical-bg hover:bg-white hover:shadow-soft transition-all duration-300 h-9 px-6 text-xs font-bold font-mono text-clinical-dark uppercase tracking-wider rounded-sm">
+                                <span>Area_Cliente</span>
+                            </button>
+                        </div>
+                        <div class="md:hidden text-clinical-dark">
+                            <span class="material-symbols-outlined cursor-pointer">menu</span>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div class="flex h-auto grow flex-col relative">
+            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-12 relative z-10">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <div class="@container">
+                        <div
+                            class="flex flex-col gap-12 px-4 py-10 @[864px]:flex-row items-center border-b border-clinical-light pb-20">
+                            <div class="flex flex-col gap-8 @[864px]:w-1/2 flex-1">
+                                <div class="flex flex-col gap-4 text-left">
+                                    <div class="inline-flex items-center gap-2 mb-2">
+                                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                        <span
+                                            class="text-xs font-mono text-clinical-med tracking-widest uppercase">Sistema
+                                            Operativo v18.0</span>
+                                    </div>
+                                    <h1
+                                        class="text-clinical-dark text-4xl font-light leading-tight tracking-tight @[480px]:text-5xl font-display">
+                                        Digitalización <br /><span class="font-bold">Inteligente</span>
+                                    </h1>
+                                    <div
+                                        class="text-clinical-med text-sm font-mono leading-relaxed pl-4 border-l border-clinical-light">
+                                        <p> &gt; Inicializando protocolos de automatización...</p>
+                                        <p> &gt; Integrando IA en núcleo ERP...</p>
+                                        <p> &gt; Estado: ONLINE</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-4">
+                                    <button
+                                        class="flex min-w-[140px] cursor-pointer items-center justify-center h-11 px-6 bg-clinical-dark text-white text-sm font-semibold tracking-wide hover:bg-slate-700 transition-all font-display rounded-sm shadow-soft">
+                                        <span class="truncate">EJECUTAR DEMO</span>
+                                    </button>
+                                    <button
+                                        class="flex min-w-[140px] cursor-pointer items-center justify-center h-11 px-6 bg-transparent border border-clinical-light text-clinical-dark text-sm font-semibold tracking-wide hover:bg-white transition-colors font-display rounded-sm hover:border-clinical-med">
+                                        <span class="truncate">VER LOGS DE VIDEO</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full @[864px]:w-1/2 aspect-video bg-clinical-surface border border-clinical-light relative p-2 shadow-soft rounded-sm">
+                                <div class="absolute -top-3 -right-3 w-6 h-6 border-t border-r border-clinical-med">
+                                </div>
+                                <div class="absolute -bottom-3 -left-3 w-6 h-6 border-b border-l border-clinical-med">
+                                </div>
+                                <div class="h-full w-full relative overflow-hidden bg-slate-50 border border-slate-100">
+                                    <div
+                                        class="absolute top-0 left-0 w-full h-8 bg-white border-b border-slate-100 flex items-center px-3 gap-2 z-20">
+                                        <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+                                        <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+                                        <div class="ml-2 text-[10px] font-mono text-slate-400">SYS_ADMIN_VIEW //
+                                            192.168.0.1</div>
+                                    </div>
+                                    <img alt="Dashboard interface"
+                                        class="w-full h-full object-cover object-top pt-8 opacity-90 contrast-105 saturate-50 hover:saturate-100 transition-all duration-700"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPRMGxR301-5FHI1pfnWl7Vs6Lud84YkwtfsJytfPfSBStN8pfkMyl-LQrkTWJ56u1cUqLkgLfuNAOXvXyD-aSWmyarBzHWtY2EYAWWxsW8tbdc5U0i_O0XWfIcX65VzUSFUf4viIWIfmkzPX1dpWxIKOaNaLdd1d2CF4MW_9NUpxkD1WxhmF-VX_ILeIWocO0qznJhNEbrrvJ_hjeheVEUs_yFPjTjJZfOf8Ewm6E9F7mYzcPQA3t7H3eJH_DUuOt0I1EmnRZVy4" />
+                                    <div
+                                        class="absolute bottom-4 right-4 bg-white/90 backdrop-blur border border-slate-200 p-2 shadow-sm z-20">
+                                        <div class="text-[9px] font-mono text-slate-500 leading-none">
+                                            CPU: 12%<br />MEM: 4.2GB
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex h-auto grow flex-col bg-white border-t border-clinical-light py-20 relative overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none opacity-30"
+                style="background-image: linear-gradient(#e2e8f0 1px, transparent 1px); background-size: 100% 60px;">
+            </div>
+            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center relative z-10">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <div class="flex flex-col items-center text-center gap-6 mb-24">
+                        <div
+                            class="inline-flex items-center justify-center px-4 py-1.5 border border-clinical-light bg-clinical-bg text-clinical-med text-[10px] font-bold uppercase tracking-[0.2em] font-mono rounded-full">
+                            Capacidades del Sistema
+                        </div>
+                        <h2
+                            class="text-clinical-dark text-3xl md:text-4xl font-bold leading-tight tracking-tight font-display">
+                            Funcionalidades Principales
+                        </h2>
+                        <p class="text-clinical-med text-base md:text-lg max-w-[600px] font-light font-body">
+                            Arquitectura optimizada para la gestión documental de alto rendimiento.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-32">
+                        <div class="flex flex-col lg:flex-row gap-16 items-center group">
+                            <div class="flex-1 flex flex-col gap-8 order-2 lg:order-1">
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 text-clinical-dark">
+                                        <span class="material-symbols-outlined !text-2xl font-light">view_kanban</span>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h3 class="text-2xl font-bold text-clinical-dark font-display">Interfaz Kanban
+                                        </h3>
+                                        <p class="text-clinical-med text-base leading-relaxed font-light">
+                                            Navegación nativa sin fricción. Organiza flujos de datos visualmente con
+                                            precisión milimétrica.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-clinical-bg p-6 border border-clinical-light relative corner-tl corner-br crosshair-corner rounded-sm">
+                                    <div
+                                        class="absolute -top-3 left-4 text-[10px] bg-white px-2 font-mono text-slate-400 border border-slate-100 uppercase tracking-widest">
+                                        Specs</div>
+                                    <ul class="flex flex-col gap-3">
+                                        <li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
+                                            <div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
+                                            <span>Renderizado visual de estados</span>
+                                        </li>
+                                        <li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
+                                            <div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
+                                            <span>Optimización de formularios</span>
+                                        </li>
+                                        <li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
+                                            <div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
+                                            <span>Core Integration: Odoo</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex-1 w-full order-1 lg:order-2 relative pl-4 pb-4">
+                                <div
+                                    class="absolute top-0 right-0 w-[80%] h-[80%] border-t border-r border-slate-200 -z-10">
+                                </div>
+                                <div class="relative bg-white p-2 border border-slate-200 shadow-soft rounded-sm">
+                                    <div class="aspect-video overflow-hidden border border-slate-100 relative">
+                                        <img alt="Vista Kanban Kairos IA"
+                                            class="w-full h-full object-cover saturate-[0.2] hover:saturate-100 transition-all duration-500 contrast-125"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA78BsHAK4G1C4i4mlr2fC0EN9jJDVo144U21CzBYLkkn-T1ycE6OgojmMof6bvFuuaHxynp2hFn_G6p4sGOa17wPVEytyqf8FOg-zj_A4niZmAzV4Dfh4T4Ln9Xz-YLkYrkP9pJQCpEgz7D216cKsPlWwrY1frwhLwKoBhHxKpIgIxmr7KhPXcp5XMNOwDFykIzwTdcr-Gt_BocgcE7XpNfwOFoD-ts_ymQHN8RbQsmi4BdCJm6-w9Qil5ZC8Juhc1ML9WCS01wnM" />
+                                        <div
+                                            class="absolute bottom-0 left-0 w-full h-6 bg-white/90 border-t border-slate-100 flex items-center justify-between px-3">
+                                            <span class="text-[9px] font-mono text-slate-400">IMG_SRC: 0x84A</span>
+                                            <span class="text-[9px] font-mono text-slate-400">SCALE: 100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row-reverse gap-16 items-center group">
+                            <div class="flex-1 flex flex-col gap-8">
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 text-clinical-dark">
+                                        <span
+                                            class="material-symbols-outlined !text-2xl font-light">youtube_searched_for</span>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h3 class="text-2xl font-bold text-clinical-dark font-display">Visualizador
+                                            Avanzado</h3>
+                                        <p class="text-clinical-med text-base leading-relaxed font-light">
+                                            Inspección de datos a nivel de píxel. Comparativa lado a lado activada para
+                                            validación técnica.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-clinical-bg p-6 border border-clinical-light relative corner-tr corner-bl crosshair-corner rounded-sm">
+                                    <div
+                                        class="absolute -top-3 right-4 text-[10px] bg-white px-2 font-mono text-slate-400 border border-slate-100 uppercase tracking-widest">
+                                        Specs</div>
+                                    <ul class="flex flex-col gap-3">
+                                        <li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
+                                            <div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
+                                            <span>Renderizado instantáneo</span>
+                                        </li>
+                                        <li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
+                                            <div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
+                                            <span>Zoom de alta resolución</span>
+                                        </li>
+                                        <li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
+                                            <div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
+                                            <span>Manipulación geométrica</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex-1 w-full relative pr-4 pb-4">
+                                <div
+                                    class="absolute top-0 left-0 w-[80%] h-[80%] border-t border-l border-slate-200 -z-10">
+                                </div>
+                                <div class="relative bg-white p-2 border border-slate-200 shadow-soft rounded-sm">
+                                    <div class="aspect-video overflow-hidden border border-slate-100 relative">
+                                        <div
+                                            class="absolute top-4 left-4 border border-white/50 bg-white/30 backdrop-blur-md p-2 z-20 rounded-full shadow-sm">
+                                            <span
+                                                class="material-symbols-outlined text-slate-800 text-sm">zoom_in</span>
+                                        </div>
+                                        <img alt="Visualizador avanzado"
+                                            class="w-full h-full object-cover saturate-[0.2] hover:saturate-100 transition-all duration-500 contrast-125"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUiWILmEeOuwMY_09uqi-6OGOLlJuilKkomtkViV9HnwiF71ithni0huIl9mOmxVHqLTWuyTaj0U1uLGBbbEbwTc5ANOayYNx11jAIw2_Hc0pSbQoQbSjwIX5n8vUy93dDmzQwwLG96cQN73nHSl1VraSf-Dpf5Hl2_nHX3IpGyaYOzF2W44mW-9suekfNHO5o8UWaW0yq3amZeJKtgmoVwD04GtiCAxHt-KX74KDuoPOT76oGHXeKfvEgZ10jHxN4O5-cv-fkBLQ" />
+                                        <div
+                                            class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-30">
+                                            <div class="w-full h-[1px] bg-slate-300"></div>
+                                            <div class="h-full w-[1px] bg-slate-300 absolute"></div>
+                                            <div class="w-20 h-20 border border-slate-300 rounded-full absolute"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row gap-16 items-center group">
+                            <div class="flex-1 flex flex-col gap-8 order-2 lg:order-1">
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 text-clinical-dark">
+                                        <span class="material-symbols-outlined !text-2xl font-light">memory</span>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h3 class="text-2xl font-bold text-clinical-dark font-display">IA: Extracción de
+                                            Datos</h3>
+                                        <p class="text-clinical-med text-base leading-relaxed font-light">
+                                            Algoritmos de aprendizaje profundo. Detección y extracción de entidades
+                                            estructuradas.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-clinical-bg p-6 border border-clinical-light relative corner-tl corner-br crosshair-corner rounded-sm">
+                                    <div
+                                        class="absolute -top-3 left-4 text-[10px] bg-white px-2 font-mono text-slate-400 border border-slate-100 uppercase tracking-widest">
+                                        Specs</div>
+                                    <ul class="flex flex-col gap-3">
+                                        <li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
+                                            <div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
+                                            <span>Auto-detección de clase documental</span>
+                                        </li>
+                                        <li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
+                                            <div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
+                                            <span>Precisión OCR: &gt;99.8%</span>
+                                        </li>
+                                        <li class="flex items-center gap-3 text-clinical-med font-mono text-xs">
+                                            <div class="w-1.5 h-1.5 bg-slate-300 rounded-full"></div>
+                                            <span>Parsing de líneas de detalle</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex-1 w-full order-1 lg:order-2 relative pl-4 pb-4">
+                                <div
+                                    class="absolute top-0 right-0 w-[80%] h-[80%] border-t border-r border-slate-200 -z-10">
+                                </div>
+                                <div class="relative bg-white p-2 border border-slate-200 shadow-soft rounded-sm">
+                                    <div
+                                        class="aspect-video overflow-hidden border border-slate-100 relative group-hover:border-slate-300 transition-colors">
+                                        <div class="absolute top-3 right-3 z-20">
+                                            <span
+                                                class="material-symbols-outlined text-slate-500 animate-spin text-sm opacity-50">settings</span>
+                                        </div>
+                                        <img alt="Extracción de datos"
+                                            class="w-full h-full object-cover saturate-[0.2] hover:saturate-100 transition-all duration-500 contrast-125"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHFFYmkFlHiCubQei7-uvS7PgUcNHeRMpwKEM9mSgpdqORjXDZci-GvwMpMHtu9cZWnYeUy-BtpES4smjWVqgskZ5sC6UqwIVDyOmiY9J9NPM84rawWxwRWqp_2WDmo6QqG8SmCGjXoiBCpIAX_MjyNFtoK55Qu2Ho5XNgjebC35Y6oTJctBM-fRxrYIfHReFveb78whQLoRWNsuouHB8TEUNkQEcE3Xg1W5OSiJQ96TarWXQf5cDtQvMJ6Ph4OWI9M9iUdDlfCJA" />
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 bg-[length:100%_200%] animate-[scan_2s_linear_infinite] pointer-events-none">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-32 border border-clinical-light bg-white p-8 md:p-12 relative overflow-hidden group shadow-soft rounded-sm">
+                        <div class="absolute inset-0 bg-clinical-bg opacity-50"></div>
+                        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div class="flex flex-col gap-2 max-w-xl">
+                                <h3 class="text-2xl font-bold leading-tight font-display text-clinical-dark">¿Listo para
+                                    modernizar su infraestructura?</h3>
+                                <p class="text-clinical-med font-body font-light">Experimente la velocidad de
+                                    procesamiento de Kairos IA.</p>
+                            </div>
+                            <button
+                                class="flex min-w-[180px] cursor-pointer items-center justify-center h-12 px-8 bg-clinical-dark text-white text-sm font-bold tracking-wider hover:bg-slate-700 transition-all font-display rounded-sm shadow-md">
+                                <span>INICIAR DEMO GRATIS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex h-auto flex-col bg-white border-t border-clinical-light">
+            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-10">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="flex items-center gap-2">
+                            <div class="size-6 text-clinical-accent">
+                                <span class="material-symbols-outlined font-light">token</span>
+                            </div>
+                            <span class="text-clinical-dark font-bold text-base font-display">Kairos_IA</span>
+                        </div>
+                        <div class="flex gap-8 text-xs text-clinical-med font-mono uppercase tracking-wider">
+                            <a class="hover:text-clinical-dark transition-colors" href="#">Privacy</a>
+                            <a class="hover:text-clinical-dark transition-colors" href="#">Terms</a>
+                            <a class="hover:text-clinical-dark transition-colors" href="#">Support</a>
+                        </div>
+                        <div class="text-xs text-slate-400 font-mono">
+                            © 2023 Kairos IA. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

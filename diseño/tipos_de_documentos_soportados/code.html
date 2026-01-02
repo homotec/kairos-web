@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kairos IA - Tipos de Documentos</title>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kairos IA - Tipos de Documentos</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             theme: {
                 extend: {
@@ -20,7 +26,7 @@
                         "clinical-accent-light": "#eceff1",
                     },
                     fontFamily: {
-                        "display": ["Share Tech Mono", "monospace"], 
+                        "display": ["Share Tech Mono", "monospace"],
                         "body": ["Manrope", "sans-serif"]
                     },
                     backgroundImage: {
@@ -34,7 +40,7 @@
             },
         }
     </script>
-<style type="text/tailwindcss">
+    <style type="text/tailwindcss">
         @layer utilities {
             .tech-border-corner {
                 position: absolute;
@@ -46,179 +52,252 @@
         }
     </style>
 </head>
-<body class="bg-clinical-bg text-clinical-text font-body transition-colors duration-200 min-h-screen relative overflow-x-hidden">
-<div class="fixed inset-0 bg-grid-technical bg-[length:40px_40px] opacity-60 pointer-events-none z-0"></div>
-<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-<div class="absolute top-[20%] left-[-10%] w-[40%] h-[40%] border border-clinical-border rounded-full opacity-20"></div>
-<div class="absolute top-[20%] left-[-10%] w-[38%] h-[38%] border border-clinical-border rounded-full opacity-20 border-dashed"></div>
-<div class="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] border border-clinical-border rounded-full opacity-20"></div>
-<div class="absolute top-0 right-[20%] h-full w-px bg-clinical-border opacity-40"></div>
-<div class="absolute top-[30%] left-0 w-full h-px bg-clinical-border opacity-40"></div>
-</div>
-<div class="relative flex h-auto min-h-screen w-full flex-col z-20">
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-12">
-<div class="layout-content-container flex flex-col max-w-[1024px] flex-1">
-<div class="flex flex-col gap-4 items-center text-center px-4 mb-16 relative">
-<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-12 h-12 w-px bg-clinical-accent/30"></div>
-<div class="inline-flex items-center gap-2 px-3 py-1 border border-clinical-accent/20 bg-white text-clinical-accent text-[10px] tracking-[0.2em] uppercase font-display">
-<span class="w-1.5 h-1.5 rounded-full bg-clinical-accent/60"></span>
-                        Sys.Status: Nominal
-                    </div>
-<h2 class="text-clinical-text text-3xl md:text-5xl font-bold leading-tight tracking-tight uppercase font-display relative inline-block">
-<span class="absolute -left-6 top-0 text-xs text-clinical-muted font-normal font-mono opacity-50 hidden md:block">01</span>
-                        Tipos de Documentos <span class="font-light text-clinical-accent">Soportados</span>
-<span class="absolute -right-6 bottom-0 text-xs text-clinical-muted font-normal font-mono opacity-50 hidden md:block">02</span>
-</h2>
-<div class="h-px w-24 bg-clinical-accent/30 my-2"></div>
-<p class="text-clinical-muted text-lg font-normal leading-relaxed max-w-[720px] font-body">
-<span class="font-mono text-xs text-clinical-accent uppercase mr-2">[Analysis_Mode]</span>
-                        Kairos IA procesa automáticamente los documentos clave para tu negocio en Odoo 18. Extracción de datos inicializada. Precisión: 99.9%.
-                    </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
-<div class="group relative flex flex-col gap-0 bg-clinical-card shadow-technical hover:shadow-technical-hover transition-all duration-300">
-<div class="absolute inset-0 border border-clinical-border transition-colors duration-300 group-hover:border-clinical-accent/30"></div>
-<div class="tech-border-corner top-0 left-0 border-t border-l group-hover:border-clinical-accent"></div>
-<div class="tech-border-corner top-0 right-0 border-t border-r group-hover:border-clinical-accent"></div>
-<div class="tech-border-corner bottom-0 left-0 border-b border-l group-hover:border-clinical-accent"></div>
-<div class="tech-border-corner bottom-0 right-0 border-b border-r group-hover:border-clinical-accent"></div>
-<div class="p-6 border-b border-clinical-border/50 flex justify-between items-start bg-clinical-accent-light/10">
-<div class="flex items-center justify-center w-12 h-12 bg-white border border-clinical-border text-clinical-accent">
-<span class="material-symbols-outlined text-[24px] font-light">schedule</span>
-</div>
-<span class="text-[10px] font-mono text-clinical-muted uppercase tracking-widest opacity-60">ID_001</span>
-</div>
-<div class="p-6 flex flex-col gap-4 flex-grow">
-<h3 class="text-clinical-text text-lg font-bold uppercase tracking-wide font-display group-hover:text-clinical-accent transition-colors">
-                                Partes de Horas
-                            </h3>
-<p class="text-clinical-muted text-sm font-light leading-relaxed">
-                                Digitalización de registros de tiempo para control de personal y proyectos.
-                            </p>
-<div class="mt-auto pt-4 relative">
-<div class="absolute top-0 left-0 w-full h-px bg-clinical-border/50 border-t border-dashed border-clinical-border"></div>
-<div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-clinical-accent/80">
-<div class="flex items-center justify-between">
-<span>INPUT_01</span>
-<span class="h-px flex-grow bg-clinical-border mx-2"></span>
-<span>[Empleado]</span>
-</div>
-<div class="flex items-center justify-between">
-<span>INPUT_02</span>
-<span class="h-px flex-grow bg-clinical-border mx-2"></span>
-<span>[Proyecto]</span>
-</div>
-<div class="flex items-center justify-between">
-<span>INPUT_03</span>
-<span class="h-px flex-grow bg-clinical-border mx-2"></span>
-<span>[Horas]</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="group relative flex flex-col gap-0 bg-clinical-card shadow-technical hover:shadow-technical-hover transition-all duration-300">
-<div class="absolute inset-0 border border-clinical-border transition-colors duration-300 group-hover:border-clinical-accent/30"></div>
-<div class="tech-border-corner top-0 left-0 border-t border-l group-hover:border-clinical-accent"></div>
-<div class="tech-border-corner top-0 right-0 border-t border-r group-hover:border-clinical-accent"></div>
-<div class="tech-border-corner bottom-0 left-0 border-b border-l group-hover:border-clinical-accent"></div>
-<div class="tech-border-corner bottom-0 right-0 border-b border-r group-hover:border-clinical-accent"></div>
-<div class="p-6 border-b border-clinical-border/50 flex justify-between items-start bg-clinical-accent-light/10">
-<div class="flex items-center justify-center w-12 h-12 bg-white border border-clinical-border text-clinical-accent">
-<span class="material-symbols-outlined text-[24px] font-light">local_shipping</span>
-</div>
-<span class="text-[10px] font-mono text-clinical-muted uppercase tracking-widest opacity-60">ID_002</span>
-</div>
-<div class="p-6 flex flex-col gap-4 flex-grow">
-<h3 class="text-clinical-text text-lg font-bold uppercase tracking-wide font-display group-hover:text-clinical-accent transition-colors">
-                                Albaranes de Entrega
-                            </h3>
-<p class="text-clinical-muted text-sm font-light leading-relaxed">
-                                Gestión eficiente de la recepción de mercancías y comprobantes de entrega.
-                            </p>
-<div class="mt-auto pt-4 relative">
-<div class="absolute top-0 left-0 w-full h-px bg-clinical-border/50 border-t border-dashed border-clinical-border"></div>
-<div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-clinical-accent/80">
-<div class="flex items-center justify-between">
-<span>REF_NO</span>
-<span class="h-px flex-grow bg-clinical-border mx-2"></span>
-<span>Ref_Albarán</span>
-</div>
-<div class="flex items-center justify-between">
-<span>DT_STMP</span>
-<span class="h-px flex-grow bg-clinical-border mx-2"></span>
-<span>Data:Fecha</span>
-</div>
-<div class="flex items-center justify-between">
-<span>ARR_OBJ</span>
-<span class="h-px flex-grow bg-clinical-border mx-2"></span>
-<span>Array:Prods</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="group relative flex flex-col gap-0 bg-clinical-card shadow-technical hover:shadow-technical-hover transition-all duration-300">
-<div class="absolute inset-0 border border-clinical-border transition-colors duration-300 group-hover:border-clinical-accent/30"></div>
-<div class="tech-border-corner top-0 left-0 border-t border-l group-hover:border-clinical-accent"></div>
-<div class="tech-border-corner top-0 right-0 border-t border-r group-hover:border-clinical-accent"></div>
-<div class="tech-border-corner bottom-0 left-0 border-b border-l group-hover:border-clinical-accent"></div>
-<div class="tech-border-corner bottom-0 right-0 border-b border-r group-hover:border-clinical-accent"></div>
-<div class="p-6 border-b border-clinical-border/50 flex justify-between items-start bg-clinical-accent-light/10">
-<div class="flex items-center justify-center w-12 h-12 bg-white border border-clinical-border text-clinical-accent">
-<span class="material-symbols-outlined text-[24px] font-light">receipt_long</span>
-</div>
-<span class="text-[10px] font-mono text-clinical-muted uppercase tracking-widest opacity-60">ID_003</span>
-</div>
-<div class="p-6 flex flex-col gap-4 flex-grow">
-<h3 class="text-clinical-text text-lg font-bold uppercase tracking-wide font-display group-hover:text-clinical-accent transition-colors">
-                                Facturas
-                            </h3>
-<p class="text-clinical-muted text-sm font-light leading-relaxed">
-                                Automatización contable completa desde la recepción hasta la validación.
-                            </p>
-<div class="mt-auto pt-4 relative">
-<div class="absolute top-0 left-0 w-full h-px bg-clinical-border/50 border-t border-dashed border-clinical-border"></div>
-<div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-clinical-accent/80">
-<div class="flex items-center justify-between">
-<span>ENT_NAME</span>
-<span class="h-px flex-grow bg-clinical-border mx-2"></span>
-<span>&lt;Proveedor&gt;</span>
-</div>
-<div class="flex items-center justify-between">
-<span>VAL_TOT</span>
-<span class="h-px flex-grow bg-clinical-border mx-2"></span>
-<span>&lt;Total&gt;</span>
-</div>
-<div class="flex items-center justify-between">
-<span>TAX_CALC</span>
-<span class="h-px flex-grow bg-clinical-border mx-2"></span>
-<span>&lt;Impuestos&gt;</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="flex px-4 pt-16 justify-center relative">
-<div class="absolute top-0 left-1/2 w-px h-16 bg-clinical-border -translate-x-1/2"></div>
-<div class="absolute top-8 left-1/4 w-1/2 h-px bg-clinical-border"></div>
-<div class="absolute top-8 left-1/4 w-px h-8 bg-clinical-border"></div>
-<div class="absolute top-8 right-1/4 w-px h-8 bg-clinical-border"></div>
-<button class="group relative flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden h-12 px-8 bg-white hover:bg-clinical-accent text-clinical-text hover:text-white border border-clinical-text/20 hover:border-clinical-accent gap-3 transition-all duration-300 shadow-sm z-10">
-<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">terminal</span>
-<span class="text-sm font-bold tracking-[0.1em] uppercase font-display">Ver Documentación</span>
-<div class="absolute right-0 top-0 w-2 h-2 border-t border-r border-current opacity-50"></div>
-<div class="absolute left-0 bottom-0 w-2 h-2 border-b border-l border-current opacity-50"></div>
-</button>
-</div>
-<div class="mt-12 text-center opacity-40 font-mono text-[10px] text-clinical-muted tracking-widest">
-                     // SYSTEM_DIAGNOSTICS_COMPLETE //
-                </div>
-</div>
-</div>
-</div>
-</div>
 
-</body></html>
+<body
+    class="bg-clinical-bg text-clinical-text font-body transition-colors duration-200 min-h-screen relative overflow-x-hidden">
+    <div class="fixed inset-0 bg-grid-technical bg-[length:40px_40px] opacity-60 pointer-events-none z-0"></div>
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div
+            class="absolute top-[20%] left-[-10%] w-[40%] h-[40%] border border-clinical-border rounded-full opacity-20">
+        </div>
+        <div
+            class="absolute top-[20%] left-[-10%] w-[38%] h-[38%] border border-clinical-border rounded-full opacity-20 border-dashed">
+        </div>
+        <div
+            class="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] border border-clinical-border rounded-full opacity-20">
+        </div>
+        <div class="absolute top-0 right-[20%] h-full w-px bg-clinical-border opacity-40"></div>
+        <div class="absolute top-[30%] left-0 w-full h-px bg-clinical-border opacity-40"></div>
+    </div>
+    <div class="relative flex h-auto min-h-screen w-full flex-col z-20">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-12">
+                <div class="layout-content-container flex flex-col max-w-[1024px] flex-1">
+                    <div class="flex flex-col gap-4 items-center text-center px-4 mb-16 relative">
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-12 h-12 w-px bg-clinical-accent/30">
+                        </div>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 border border-clinical-accent/20 bg-white text-clinical-accent text-[10px] tracking-[0.2em] uppercase font-display">
+                            <span class="w-1.5 h-1.5 rounded-full bg-clinical-accent/60"></span>
+                            Sys.Status: Nominal
+                        </div>
+                        <h2
+                            class="text-clinical-text text-3xl md:text-5xl font-bold leading-tight tracking-tight uppercase font-display relative inline-block">
+                            <span
+                                class="absolute -left-6 top-0 text-xs text-clinical-muted font-normal font-mono opacity-50 hidden md:block">01</span>
+                            Tipos de Documentos <span class="font-light text-clinical-accent">Soportados</span>
+                            <span
+                                class="absolute -right-6 bottom-0 text-xs text-clinical-muted font-normal font-mono opacity-50 hidden md:block">02</span>
+                        </h2>
+                        <div class="h-px w-24 bg-clinical-accent/30 my-2"></div>
+                        <p class="text-clinical-muted text-lg font-normal leading-relaxed max-w-[720px] font-body">
+                            <span class="font-mono text-xs text-clinical-accent uppercase mr-2">[Analysis_Mode]</span>
+                            Kairos IA procesa automáticamente los documentos clave para tu negocio en Odoo. Extracción
+                            de datos inicializada. Precisión: 99.9%.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+                        <div
+                            class="group relative flex flex-col gap-0 bg-clinical-card shadow-technical hover:shadow-technical-hover transition-all duration-300">
+                            <div
+                                class="absolute inset-0 border border-clinical-border transition-colors duration-300 group-hover:border-clinical-accent/30">
+                            </div>
+                            <div
+                                class="tech-border-corner top-0 left-0 border-t border-l group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="tech-border-corner top-0 right-0 border-t border-r group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="tech-border-corner bottom-0 left-0 border-b border-l group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="tech-border-corner bottom-0 right-0 border-b border-r group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="p-6 border-b border-clinical-border/50 flex justify-between items-start bg-clinical-accent-light/10">
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 bg-white border border-clinical-border text-clinical-accent">
+                                    <span class="material-symbols-outlined text-[24px] font-light">schedule</span>
+                                </div>
+                                <span
+                                    class="text-[10px] font-mono text-clinical-muted uppercase tracking-widest opacity-60">ID_001</span>
+                            </div>
+                            <div class="p-6 flex flex-col gap-4 flex-grow">
+                                <h3
+                                    class="text-clinical-text text-lg font-bold uppercase tracking-wide font-display group-hover:text-clinical-accent transition-colors">
+                                    Partes de Horas
+                                </h3>
+                                <p class="text-clinical-muted text-sm font-light leading-relaxed">
+                                    Digitalización de registros de tiempo para control de personal y proyectos.
+                                </p>
+                                <div class="mt-auto pt-4 relative">
+                                    <div
+                                        class="absolute top-0 left-0 w-full h-px bg-clinical-border/50 border-t border-dashed border-clinical-border">
+                                    </div>
+                                    <div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-clinical-accent/80">
+                                        <div class="flex items-center justify-between">
+                                            <span>INPUT_01</span>
+                                            <span class="h-px flex-grow bg-clinical-border mx-2"></span>
+                                            <span>[Empleado]</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span>INPUT_02</span>
+                                            <span class="h-px flex-grow bg-clinical-border mx-2"></span>
+                                            <span>[Proyecto]</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span>INPUT_03</span>
+                                            <span class="h-px flex-grow bg-clinical-border mx-2"></span>
+                                            <span>[Horas]</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative flex flex-col gap-0 bg-clinical-card shadow-technical hover:shadow-technical-hover transition-all duration-300">
+                            <div
+                                class="absolute inset-0 border border-clinical-border transition-colors duration-300 group-hover:border-clinical-accent/30">
+                            </div>
+                            <div
+                                class="tech-border-corner top-0 left-0 border-t border-l group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="tech-border-corner top-0 right-0 border-t border-r group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="tech-border-corner bottom-0 left-0 border-b border-l group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="tech-border-corner bottom-0 right-0 border-b border-r group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="p-6 border-b border-clinical-border/50 flex justify-between items-start bg-clinical-accent-light/10">
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 bg-white border border-clinical-border text-clinical-accent">
+                                    <span class="material-symbols-outlined text-[24px] font-light">local_shipping</span>
+                                </div>
+                                <span
+                                    class="text-[10px] font-mono text-clinical-muted uppercase tracking-widest opacity-60">ID_002</span>
+                            </div>
+                            <div class="p-6 flex flex-col gap-4 flex-grow">
+                                <h3
+                                    class="text-clinical-text text-lg font-bold uppercase tracking-wide font-display group-hover:text-clinical-accent transition-colors">
+                                    Albaranes de Entrega
+                                </h3>
+                                <p class="text-clinical-muted text-sm font-light leading-relaxed">
+                                    Gestión eficiente de la recepción de mercancías y comprobantes de entrega.
+                                </p>
+                                <div class="mt-auto pt-4 relative">
+                                    <div
+                                        class="absolute top-0 left-0 w-full h-px bg-clinical-border/50 border-t border-dashed border-clinical-border">
+                                    </div>
+                                    <div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-clinical-accent/80">
+                                        <div class="flex items-center justify-between">
+                                            <span>REF_NO</span>
+                                            <span class="h-px flex-grow bg-clinical-border mx-2"></span>
+                                            <span>Ref_Albarán</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span>DT_STMP</span>
+                                            <span class="h-px flex-grow bg-clinical-border mx-2"></span>
+                                            <span>Data:Fecha</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span>ARR_OBJ</span>
+                                            <span class="h-px flex-grow bg-clinical-border mx-2"></span>
+                                            <span>Array:Prods</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative flex flex-col gap-0 bg-clinical-card shadow-technical hover:shadow-technical-hover transition-all duration-300">
+                            <div
+                                class="absolute inset-0 border border-clinical-border transition-colors duration-300 group-hover:border-clinical-accent/30">
+                            </div>
+                            <div
+                                class="tech-border-corner top-0 left-0 border-t border-l group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="tech-border-corner top-0 right-0 border-t border-r group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="tech-border-corner bottom-0 left-0 border-b border-l group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="tech-border-corner bottom-0 right-0 border-b border-r group-hover:border-clinical-accent">
+                            </div>
+                            <div
+                                class="p-6 border-b border-clinical-border/50 flex justify-between items-start bg-clinical-accent-light/10">
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 bg-white border border-clinical-border text-clinical-accent">
+                                    <span class="material-symbols-outlined text-[24px] font-light">receipt_long</span>
+                                </div>
+                                <span
+                                    class="text-[10px] font-mono text-clinical-muted uppercase tracking-widest opacity-60">ID_003</span>
+                            </div>
+                            <div class="p-6 flex flex-col gap-4 flex-grow">
+                                <h3
+                                    class="text-clinical-text text-lg font-bold uppercase tracking-wide font-display group-hover:text-clinical-accent transition-colors">
+                                    Facturas
+                                </h3>
+                                <p class="text-clinical-muted text-sm font-light leading-relaxed">
+                                    Automatización contable completa desde la recepción hasta la validación.
+                                </p>
+                                <div class="mt-auto pt-4 relative">
+                                    <div
+                                        class="absolute top-0 left-0 w-full h-px bg-clinical-border/50 border-t border-dashed border-clinical-border">
+                                    </div>
+                                    <div class="flex flex-col gap-2 mt-3 font-mono text-[10px] text-clinical-accent/80">
+                                        <div class="flex items-center justify-between">
+                                            <span>ENT_NAME</span>
+                                            <span class="h-px flex-grow bg-clinical-border mx-2"></span>
+                                            <span>&lt;Proveedor&gt;</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span>VAL_TOT</span>
+                                            <span class="h-px flex-grow bg-clinical-border mx-2"></span>
+                                            <span>&lt;Total&gt;</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span>TAX_CALC</span>
+                                            <span class="h-px flex-grow bg-clinical-border mx-2"></span>
+                                            <span>&lt;Impuestos&gt;</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-4 pt-16 justify-center relative">
+                        <div class="absolute top-0 left-1/2 w-px h-16 bg-clinical-border -translate-x-1/2"></div>
+                        <div class="absolute top-8 left-1/4 w-1/2 h-px bg-clinical-border"></div>
+                        <div class="absolute top-8 left-1/4 w-px h-8 bg-clinical-border"></div>
+                        <div class="absolute top-8 right-1/4 w-px h-8 bg-clinical-border"></div>
+                        <button
+                            class="group relative flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden h-12 px-8 bg-white hover:bg-clinical-accent text-clinical-text hover:text-white border border-clinical-text/20 hover:border-clinical-accent gap-3 transition-all duration-300 shadow-sm z-10">
+                            <span
+                                class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">terminal</span>
+                            <span class="text-sm font-bold tracking-[0.1em] uppercase font-display">Ver
+                                Documentación</span>
+                            <div class="absolute right-0 top-0 w-2 h-2 border-t border-r border-current opacity-50">
+                            </div>
+                            <div class="absolute left-0 bottom-0 w-2 h-2 border-b border-l border-current opacity-50">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="mt-12 text-center opacity-40 font-mono text-[10px] text-clinical-muted tracking-widest">
+                        // SYSTEM_DIAGNOSTICS_COMPLETE //
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

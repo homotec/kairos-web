@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kairos IA - Digitalización Inteligente de Documentos</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kairos IA - Digitalización Inteligente de Documentos</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             theme: {
                 extend: {
@@ -40,220 +46,302 @@
             },
         }
     </script>
-<style>
+    <style>
         body {
             font-family: 'Manrope', sans-serif;
             background-color: #F8FAFC;
-            background-image: 
+            background-image:
                 linear-gradient(#e2e8f0 1px, transparent 1px),
                 linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
             background-size: 60px 60px;
         }
-        h1, h2, h3, button, .font-technical-style {
+
+        h1,
+        h2,
+        h3,
+        button,
+        .font-technical-style {
             font-family: 'Inter', sans-serif;
             letter-spacing: -0.02em;
         }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
             color: inherit;
-        }.thin-border {
+        }
+
+        .thin-border {
             border-width: 1px;
             border-style: solid;
         }
     </style>
 </head>
+
 <body class="bg-background-light text-text-main antialiased selection:bg-slate-200 selection:text-slate-900">
-<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-<div class="layout-container flex w-full flex-col">
-<div class="flex flex-1 justify-center">
-<div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-border-clinical px-6 sm:px-10 py-4 bg-surface-light/80 backdrop-blur-md sticky top-0 z-50">
-<div class="flex items-center gap-3">
-<div class="size-8 text-primary flex items-center justify-center border border-border-clinical rounded-sm bg-slate-50">
-<span class="material-symbols-outlined text-xl">grid_view</span>
-</div>
-<h2 class="text-text-main text-lg font-semibold tracking-tight uppercase">Kairos IA</h2>
-</div>
-<div class="hidden md:flex flex-1 justify-end gap-10 items-center">
-<div class="flex items-center gap-8">
-<a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full" href="#">Inicio</a>
-<a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full" href="#">Tecnología</a>
-<a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full" href="#">Odoo 18</a>
-<a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full" href="#">Pricing</a>
-</div>
-<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-sm h-9 px-5 bg-primary text-white text-xs font-medium tracking-wide hover:bg-slate-800 transition-all uppercase shadow-clinical hover:shadow-clinical-hover">
-<span>Contactar</span>
-</button>
-</div>
-<div class="md:hidden flex items-center">
-<button class="text-text-main hover:bg-slate-100 p-1 rounded transition-colors">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</header>
-</div>
-</div>
-</div>
-<div class="layout-container flex w-full flex-col relative">
-<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white to-transparent opacity-60 pointer-events-none z-0"></div>
-<div class="px-6 sm:px-10 md:px-40 flex flex-1 justify-center py-12 relative z-10">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<div class="@container">
-<div class="flex flex-col gap-12 px-4 py-10 @[864px]:flex-row-reverse items-center">
-<div class="w-full aspect-[4/3] rounded-sm border border-border-clinical bg-slate-50 p-2 @[864px]:w-1/2 relative shadow-clinical">
-<div class="w-full h-full bg-center bg-cover overflow-hidden relative grayscale opacity-90 hover:grayscale-0 transition-all duration-700" data-alt="Abstract technical illustration" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9CHSmAtcT8ZSSWR-4Xl2ags4lhmQSoA4ao0GLp7TF1RiVckFgQ03ZBtn1kFXgEVVuZN3-bkyazwV5ImDlz2KmnVHzNlTqL-ZOTxkb_83vxZXeKFSMiXjy-_83gzeL0BNNf2JJPslAs3f3ks9ntdlU45W61tLWnFgsbc4NdTByqjcO4rLMR5DLIZYLlmhVqobJToXsPVdLPxcUs3ex8iJItdq2WDe5HnLj2-JhXAixg0hHrNyu5-u_5lyDfXh225YWsIllxXvqgs0");'>
-<div class="absolute inset-0 bg-white/10"></div>
-<div class="absolute top-0 left-0 w-full h-full border-[0.5px] border-white/20 m-2 box-border"></div>
-<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-2 py-1 text-[10px] text-text-muted font-mono border border-border-clinical">FIG. 01 — SCAN</div>
-</div>
-</div>
-<div class="flex flex-col gap-8 @[864px]:justify-center @[864px]:w-1/2">
-<div class="flex flex-col gap-6 text-left">
-<div class="inline-flex items-center gap-3 px-3 py-1.5 rounded-full border border-border-clinical bg-white w-fit shadow-sm">
-<div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-<span class="text-text-muted text-[11px] font-medium uppercase tracking-widest font-technical-style">System Status: Nominal</span>
-</div>
-<h1 class="text-text-main text-5xl font-light leading-[1.1] tracking-tight @[480px]:text-6xl uppercase">
-                                    Kairos IA<br/><span class="text-slate-400 font-extralight">Digitalización</span>
-</h1>
-<h2 class="text-text-muted text-base font-light leading-relaxed border-l border-slate-300 pl-6 max-w-md">
-                                    Automatización de captura de datos. Precisión clínica en el procesamiento de información estructurada mediante algoritmos avanzados.
-                                </h2>
-</div>
-<div class="flex flex-wrap gap-4 pt-4">
-<button class="flex items-center justify-center rounded-sm h-11 px-8 bg-surface-light border border-slate-300 text-text-main text-xs font-semibold tracking-widest hover:border-slate-800 hover:bg-slate-50 transition-all uppercase shadow-sm">
-<span>Solicitar Demo</span>
-</button>
-<button class="flex items-center justify-center h-11 px-6 text-text-muted text-xs font-medium tracking-widest hover:text-text-main transition-colors uppercase group">
-<span>Más Información</span>
-<span class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="layout-container flex w-full flex-col bg-surface-light border-y border-border-clinical">
-<div class="px-6 sm:px-10 md:px-40 flex flex-1 justify-center py-24">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<div class="flex flex-col gap-16 px-4 @container">
-<div class="flex flex-col gap-4 text-center items-center">
-<h3 class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-2">Especificaciones Técnicas</h3>
-<h1 class="text-text-main tracking-tight text-3xl font-light leading-tight @[480px]:text-4xl max-w-[720px]">
-                            Protocolos del <span class="font-semibold">Sistema</span>
-</h1>
-<p class="text-text-muted text-sm font-light leading-relaxed max-w-[600px] mt-2">
-                            Integración seamless con Odoo 18. Arquitectura diseñada para eficiencia operativa.
-                        </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group flex flex-1 gap-6 p-8 flex-col bg-slate-50 border border-transparent hover:border-border-clinical hover:bg-white hover:shadow-clinical transition-all duration-500 relative">
-<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-<span class="material-symbols-outlined text-slate-200 text-6xl font-thin">qr_code_2</span>
-</div>
-<div class="text-text-main w-10 h-10 flex items-center justify-center border border-slate-200 bg-white rounded-sm mb-2">
-<span class="material-symbols-outlined text-[20px] font-light">extension</span>
-</div>
-<div class="flex flex-col gap-3 relative z-10">
-<h2 class="text-text-main text-sm font-bold tracking-wide uppercase">Integración Odoo 18</h2>
-<p class="text-text-muted text-sm font-light leading-relaxed">Conexión nativa a nivel de API. Sin fricción en la implementación de flujos ERP.</p>
-</div>
-<div class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700"></div>
-</div>
-<div class="group flex flex-1 gap-6 p-8 flex-col bg-slate-50 border border-transparent hover:border-border-clinical hover:bg-white hover:shadow-clinical transition-all duration-500 relative">
-<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-<span class="material-symbols-outlined text-slate-200 text-6xl font-thin">memory</span>
-</div>
-<div class="text-text-main w-10 h-10 flex items-center justify-center border border-slate-200 bg-white rounded-sm mb-2">
-<span class="material-symbols-outlined text-[20px] font-light">psychology</span>
-</div>
-<div class="flex flex-col gap-3 relative z-10">
-<h2 class="text-text-main text-sm font-bold tracking-wide uppercase">IA Avanzada</h2>
-<p class="text-text-muted text-sm font-light leading-relaxed">Redes neuronales de aprendizaje continuo para maximizar la fidelidad de datos.</p>
-</div>
-<div class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700"></div>
-</div>
-<div class="group flex flex-1 gap-6 p-8 flex-col bg-slate-50 border border-transparent hover:border-border-clinical hover:bg-white hover:shadow-clinical transition-all duration-500 relative">
-<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-<span class="material-symbols-outlined text-slate-200 text-6xl font-thin">schedule</span>
-</div>
-<div class="text-text-main w-10 h-10 flex items-center justify-center border border-slate-200 bg-white rounded-sm mb-2">
-<span class="material-symbols-outlined text-[20px] font-light">timer</span>
-</div>
-<div class="flex flex-col gap-3 relative z-10">
-<h2 class="text-text-main text-sm font-bold tracking-wide uppercase">Optimización Temporal</h2>
-<p class="text-text-muted text-sm font-light leading-relaxed">Reducción del 80% en carga manual. Minimización de error humano a niveles despreciables.</p>
-</div>
-<div class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="layout-container flex w-full flex-col relative overflow-hidden bg-background-light">
-<div class="px-6 sm:px-10 md:px-40 flex flex-1 justify-center py-24 relative z-10">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<div class="@container bg-white border border-border-clinical rounded-sm overflow-hidden shadow-sm relative p-1">
-<div class="border border-dashed border-slate-200 p-10 md:p-16 flex flex-col justify-center items-center gap-8 relative">
-<div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-slate-400"></div>
-<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-slate-400"></div>
-<div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-slate-400"></div>
-<div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-slate-400"></div>
-<div class="flex flex-col gap-3 text-center">
-<h2 class="text-text-main tracking-tight text-2xl font-semibold leading-tight uppercase">
-                                Actualizaciones de Sistema
-</h2>
-<p class="text-text-muted text-sm font-light max-w-lg mx-auto">
-                                Suscríbase al boletín técnico para recibir informes de rendimiento y nuevas capacidades.
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex w-full flex-col">
+            <div class="flex flex-1 justify-center">
+                <div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1">
+                    <header
+                        class="flex items-center justify-between whitespace-nowrap border-b border-border-clinical px-6 sm:px-10 py-4 bg-surface-light/80 backdrop-blur-md sticky top-0 z-50">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="size-8 text-primary flex items-center justify-center border border-border-clinical rounded-sm bg-slate-50">
+                                <span class="material-symbols-outlined text-xl">grid_view</span>
+                            </div>
+                            <h2 class="text-text-main text-lg font-semibold tracking-tight uppercase">Kairos IA</h2>
+                        </div>
+                        <div class="hidden md:flex flex-1 justify-end gap-10 items-center">
+                            <div class="flex items-center gap-8">
+                                <a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                                    href="#">Inicio</a>
+                                <a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                                    href="#">Tecnología</a>
+                                <a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                                    href="#">Odoo</a>
+                                <a class="text-text-muted text-xs font-medium uppercase tracking-wide hover:text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                                    href="#">Pricing</a>
+                            </div>
+                            <button
+                                class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-sm h-9 px-5 bg-primary text-white text-xs font-medium tracking-wide hover:bg-slate-800 transition-all uppercase shadow-clinical hover:shadow-clinical-hover">
+                                <span>Contactar</span>
+                            </button>
+                        </div>
+                        <div class="md:hidden flex items-center">
+                            <button class="text-text-main hover:bg-slate-100 p-1 rounded transition-colors">
+                                <span class="material-symbols-outlined">menu</span>
+                            </button>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div class="layout-container flex w-full flex-col relative">
+            <div
+                class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white to-transparent opacity-60 pointer-events-none z-0">
+            </div>
+            <div class="px-6 sm:px-10 md:px-40 flex flex-1 justify-center py-12 relative z-10">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <div class="@container">
+                        <div class="flex flex-col gap-12 px-4 py-10 @[864px]:flex-row-reverse items-center">
+                            <div
+                                class="w-full aspect-[4/3] rounded-sm border border-border-clinical bg-slate-50 p-2 @[864px]:w-1/2 relative shadow-clinical">
+                                <div class="w-full h-full bg-center bg-cover overflow-hidden relative grayscale opacity-90 hover:grayscale-0 transition-all duration-700"
+                                    data-alt="Abstract technical illustration"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9CHSmAtcT8ZSSWR-4Xl2ags4lhmQSoA4ao0GLp7TF1RiVckFgQ03ZBtn1kFXgEVVuZN3-bkyazwV5ImDlz2KmnVHzNlTqL-ZOTxkb_83vxZXeKFSMiXjy-_83gzeL0BNNf2JJPslAs3f3ks9ntdlU45W61tLWnFgsbc4NdTByqjcO4rLMR5DLIZYLlmhVqobJToXsPVdLPxcUs3ex8iJItdq2WDe5HnLj2-JhXAixg0hHrNyu5-u_5lyDfXh225YWsIllxXvqgs0");'>
+                                    <div class="absolute inset-0 bg-white/10"></div>
+                                    <div
+                                        class="absolute top-0 left-0 w-full h-full border-[0.5px] border-white/20 m-2 box-border">
+                                    </div>
+                                    <div
+                                        class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-2 py-1 text-[10px] text-text-muted font-mono border border-border-clinical">
+                                        FIG. 01 — SCAN</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-8 @[864px]:justify-center @[864px]:w-1/2">
+                                <div class="flex flex-col gap-6 text-left">
+                                    <div
+                                        class="inline-flex items-center gap-3 px-3 py-1.5 rounded-full border border-border-clinical bg-white w-fit shadow-sm">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                                        <span
+                                            class="text-text-muted text-[11px] font-medium uppercase tracking-widest font-technical-style">System
+                                            Status: Nominal</span>
+                                    </div>
+                                    <h1
+                                        class="text-text-main text-5xl font-light leading-[1.1] tracking-tight @[480px]:text-6xl uppercase">
+                                        Kairos IA<br /><span
+                                            class="text-slate-400 font-extralight">Digitalización</span>
+                                    </h1>
+                                    <h2
+                                        class="text-text-muted text-base font-light leading-relaxed border-l border-slate-300 pl-6 max-w-md">
+                                        Automatización de captura de datos. Precisión clínica en el procesamiento de
+                                        información estructurada mediante algoritmos avanzados.
+                                    </h2>
+                                </div>
+                                <div class="flex flex-wrap gap-4 pt-4">
+                                    <button
+                                        class="flex items-center justify-center rounded-sm h-11 px-8 bg-surface-light border border-slate-300 text-text-main text-xs font-semibold tracking-widest hover:border-slate-800 hover:bg-slate-50 transition-all uppercase shadow-sm">
+                                        <span>Solicitar Demo</span>
+                                    </button>
+                                    <button
+                                        class="flex items-center justify-center h-11 px-6 text-text-muted text-xs font-medium tracking-widest hover:text-text-main transition-colors uppercase group">
+                                        <span>Más Información</span>
+                                        <span
+                                            class="material-symbols-outlined text-sm ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-container flex w-full flex-col bg-surface-light border-y border-border-clinical">
+            <div class="px-6 sm:px-10 md:px-40 flex flex-1 justify-center py-24">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <div class="flex flex-col gap-16 px-4 @container">
+                        <div class="flex flex-col gap-4 text-center items-center">
+                            <h3 class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-2">Especificaciones
+                                Técnicas</h3>
+                            <h1
+                                class="text-text-main tracking-tight text-3xl font-light leading-tight @[480px]:text-4xl max-w-[720px]">
+                                Protocolos del <span class="font-semibold">Sistema</span>
+                            </h1>
+                            <p class="text-text-muted text-sm font-light leading-relaxed max-w-[600px] mt-2">
+                                Integración seamless con Odoo. Arquitectura diseñada para eficiencia operativa.
                             </p>
-</div>
-<div class="flex flex-1 justify-center w-full max-w-md">
-<label class="flex flex-col w-full h-11 group">
-<div class="flex w-full flex-1 items-stretch rounded-sm shadow-sm border border-slate-300 bg-white group-focus-within:border-slate-800 transition-all">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-sm text-text-main focus:outline-0 focus:ring-0 bg-transparent h-full placeholder:text-slate-400 px-4 text-xs font-medium tracking-wide" placeholder="email@dominio.com" value=""/>
-<div class="flex items-center justify-center rounded-r-sm bg-white pr-1 py-1">
-<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-sm h-full px-4 bg-primary text-white text-xs font-semibold tracking-wide hover:bg-slate-700 transition-colors uppercase">
-<span class="truncate">Suscribirse</span>
-</button>
-</div>
-</div>
-</label>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="layout-container flex w-full flex-col mt-auto border-t border-border-clinical bg-white">
-<div class="px-6 sm:px-10 md:px-40 flex flex-1 justify-center py-10">
-<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-<footer class="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-<div class="flex flex-col gap-2">
-<p class="text-text-main text-xs font-bold uppercase tracking-widest">Kairos IA</p>
-<p class="text-slate-400 text-[10px] font-mono leading-normal">© 2024 SYSTEM ONLINE. ALL RIGHTS RESERVED.</p>
-</div>
-<div class="flex flex-wrap items-center justify-center gap-8">
-<a class="text-text-muted hover:text-text-main text-[11px] font-medium uppercase tracking-wide transition-colors" href="#">Privacidad</a>
-<a class="text-text-muted hover:text-text-main text-[11px] font-medium uppercase tracking-wide transition-colors" href="#">Términos</a>
-<a class="text-text-muted hover:text-text-main text-[11px] font-medium uppercase tracking-wide transition-colors" href="#">Soporte</a>
-</div>
-<div class="flex gap-4">
-<a class="group w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 hover:border-slate-800 transition-colors" href="#">
-<span class="material-symbols-outlined text-slate-400 group-hover:text-slate-800 text-sm">groups</span>
-</a>
-<a class="group w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 hover:border-slate-800 transition-colors" href="#">
-<span class="material-symbols-outlined text-slate-400 group-hover:text-slate-800 text-sm">chat_bubble</span>
-</a>
-<a class="group w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 hover:border-slate-800 transition-colors" href="#">
-<span class="material-symbols-outlined text-slate-400 group-hover:text-slate-800 text-sm">thumb_up</span>
-</a>
-</div>
-</footer>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div
+                                class="group flex flex-1 gap-6 p-8 flex-col bg-slate-50 border border-transparent hover:border-border-clinical hover:bg-white hover:shadow-clinical transition-all duration-500 relative">
+                                <div
+                                    class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <span
+                                        class="material-symbols-outlined text-slate-200 text-6xl font-thin">qr_code_2</span>
+                                </div>
+                                <div
+                                    class="text-text-main w-10 h-10 flex items-center justify-center border border-slate-200 bg-white rounded-sm mb-2">
+                                    <span class="material-symbols-outlined text-[20px] font-light">extension</span>
+                                </div>
+                                <div class="flex flex-col gap-3 relative z-10">
+                                    <h2 class="text-text-main text-sm font-bold tracking-wide uppercase">Integración
+                                        Odoo</h2>
+                                    <p class="text-text-muted text-sm font-light leading-relaxed">Conexión nativa a
+                                        nivel de API. Sin fricción en la implementación de flujos ERP.</p>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700">
+                                </div>
+                            </div>
+                            <div
+                                class="group flex flex-1 gap-6 p-8 flex-col bg-slate-50 border border-transparent hover:border-border-clinical hover:bg-white hover:shadow-clinical transition-all duration-500 relative">
+                                <div
+                                    class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <span
+                                        class="material-symbols-outlined text-slate-200 text-6xl font-thin">memory</span>
+                                </div>
+                                <div
+                                    class="text-text-main w-10 h-10 flex items-center justify-center border border-slate-200 bg-white rounded-sm mb-2">
+                                    <span class="material-symbols-outlined text-[20px] font-light">psychology</span>
+                                </div>
+                                <div class="flex flex-col gap-3 relative z-10">
+                                    <h2 class="text-text-main text-sm font-bold tracking-wide uppercase">IA Avanzada
+                                    </h2>
+                                    <p class="text-text-muted text-sm font-light leading-relaxed">Redes neuronales de
+                                        aprendizaje continuo para maximizar la fidelidad de datos.</p>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700">
+                                </div>
+                            </div>
+                            <div
+                                class="group flex flex-1 gap-6 p-8 flex-col bg-slate-50 border border-transparent hover:border-border-clinical hover:bg-white hover:shadow-clinical transition-all duration-500 relative">
+                                <div
+                                    class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <span
+                                        class="material-symbols-outlined text-slate-200 text-6xl font-thin">schedule</span>
+                                </div>
+                                <div
+                                    class="text-text-main w-10 h-10 flex items-center justify-center border border-slate-200 bg-white rounded-sm mb-2">
+                                    <span class="material-symbols-outlined text-[20px] font-light">timer</span>
+                                </div>
+                                <div class="flex flex-col gap-3 relative z-10">
+                                    <h2 class="text-text-main text-sm font-bold tracking-wide uppercase">Optimización
+                                        Temporal</h2>
+                                    <p class="text-text-muted text-sm font-light leading-relaxed">Reducción del 80% en
+                                        carga manual. Minimización de error humano a niveles despreciables.</p>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-700">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-container flex w-full flex-col relative overflow-hidden bg-background-light">
+            <div class="px-6 sm:px-10 md:px-40 flex flex-1 justify-center py-24 relative z-10">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <div
+                        class="@container bg-white border border-border-clinical rounded-sm overflow-hidden shadow-sm relative p-1">
+                        <div
+                            class="border border-dashed border-slate-200 p-10 md:p-16 flex flex-col justify-center items-center gap-8 relative">
+                            <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-slate-400"></div>
+                            <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-slate-400"></div>
+                            <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-slate-400"></div>
+                            <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-slate-400"></div>
+                            <div class="flex flex-col gap-3 text-center">
+                                <h2
+                                    class="text-text-main tracking-tight text-2xl font-semibold leading-tight uppercase">
+                                    Actualizaciones de Sistema
+                                </h2>
+                                <p class="text-text-muted text-sm font-light max-w-lg mx-auto">
+                                    Suscríbase al boletín técnico para recibir informes de rendimiento y nuevas
+                                    capacidades.
+                                </p>
+                            </div>
+                            <div class="flex flex-1 justify-center w-full max-w-md">
+                                <label class="flex flex-col w-full h-11 group">
+                                    <div
+                                        class="flex w-full flex-1 items-stretch rounded-sm shadow-sm border border-slate-300 bg-white group-focus-within:border-slate-800 transition-all">
+                                        <input
+                                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-sm text-text-main focus:outline-0 focus:ring-0 bg-transparent h-full placeholder:text-slate-400 px-4 text-xs font-medium tracking-wide"
+                                            placeholder="email@dominio.com" value="" />
+                                        <div class="flex items-center justify-center rounded-r-sm bg-white pr-1 py-1">
+                                            <button
+                                                class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-sm h-full px-4 bg-primary text-white text-xs font-semibold tracking-wide hover:bg-slate-700 transition-colors uppercase">
+                                                <span class="truncate">Suscribirse</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-container flex w-full flex-col mt-auto border-t border-border-clinical bg-white">
+            <div class="px-6 sm:px-10 md:px-40 flex flex-1 justify-center py-10">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                    <footer
+                        class="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-text-main text-xs font-bold uppercase tracking-widest">Kairos IA</p>
+                            <p class="text-slate-400 text-[10px] font-mono leading-normal">© 2024 SYSTEM ONLINE. ALL
+                                RIGHTS RESERVED.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-center gap-8">
+                            <a class="text-text-muted hover:text-text-main text-[11px] font-medium uppercase tracking-wide transition-colors"
+                                href="#">Privacidad</a>
+                            <a class="text-text-muted hover:text-text-main text-[11px] font-medium uppercase tracking-wide transition-colors"
+                                href="#">Términos</a>
+                            <a class="text-text-muted hover:text-text-main text-[11px] font-medium uppercase tracking-wide transition-colors"
+                                href="#">Soporte</a>
+                        </div>
+                        <div class="flex gap-4">
+                            <a class="group w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 hover:border-slate-800 transition-colors"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined text-slate-400 group-hover:text-slate-800 text-sm">groups</span>
+                            </a>
+                            <a class="group w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 hover:border-slate-800 transition-colors"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined text-slate-400 group-hover:text-slate-800 text-sm">chat_bubble</span>
+                            </a>
+                            <a class="group w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 hover:border-slate-800 transition-colors"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined text-slate-400 group-hover:text-slate-800 text-sm">thumb_up</span>
+                            </a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

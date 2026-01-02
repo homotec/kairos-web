@@ -150,7 +150,7 @@ Cada proveedor puede tener asignadas:
 
 | Componente | Tecnología |
 |------------|------------|
-| **ERP** | Odoo 18 |
+| **ERP** | Odoo |
 | **IA Vision** | Google Gemini 2.0 Flash |
 | **Matching Difuso** | TheFuzz (Levenshtein) |
 | **Procesamiento PDF** | pdf2image + Poppler |
@@ -160,7 +160,7 @@ Cada proveedor puede tener asignadas:
 
 ## 📋 Requisitos
 
-- Odoo 18 Community o Enterprise
+- Odoo Community o Enterprise
 - Cuenta Google Cloud con API Gemini habilitada
 - Poppler (para conversión PDF)
 - Dependencias Python: `google-generativeai`, `thefuzz`, `pdf2image`
