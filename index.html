@@ -272,6 +272,82 @@
         .gradient-hero {
             background: linear-gradient(135deg, rgba(248, 250, 252, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(14, 165, 233, 0.05) 100%);
         }
+
+        /* --- ANIMACIONES DE FLUJO DE DATOS --- */
+        .data-flow-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .data-flow-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                    transparent 0%,
+                    rgba(14, 165, 233, 0.05) 45%,
+                    rgba(14, 165, 233, 0.15) 50%,
+                    rgba(14, 165, 233, 0.05) 55%,
+                    transparent 100%);
+            background-size: 200% 200%;
+            animation: data-flow 4s linear infinite;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .scanline {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: rgba(14, 165, 233, 0.2);
+            box-shadow: 0 0 8px 1px rgba(14, 165, 233, 0.4);
+            top: 0;
+            left: 0;
+            animation: scan 3s ease-in-out infinite;
+            z-index: 11;
+            pointer-events: none;
+        }
+
+        .blue-glow-pulse {
+            animation: blue-glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes data-flow {
+            0% {
+                background-position: 200% 200%;
+            }
+
+            100% {
+                background-position: -200% -200%;
+            }
+        }
+
+        @keyframes scan {
+
+            0%,
+            100% {
+                top: 0%;
+                opacity: 0;
+            }
+
+            5%,
+            95% {
+                opacity: 1;
+            }
+
+            50% {
+                top: 100%;
+            }
+        }
+
+        @keyframes blue-glow {
+            0% {
+                filter: drop-shadow(0 0 2px rgba(14, 165, 233, 0.1)) brightness(1);
+            }
+
+            100% {
+                filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.3)) brightness(1.05);
+            }
+        }
     </style>
 </head>
 
