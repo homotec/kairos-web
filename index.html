@@ -2018,7 +2018,7 @@
         // ===================
         // Validación del Formulario
         // ===================
-        function validateForm(event) {
+        async function validateForm(event) {
             event.preventDefault();
 
             const name = document.getElementById('form-name');
@@ -2054,29 +2054,61 @@
             }
 
             if (isValid) {
-                // Simular envío
+                // Estado de carga
                 btnText.textContent = 'Enviando...';
                 btnIcon.textContent = 'hourglass_empty';
                 btnIcon.classList.add('animate-spin');
                 submitBtn.disabled = true;
 
-                setTimeout(() => {
-                    btnText.textContent = '¡Enviado!';
-                    btnIcon.textContent = 'check';
-                    btnIcon.classList.remove('animate-spin');
-                    submitBtn.classList.add('bg-green-600', 'border-green-600', 'text-white');
-                    successMessage.classList.remove('hidden');
+                const formData = {
+                    name: name.value,
+                    email: email.value,
+                    company: document.getElementById('form-company').value,
+                    message: document.getElementById('form-message').value
+                };
 
-                    // Reset después de 3 segundos
+                try {
+                    const response = await fetch('/api/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        btnText.textContent = '¡Enviado!';
+                        btnIcon.textContent = 'check';
+                        btnIcon.classList.remove('animate-spin');
+                        submitBtn.classList.add('bg-green-600', 'border-green-600', 'text-white');
+                        successMessage.classList.remove('hidden');
+
+                        // Reset después de 5 segundos
+                        setTimeout(() => {
+                            document.getElementById('contact-form').reset();
+                            btnText.textContent = 'Ejecutar';
+                            btnIcon.textContent = 'arrow_forward';
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove('bg-green-600', 'border-green-600', 'text-white');
+                            successMessage.classList.add('hidden');
+                        }, 5000);
+                    } else {
+                        throw new Error('Error en el envío');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    btnText.textContent = 'Error';
+                    btnIcon.textContent = 'error';
+                    btnIcon.classList.remove('animate-spin');
+                    submitBtn.classList.add('bg-red-600', 'border-red-600', 'text-white');
+
                     setTimeout(() => {
-                        document.getElementById('contact-form').reset();
-                        btnText.textContent = 'Ejecutar';
+                        btnText.textContent = 'Reintentar';
                         btnIcon.textContent = 'arrow_forward';
                         submitBtn.disabled = false;
-                        submitBtn.classList.remove('bg-green-600', 'border-green-600', 'text-white');
-                        successMessage.classList.add('hidden');
-                    }, 5000);
-                }, 1500);
+                        submitBtn.classList.remove('bg-red-600', 'border-red-600', 'text-white');
+                    }, 3000);
+                }
             }
 
             return false;
