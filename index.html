@@ -2102,6 +2102,10 @@
                     btnIcon.classList.remove('animate-spin');
                     submitBtn.classList.add('bg-red-600', 'border-red-600', 'text-white');
 
+                    if (window.location.protocol === 'file:') {
+                        alert('⚠️ El formulario de contacto solo funciona en la web publicada de Vercel (no abriendo el archivo localmente).');
+                    }
+
                     setTimeout(() => {
                         btnText.textContent = 'Reintentar';
                         btnIcon.textContent = 'arrow_forward';
