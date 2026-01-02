@@ -3,6 +3,7 @@ module.exports = async (req, res) => {
     return res.status(200).json({
       status: 'API Active',
       message: 'La API de contacto está activa y escuchando peticiones POST.',
+      v: '1.2',
       time: new Date().toISOString()
     });
   }
