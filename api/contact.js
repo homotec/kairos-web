@@ -22,6 +22,8 @@ module.exports = async (req, res) => {
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
     // El receptor por defecto será el del login de Resend si no se configura la variable
     const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || 'lorenzo@homotec.com';
+    // Convert comma-separated string to an array for Resend
+    const recipients = RECIPIENT_EMAIL.split(',').map(email => email.trim());
 
     if (!RESEND_API_KEY) {
       return res.status(200).json({
@@ -38,7 +40,7 @@ module.exports = async (req, res) => {
       },
       body: JSON.stringify({
         from: 'Kairos IA <notificaciones@kairosia.digital>',
-        to: [RECIPIENT_EMAIL],
+        to: recipients,
         subject: `Nueva solicitud de Demo: ${name}`,
         html: `
           <h1>Nueva solicitud de contacto</h1>
