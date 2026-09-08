@@ -872,7 +872,7 @@ const DEFAULT_TEXTS = {
     }
   }
 };
-const INLINE_ASSETS = {};
+const INLINE_ASSETS = window.KAIROS_INLINE_ASSETS || {};
 
 let siteTexts = clone(DEFAULT_TEXTS);
 let lastLoadedText = "";
@@ -1229,17 +1229,6 @@ function renderHome() {
           <h2>${escapeHtml(h.benefitsTitle)}</h2>
         </div>
         ${benefitGrid(siteTexts.benefits)}
-      </div>
-    </section>
-
-    <section class="section-tight">
-      <div class="container cta-band ethic-cta">
-        <div>
-          ${siteTexts.ethic.homeEyebrow ? `<span class="eyebrow">${escapeHtml(siteTexts.ethic.homeEyebrow)}</span>` : ""}
-          <h2>${escapeHtml(siteTexts.ethic.homeTitle)}</h2>
-          <p class="section-copy">${escapeHtml(siteTexts.ethic.homeText)}</p>
-        </div>
-        ${siteTexts.ethic.homeButton ? `<a class="btn" href="ethic-by-design.html">${icon("verified_user")}${escapeHtml(siteTexts.ethic.homeButton)}</a>` : ""}
       </div>
     </section>
 
