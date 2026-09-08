@@ -1172,7 +1172,7 @@ function renderHome() {
           <div class="tech-card assistant-panel">
             <span class="corner-b"></span><span class="corner-c"></span>
             <div class="assistant-screen video-screen">
-              <video class="hero-video" data-intro-video controls playsinline muted preload="metadata" poster="${assetUrl("assets/hero-principal.png")}" aria-label="Vídeo introductorio de Kairós IA">
+              <video class="hero-video" data-intro-video autoplay loop playsinline muted preload="metadata" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" poster="${assetUrl("assets/hero-principal.png")}" aria-label="Vídeo introductorio de Kairós IA">
                 <source src="${assetUrl("assets/videos/video-home-kairos.mp4")}" type="video/mp4">
               </video>
             </div>
@@ -1670,28 +1670,14 @@ function initIntroVideo() {
   const video = document.querySelector("[data-intro-video]");
   if (!video) return;
 
-  const completedKey = "kairos-home-intro-video-completed";
-  const hasCompleted = localStorage.getItem(completedKey) === "true";
-
-  video.addEventListener("ended", () => {
-    localStorage.setItem(completedKey, "true");
-    video.muted = false;
-    video.removeAttribute("autoplay");
-  }, { once: true });
-
-  if (hasCompleted) {
-    video.muted = false;
-    video.removeAttribute("autoplay");
-    return;
-  }
-
+  video.controls = false;
   video.muted = true;
+  video.defaultMuted = true;
+  video.loop = true;
   video.setAttribute("autoplay", "");
   const playPromise = video.play();
   if (playPromise && typeof playPromise.catch === "function") {
-    playPromise.catch(() => {
-      video.removeAttribute("autoplay");
-    });
+    playPromise.catch(() => {});
   }
 }
 
