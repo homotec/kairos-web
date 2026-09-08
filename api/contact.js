@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, company, message } = req.body || {};
+  const { name, email, company, category, message } = req.body || {};
 
   if (!name || !email) {
     return res.status(400).json({ error: 'Faltan campos obligatorios: nombre y email' });
@@ -32,6 +32,13 @@ module.exports = async (req, res) => {
       });
     }
 
+    const escapeHtml = (value = '') => String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -44,10 +51,11 @@ module.exports = async (req, res) => {
         subject: `Nueva solicitud de Demo: ${name}`,
         html: `
           <h1>Nueva solicitud de contacto</h1>
-          <p><strong>Nombre:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Empresa:</strong> ${company || 'No especificada'}</p>
-          <p><strong>Mensaje:</strong> ${message || 'Sin mensaje'}</p>
+          <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Empresa:</strong> ${escapeHtml(company || 'No especificada')}</p>
+          <p><strong>Categoría:</strong> ${escapeHtml(category || 'No especificada')}</p>
+          <p><strong>Mensaje:</strong> ${escapeHtml(message || 'Sin mensaje')}</p>
         `,
       }),
     });

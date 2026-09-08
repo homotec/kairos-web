@@ -1,0 +1,264 @@
+TEXTOS WEB KAIRÓS IA - REVISIÓN
+======================================
+
+Archivo preparado para revisar textos comerciales de la web.
+Nota: se excluyen los textos legales largos de Términos y Privacidad salvo enlaces/pie.
+
+HOME
+----
+Eyebrow portada: Asistente-IA para procesos empresariales
+Título portada: El Asistente Empresarial de IA que comprende tus procesos y trabaja contigo.
+Texto portada: Kairós IA organiza tu información, automatiza tareas, conecta tus aplicaciones y ayuda a tus equipos a trabajar y decidir mejor.
+Botón principal: Ver qué hace Kairós
+Botón secundario: Solicitar demo
+Eyebrow Qué es Kairós: Qué es Kairós IA
+Título Qué es Kairós: La capa inteligente que conecta información, procesos y personas.
+Texto Qué es Kairós: Kairós no es un OCR, un gestor documental o un chatbot. Es una capa inteligente de IA que comprende los documentos y datos de tu empresa, organiza la información y automatiza tareas y procesos. Trabaja conectada con tus aplicaciones y con tus equipos, reduciendo el trabajo manual y ayudando a las personas a trabajar mejor, con más información, control y capacidad de decisión.
+Título imagen Qué es Kairós: Kairós actúa como una capa inteligente entre tus aplicaciones, tus procesos y tus equipos.
+Eyebrow Qué hace Kairós: Qué hace Kairós
+Título Qué hace Kairós: Kairós IA, un asistente empresarial que se adapta a tus procesos, tus tareas y al ritmo de tu empresa.
+Eyebrow Beneficios: Beneficios
+Título Beneficios: Más control, más productividad y más capacidad de decisión.
+
+QUÉ ES KAIRÓS - TARJETAS
+-------------------------
+Comprende: Interpreta documentos y datos, identifica su tipología y extrae la información relevante.
+Actúa: Valida y concilia datos, aplica reglas, controla estados, genera documentos e intercambia información.
+Informa: Organiza los datos, genera indicadores y permite consultar la información empresarial.
+
+QUÉ HACE KAIRÓS - TARJETAS Y SUBPÁGINAS
+-------------------------------------------
+01 · Centralización documental y de datos
+Subtítulo tarjeta: Toda la información de tu empresa, en un único lugar.
+Descripción: Kairós centraliza facturas, albaranes, contratos, partes de trabajo, recibos bancarios y otros documentos, interpreta su contenido, extrae y estructura sus datos y conserva los archivos originales. Además, puede incorporar información procedente de aplicaciones y facilitar su consulta, búsqueda, comparación y descarga mediante vistas y motores de búsqueda avanzados.
+Highlights:
+  01. Consulta de digitalizaciones
+      Subtítulo: Busca, filtra y revisa la información extraída de tus documentos en un único entorno.
+      Texto: Kairós centraliza las digitalizaciones realizadas y permite consultar facturas, albaranes, recibos y otros documentos desde una única vista. La información queda estructurada y accesible para revisar estados, localizar documentos concretos y validar rápidamente los datos extraídos.
+      Caption imagen: Consulta unificada de documentos y datos digitalizados.
+  02. Dashboard operativo y de control
+      Subtítulo: Visualiza la actividad, supervisa el proceso y convierte la operativa diaria en información útil.
+      Texto: El dashboard de Kairós reúne indicadores clave de actividad, estado de procesamiento, incidencias y consultas sobre la información gestionada. Permite a los equipos y a la dirección disponer de una visión clara de la operativa, detectar puntos de atención y tomar decisiones con más criterio.
+      Caption imagen: Indicadores, control y visibilidad en tiempo real.
+  03. Gestión inteligente de contratos
+      Subtítulo: Centraliza contratos y anexos, estructura su información y facilita su seguimiento.
+      Texto: Kairós permite reunir contratos, anexos y documentación asociada en un entorno único, interpretando su contenido y organizando los datos clave para su consulta y control. De este modo, resulta más sencillo localizar contratos, revisar condiciones, consultar información relevante y dar soporte a la gestión documental y operativa.
+      Caption imagen: Contratos centralizados, organizados y listos para consultar.
+  04. Logs y trazabilidad
+      Subtítulo: Sigue el recorrido de cada documento y mantén control sobre el proceso.
+      Texto: Kairós registra la recepción, tratamiento y estado de los documentos procesados, generando trazabilidad sobre las acciones realizadas y el resultado de cada flujo. Esto permite a los equipos supervisar el proceso, revisar incidencias, identificar errores y disponer de mayor control sobre la operativa documental.
+      Caption imagen: Seguimiento y control del ciclo de vida documental.
+  05. Centralización documental y de datos
+      Subtítulo: Toda la información de tu empresa, en un único lugar.
+      Texto: Kairós centraliza facturas, albaranes, contratos, partes, recibos y otros documentos, interpreta su contenido y estructura sus datos para facilitar su consulta, búsqueda y control. Además, puede incorporar información procedente de aplicaciones, convirtiéndose en una capa útil para acceder a documentos y datos desde una visión unificada.
+      Caption imagen: Documentos y datos conectados en una misma capa de trabajo.
+
+02 · Gestión inteligente de facturas
+Subtítulo tarjeta: Lee, valida, alerta y deriva para su revisión o aprobación.
+Descripción: Kairós lee las facturas y los recibos bancarios, extrae sus datos y los confronta con las reglas de negocio definidas por la empresa. Detecta incidencias, genera alertas y automatiza el tratamiento de las facturas recurrentes, mientras deriva al equipo de Administración aquellas que requieren revisión o aprobación antes de su registro definitivo en el ERP.
+Título subpágina: Así trabaja Kairós con tus facturas
+Intro subpágina: Desde la recepción del documento hasta su validación e integración en el ERP, Kairós convierte la gestión de facturas en un proceso más ágil, estructurado y controlado.
+Highlights:
+  01. Control de facturas y estados
+      Texto: Kairós organiza las facturas dentro de un flujo de trabajo claro y estructurado, mostrando qué documentos están completados, en revisión o con incidencias. Esto permite al equipo priorizar, supervisar y actuar rápidamente sobre cada factura.
+  02. Lectura y extracción de la factura
+      Texto: Kairós interpreta la factura o recibo bancario original, identifica su contenido y extrae automáticamente los datos clave de cabecera y líneas. La información queda estructurada y lista para su revisión, consulta o tratamiento posterior.
+  03. Validación y gestión de excepciones
+      Texto: Cuando una factura o recibo bancario requiere revisión, Kairós detecta incidencias, aplica reglas y señala al usuario qué debe validarse o corregirse. De esta forma, el equipo interviene solo donde realmente aporta valor.
+  04. Intra-factura e integración con a3ERP
+      Texto: Una vez validada, Kairós genera la intra-factura y prepara la información para su integración en el ERP. Así se evita volver a introducir los datos y se acelera el registro contable con mayor control y trazabilidad.
+
+03 · Gestión inteligente de albaranes
+Subtítulo tarjeta: Desde la entrada del documento hasta su incorporación al sistema de gestión.
+Descripción: Kairós interpreta y estructura la información de los albaranes, comprueba los datos aplicando las reglas del proceso y facilita la gestión de cualquier incidencia detectada. Una vez validados, los datos pueden enviarse automáticamente al módulo de Compras, ERP u otra aplicación conectada, reduciendo tareas manuales y mejorando el control de la operativa.
+Título subpágina: Así gestiona Kairós tus albaranes
+Intro subpágina: Desde la entrada del documento hasta su incorporación al sistema de gestión, Kairós ayuda a convertir los albaranes en información estructurada, validada y preparada para continuar dentro del proceso de Compras.
+Highlights:
+  01. Seguimiento de albaranes
+      Subtítulo: Kairós centraliza los albaranes recibidos y permite conocer en todo momento su situación dentro del proceso.
+      Texto: Los usuarios pueden identificar rápidamente qué documentos han sido tratados correctamente, cuáles requieren revisión y dónde existen incidencias pendientes de resolver. Esto facilita una gestión más ordenada del volumen documental y permite concentrar la atención en los casos que realmente necesitan intervención.
+      Caption imagen: Seguimiento visual del estado de los albaranes procesados.
+  02. Interpretación del albarán
+      Subtítulo: Kairós analiza el contenido del albarán e identifica la información necesaria para trabajar con él.
+      Texto: Identifica proveedor, número de documento, fechas, referencias, artículos, unidades, cantidades, precios y demás datos relevantes. La información extraída queda estructurada y relacionada con el documento original, facilitando su consulta y su utilización en las siguientes etapas del proceso.
+      Caption imagen: Lectura del albarán y extracción de datos relevantes.
+  03. Comprobación y gestión de incidencias
+      Subtítulo: Antes de continuar con el proceso, Kairós comprueba la información obtenida aplicando los criterios y reglas definidos por la organización.
+      Texto: Si detecta datos incompletos, inconsistencias o situaciones que requieren validación, marca el albarán para revisión y facilita al usuario la información necesaria para resolver la incidencia. De este modo, la intervención humana se concentra principalmente en las excepciones.
+      Caption imagen: Revisión de incidencias antes de continuar el proceso.
+  04. Registro en Compras o ERP
+      Subtítulo: Cuando el albarán ha sido correctamente procesado y validado, Kairós puede preparar y trasladar su información.
+      Texto: La información puede enviarse al módulo de Compras, ERP o aplicación de gestión correspondiente. El objetivo es que los datos no tengan que introducirse nuevamente de forma manual y que el albarán continúe dentro de la operativa habitual de la empresa, respetando las reglas y flujos definidos en cada integración.
+      Caption imagen: Información preparada para registro en Compras o ERP.
+
+04 · Conciliación
+Subtítulo tarjeta: Compara, valida y detecta diferencias antes de continuar el proceso.
+Descripción: Kairós facilita la conciliación entre albaranes, pedidos y facturas, comparando automáticamente la información disponible en cada documento y en las aplicaciones conectadas. El sistema puede contrastar referencias, artículos, cantidades, precios, impuestos, totales y otros datos relevantes del proceso, ayudando a verificar que la información coincide antes de avanzar hacia la siguiente fase.
+Título subpágina: Más control antes de validar y continuar el proceso.
+Intro subpágina: En lugar de revisar manualmente toda la documentación, los usuarios pueden centrarse directamente en los puntos que necesitan atención.
+Highlights:
+  01. Identificación de coincidencias y discrepancias
+      Texto: Kairós analiza los elementos que forman parte de la conciliación y señala de forma clara qué información coincide, presenta diferencias o requiere revisión. Esto permite detectar rápidamente diferencias de cantidades, variaciones de precios, artículos no coincidentes, referencias distintas o cualquier otra excepción definida dentro del proceso.
+  02. Conciliación adaptada al proceso de negocio
+      Texto: La conciliación no se limita a una comparación rígida entre documentos. Kairós puede aplicar reglas y criterios definidos por la organización, teniendo en cuenta cómo funciona realmente cada proceso y qué condiciones deben cumplirse antes de considerar una operación correctamente conciliada.
+  03. Gestión de excepciones
+      Texto: Cuando Kairós detecta una discrepancia, puede identificarla como una excepción y ponerla a disposición del usuario responsable para su revisión. Así, los equipos pueden trabajar por excepción en lugar de revisar manualmente cada documento.
+  04. Más control antes de validar
+      Texto: Kairós ayuda a comprobar que la información recibida es coherente antes de realizar acciones posteriores, como validar un documento, registrar información en una aplicación o continuar un flujo administrativo o de compras. Esto contribuye a detectar errores antes, reducir reprocesos y mejorar la trazabilidad de las validaciones realizadas.
+  05. Integrada con otras capacidades de Kairós
+      Texto: La conciliación puede trabajar conjuntamente con otras capacidades del asistente empresarial. Kairós puede recibir y digitalizar los documentos, extraer la información, consultar datos de aplicaciones conectadas, realizar la conciliación y, cuando se cumplen las condiciones definidas, continuar el proceso mediante sus integraciones.
+
+05 · Gestión inteligente de contratos
+Subtítulo tarjeta: De contratos dispersos a información estructurada, accesible y bajo control.
+Descripción: Kairós Contratos centraliza la documentación contractual, interpreta su contenido y transforma los datos relevantes de cada contrato en información estructurada para facilitar su consulta, seguimiento y control.
+Título subpágina: De contratos dispersos a información estructurada, accesible y bajo control.
+Intro subpágina: Kairós Contratos centraliza la documentación contractual, interpreta su contenido y transforma los datos relevantes de cada contrato en información estructurada para facilitar su consulta, seguimiento y control.
+Highlights:
+  01. Centralización contractual
+      Subtítulo: Todos tus contratos y anexos en un único entorno.
+      Texto: Kairós reúne la documentación contractual de la organización y permite gestionarla desde un punto centralizado, evitando la dispersión entre carpetas, correos y diferentes ubicaciones.
+      Caption imagen: Contratos y anexos centralizados para trabajar desde una única vista.
+  02. Lectura y extracción inteligente
+      Subtítulo: Del contrato original a información lista para trabajar.
+      Texto: Kairós interpreta el documento y extrae automáticamente información relevante como proveedor o contraparte, tipo y número de contrato, fechas, importes, vencimientos, renovaciones y otros datos definidos por la organización.
+      Caption imagen: Datos clave extraídos del contrato original para revisar y consultar.
+  03. Clasificación automática
+      Subtítulo: Cada contrato, asociado a su contexto empresarial.
+      Texto: La información puede organizarse por sociedad, establecimiento, departamento, unidad de negocio, proveedor y centro de coste, facilitando una visión contractual ordenada y transversal.
+      Caption imagen: Clasificación del contrato según criterios definidos por la organización.
+  04. Control de vencimientos y renovaciones
+      Subtítulo: Anticípate a las fechas importantes.
+      Texto: Kairós estructura fechas de inicio, vencimiento, renovación y preaviso para facilitar el seguimiento del ciclo contractual y reducir el riesgo de que una fecha relevante pase inadvertida.
+      Caption imagen: Seguimiento de fechas, renovaciones y preavisos contractuales.
+  05. Alertas y seguimiento
+      Subtítulo: La información llega a quien tiene que actuar.
+      Texto: Kairós puede generar avisos asociados a vencimientos, renovaciones y otras condiciones contractuales, facilitando que los usuarios responsables intervengan cuando corresponde.
+      Caption imagen: Avisos asociados a vencimientos, renovaciones y condiciones contractuales.
+  06. Contrato y datos en una misma vista
+      Subtítulo: Consulta la información estructurada sin perder el documento original.
+      Texto: La ficha digitalizada permite visualizar conjuntamente los datos extraídos y el contrato original, facilitando la revisión, validación y consulta de la información.
+      Caption imagen: Contratos digitalizados listos para consultar desde una vista organizada.
+  07. Búsqueda, filtros y estados
+      Subtítulo: Encuentra y controla tus contratos con mayor rapidez.
+      Texto: Kairós permite consultar y clasificar la documentación contractual y trabajar con diferentes vistas y estados, facilitando el seguimiento de contratos completados, pendientes de revisión u otras situaciones definidas dentro del proceso.
+      Caption imagen: Consulta de contratos mediante filtros, estados y vistas de control.
+  08. Datos estructurados y exportables
+      Subtítulo: La información contractual deja de estar encerrada en un PDF.
+      Texto: Los datos extraídos quedan estructurados para poder consultarlos, analizarlos y exportarlos, convirtiendo los contratos en una fuente de información utilizable por la organización.
+      Caption imagen: Datos preparados para consultar, analizar, importar y exportar.
+  09. Adaptado a tu gestión contractual
+      Subtítulo: Kairós interpreta y organiza la información que realmente necesita cada empresa.
+      Texto: Permite definir qué información debe interpretar, automatizar asignaciones organizativas y procesar simultáneamente contratos, anexos y otra documentación contractual.
+      Caption imagen: Campos, criterios y procesos adaptados a la forma de trabajar de cada empresa.
+  10. Convierte tus contratos en información útil para gestionar
+      Subtítulo: Menos trabajo manual, más organización y trazabilidad.
+      Texto: Kairós Contratos ayuda a reducir trabajo manual, mejorar la organización y trazabilidad de la documentación y disponer de datos estructurados para controlar mejor vencimientos, renovaciones y condiciones contractuales.
+      Caption imagen: Filtros, agrupaciones y vistas para convertir contratos en información accionable.
+
+06 · Información y decisión
+Subtítulo tarjeta: Convierte la información de tu empresa en conocimiento útil para decidir mejor.
+Descripción: Kairós combina la información que genera a partir de documentos y procesos con los datos procedentes de las aplicaciones conectadas, creando una capa transversal de información accesible para toda la organización.
+Título subpágina: Convierte la información de tu empresa en conocimiento útil para decidir mejor.
+Highlights:
+  01. PGD · Plataforma de Gobernanza de Datos
+      Subtítulo: Una capa integrada para centralizar, estructurar y gobernar la información.
+      Texto: Kairós cuenta con una PGD, su Plataforma de Gobernanza de Datos, integrada dentro de esta capacidad. PGD centraliza, estructura y gobierna la información, permitiendo además su control, monitorización, sanitación y explotación. No es solo un almacén de datos: proporciona una visión más completa sobre el dato y facilita que la información pueda utilizarse de forma coherente y transversal.
+      Caption imagen: Gobernanza, estructura y control de la información empresarial.
+  02. Paneles e indicadores
+      Texto: Kairós presenta la información mediante paneles, indicadores y cuadros de mando adaptados a las necesidades de cada organización y área.
+      Caption imagen: Indicadores y paneles para supervisar la operativa.
+  03. Consultas en lenguaje natural
+      Texto: Los usuarios pueden preguntar directamente a Kairós sobre la información disponible mediante lenguaje natural, obteniendo respuestas contextualizadas sin depender únicamente de filtros o informes predefinidos.
+      Caption imagen: Consulta de información mediante preguntas en lenguaje natural.
+  04. Informes y reportes
+      Texto: Kairós puede generar informes, análisis y comparativas, así como completar plantillas de reporting ya utilizadas por el cliente con la información disponible.
+      Caption imagen: Informes y reportes generados a partir de la información disponible.
+  05. Alertas y seguimiento
+      Texto: Kairós puede detectar incidencias, excepciones, desviaciones o vencimientos y avisar automáticamente a los usuarios responsables para facilitar su seguimiento y actuación.
+      Caption imagen: Alertas y seguimiento para actuar sobre incidencias o desviaciones.
+  06. Información transversal
+      Texto: La información puede adaptarse a las necesidades de Administración, Compras, Operaciones, Finanzas, Comercial y Dirección, manteniendo una visión común y coordinada de la organización.
+      Caption imagen: Una visión compartida de la información entre áreas.
+
+BENEFICIOS
+----------
+01 · Ahorro de tiempo
+Texto reverso: Reduce el tiempo dedicado a buscar, revisar, clasificar, validar, copiar y registrar información manualmente.
+02 · Más capacidad operativa
+Texto reverso: Permite gestionar un mayor volumen de documentos, datos y procesos sin incrementar proporcionalmente la carga administrativa de los equipos.
+03 · Reducción de errores
+Texto reverso: Reduce errores de transcripción, clasificación, validación y registro mediante extracción inteligente, reglas y controles automáticos.
+04 · Gobernanza del dato
+Texto reverso: Ayuda a establecer reglas, criterios, responsabilidades y controles para disponer de información empresarial más ordenada, consistente y fiable.
+05 · Calidad y estandarización
+Texto reverso: Transforma información procedente de diferentes documentos y aplicaciones en datos estructurados, normalizados y preparados para ser utilizados.
+06 · Trazabilidad y auditoría
+Texto reverso: Permite conocer qué ha ocurrido, cuándo, sobre qué información y dentro de qué estado o fase del proceso.
+07 · Automatización con control
+Texto reverso: Automatiza las tareas que pueden resolverse mediante reglas y mantiene la intervención humana cuando se requiere revisión, aprobación o decisión.
+08 · Información conectada
+Texto reverso: Reduce la fragmentación entre documentos, datos y aplicaciones, permitiendo que la información continúe su recorrido entre diferentes sistemas.
+09 · Gestión de excepciones
+Texto reverso: Detecta incidencias, discrepancias o situaciones que requieren intervención y las dirige a las personas adecuadas para su resolución.
+10 · Visibilidad transversal
+Texto reverso: Facilita una visión más completa de la información y los procesos que atraviesan diferentes áreas, documentos y aplicaciones de la organización.
+11 · Mejores decisiones
+Texto reverso: Convierte la información operativa en indicadores, alertas, informes y consultas que ayudan a gestionar y decidir con mejor información.
+12 · Escalabilidad organizativa
+Texto reverso: Permite comenzar por un proceso concreto y extender progresivamente Kairós hacia nuevas áreas, capacidades, automatizaciones e integraciones.
+
+ETHICS BY DESIGN
+----------------
+Eyebrow: ETHICS BY DESIGN
+Título: IA empresarial diseñada para trabajar con control, criterio y responsabilidad.
+Texto hero: Kairós incorpora principios éticos desde su diseño y su propósito. Está concebido para ayudar a las organizaciones a digitalizar, automatizar y mejorar sus procesos manteniendo el control, la supervisión y la capacidad de decisión de las personas.
+Bloque 2 título: Una IA diseñada con responsabilidad desde el origen
+Bloque 2 texto: Kairós nace como una IA aumentativa y colaborativa, diseñada para conectar personas, procesos, documentos y datos, respetando la operativa y el ecosistema tecnológico de cada organización.
+Bloque principios título: Una IA colaborativa que se integra en los procesos teniendo en cuenta los equipos, y las personas.
+Bloque final texto: Diseñamos Kairós para que las organizaciones puedan avanzar hacia el nuevo paradigma de la inteligencia artificial de forma progresiva, flexible y alineada con sus propias necesidades.
+CTA final: Solicitar una demo
+CTA home eyebrow: Ethics by Design
+CTA home título: Una IA responsable desde su origen
+CTA home texto: Kairós IA incorpora criterios éticos desde su diseño y su propósito, priorizando una inteligencia artificial colaborativa que aumente las capacidades de los equipos y las personas.
+CTA home botón: Ver enfoque ético
+Principios:
+  - Control humano: Revisión y aprobación cuando el proceso lo requiere.
+  - Trazabilidad: Seguimiento de documentos, datos, estados y acciones.
+  - Personas primero: Tecnología diseñada para aumentar la capacidad de trabajo y decisión de los equipos.
+  - Reglas explícitas: Automatización basada en criterios definidos por la organización.
+  - Flexibilidad tecnológica: Kairós se integra con el ecosistema existente y permite trabajar con diferentes tecnologías y motores de IA.
+  - IA comprensible: El usuario mantiene visibilidad sobre la información y el funcionamiento del proceso.
+
+CONTACTO / SOLICITAR DEMO
+-------------------------
+Eyebrow: Solicitar demo
+Título: Cuéntanos qué necesitas y te mostramos cómo puede ayudarte Kairós.
+Texto: Completa el formulario y prepararemos una reunión orientada a tus documentos, procesos, aplicaciones y necesidades de automatización.
+Tarjeta eyebrow: Kairós IA Contact
+Tarjeta texto: Un asistente empresarial preparado para comprender la información de tu negocio, automatizar procesos y ayudar a tus equipos a trabajar y decidir mejor.
+Beneficios eyebrow: Por qué elegir Kairós IA
+Beneficios título: Beneficios que se traducen en operación diaria.
+
+QUIÉNES SOMOS
+-------------
+Kairós IA Home Qué es Kairós Qué hace Kairós Beneficios Ethic by design Solicitar demo Quiénes somos Tecnología, conocimiento de negocio y capacidad de desarrollo trabajando juntos.
+Serra-tech Europe y Homotec Servicios Informáticos SLU llevamos tiempo colaborando bajo un modelo de Joint Venture , uniendo experiencia, conocimiento de negocio y capacidad tecnológica para desarrollar soluciones conjuntas. Fruto de esta colaboración nace una de nuestras principales spin-off: Kairós IA, el primer agente empresarial de back office diseñado para adaptarse a los procesos, aplicaciones y necesidades reales de cada negocio.
+01 Entendemos el negocio antes de aplicar la tecnología
+Nuestro enfoque parte de comprender cómo trabaja cada empresa, qué procesos necesita mejorar y qué resultados quiere conseguir . La tecnología solo tiene sentido cuando responde a una necesidad concreta y genera un impacto real.
+Trabajamos con equipos de Dirección, negocio, IT, Administración, Operaciones, Finanzas o Comercial , conectando las necesidades funcionales con la solución tecnológica necesaria para resolverlas.
+02 Una alianza preparada para evolucionar
+La Joint Venture amplía nuestra capacidad para abordar proyectos de desarrollo de software, integración de sistemas, gobernanza del dato, automatización e Inteligencia Artificial , desde soluciones específicas hasta iniciativas transversales.
+Este marco ha permitido evolucionar soluciones como Kairós IA y otras iniciativas tecnológicas de Serra-tech, con una filosofía común: crear soluciones escalables, sostenibles y capaces de crecer con cada cliente.
+03 Nuestro objetivo
+Transformar necesidades y retos de negocio en soluciones tecnológicas útiles, medibles y sostenibles. Unimos tecnología, conocimiento de negocio, experiencia sectorial y capacidad de desarrollo.
+Ayudamos a nuestros clientes a optimizar procesos, reducir costes, aprovechar mejor sus datos y avanzar en su transformación digital con una visión práctica, progresiva y orientada al largo plazo.
+Serra-tech Europe + Homotec Dos capacidades. Una misma visión: hacer que la tecnología trabaje para tu negocio.
+Kairós IA - © 2024. ALL RIGHTS RESERVED. ¿Quiénes somos? Términos Privacidad
+
+PIE DE PÁGINA
+-------------
+Kairós IA - © 2024. ALL RIGHTS RESERVED.
+¿Quiénes somos?
+Términos
+Privacidad
+

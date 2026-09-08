@@ -1,0 +1,1095 @@
+{
+  "_instrucciones": [
+    "Edita solo los textos entre comillas.",
+    "Respeta las comillas, comas, corchetes y llaves.",
+    "Guarda este archivo en UTF-8 para mantener bien los acentos.",
+    "Abre la web con abrir_web.bat para ver los cambios automáticamente al guardar.",
+    "Para ajustar la imagen del hero de Ethics by Design, cambia heroImageZoom, heroImageOffsetX, heroImageOffsetY y heroImagePadding."
+  ],
+  "home": {
+    "metaTitle": "Kairós IA | AI Business Assistant",
+    "heroEyebrow": "AI Assistant for Business Processes",
+    "heroTitle": "The AI Business Assistant that understands your processes and works alongside you.",
+    "heroLead": "Kairós IA organizes your information, automates tasks, connects your applications, and helps your teams work and make better decisions.",
+    "primaryButton": "See what Kairós does",
+    "secondaryButton": "Request a demo",
+    "hudOneLabel": "Understands",
+    "hudOneTitle": "Documents and other data",
+    "hudOneItems": [
+      "Invoices, packing slips, bank receipts, work reports, and contracts",
+      "Data from business applications"
+    ],
+    "hudTwoLabel": "Acts and informs",
+    "hudTwoTitle": "Processes",
+    "hudTwoItems": [
+      "Posts, reconciles, and validates data",
+      "Integrates data into applications",
+      "Alerts, notifies, and enables queries"
+    ],
+    "whatEyebrow": "What is Kairós IA",
+    "whatTitle": "The intelligent layer connecting information, processes, and people.",
+    "whatLead": "Kairós is not OCR software, a document management system, or a chatbot. It is an intelligent AI layer that understands your company's documents and data, organizes information, and automates tasks and processes. It works with your applications and your teams, reducing manual work and helping people work better with more information, greater control, and stronger decision-making capabilities.",
+    "whatDiagramTitle": "Kairós acts as an intelligent layer between your applications, your processes, and your teams.",
+    "pillars": [
+      {
+        "icon": "psychology",
+        "image": "assets/que-es/icono-comprende-web.png",
+        "title": "Understands",
+        "text": "Interprets documents and data, identifies their type, and extracts the relevant information."
+      },
+      {
+        "icon": "settings_suggest",
+        "image": "assets/que-es/icono-actua-web.png",
+        "title": "Acts",
+        "text": "Validates and reconciles data, applies rules, manages statuses, generates documents, and exchanges information."
+      },
+      {
+        "icon": "query_stats",
+        "image": "assets/que-es/icono-informa-web.png",
+        "title": "Informs",
+        "text": "Organizes data, generates KPIs, and makes business information easy to access and query."
+      }
+    ],
+    "capabilitiesEyebrow": "Capabilities",
+    "capabilitiesTitle": "Six capabilities. One business assistant.",
+    "capabilitiesSubtitle": "Activate Kairós where you need it most and expand its capabilities as your company evolves.",
+    "capabilitiesText": "Kairós adapts to each organization’s level of digitization and evolves with it, allowing new capabilities, processes, and integrations to be added progressively in a modular and scalable way.",
+    "capabilitiesIntro": "Combine the capabilities you need to solve each process.",
+    "capabilitiesCtaText": "See how these capabilities combine to solve real business processes.",
+    "capabilitiesCtaButton": "View use cases",
+    "useCasesEyebrow": "What Kairós does",
+    "useCasesTitle": "Kairós IA, a business assistant that adapts to your processes, your tasks, and the pace of your company.",
+    "useCasesIntroTitle": "Kairós can be progressively incorporated into different areas of the business, from document management to process automation, integrations, and analysis and decision-making capabilities. Its modular architecture makes it possible to expand its reach as the organization’s needs evolve.",
+    "useCasesIntroText": "These are some of the ways Kairós can apply and combine its capabilities to centralize information, manage documents, automate processes, and support decision-making.",
+    "useCasesSubtitle": "",
+    "useCasesClaim": "",
+    "benefitsEyebrow": "Benefits",
+    "benefitsTitle": "More control, greater productivity, and better decision-making.",
+    "ctaEyebrow": "Contact",
+    "ctaTitle": "Tell us what you need and we'll show you how Kairós can help.",
+    "ctaButton": "Request a meeting",
+    "whatDiagramImage": "assets/que-es/imagen-kairos-que-es-english.png",
+    "whatDiagramAlt": "Kairós IA as an intelligent layer between applications, processes, documents, teams, and decision-making."
+  },
+  "common": {
+    "brand": "Kairós IA",
+    "footerCopy": "Kairós IA - © 2026. ALL RIGHTS RESERVED.",
+    "termsLabel": "Terms",
+    "privacyLabel": "Privacy",
+    "capabilityEyebrowSuffix": "Kairós IA capability",
+    "demoButton": "Request a demo",
+    "viewCapabilitiesButton": "View capabilities",
+    "howItWorksEyebrow": "How it works",
+    "howItWorksTitle": "From scattered information to operational process.",
+    "outcomeEyebrow": "Business outcome",
+    "outcomeTitle": "More control, less friction, and data ready for decision-making.",
+    "outcomeLead": "The capability integrates into a cross-functional architecture: documents, data, applications, and people connected by Kairós IA.",
+    "continueButton": "Continue",
+    "aboutLabel": "About Us"
+  },
+  "benefits": [
+    {
+      "number": "01",
+      "icon": "timer",
+      "title": "Time savings",
+      "description": "Reduces the time spent manually searching, reviewing, classifying, validating, copying, and entering information."
+    },
+    {
+      "number": "02",
+      "icon": "trending_up",
+      "title": "Greater operational capacity",
+      "description": "Enables teams to handle larger volumes of documents, data, and processes without proportionally increasing administrative workload."
+    },
+    {
+      "number": "03",
+      "icon": "task_alt",
+      "title": "Fewer errors",
+      "description": "Reduces transcription, classification, validation, and data-entry errors through intelligent extraction, rules, and automated controls."
+    },
+    {
+      "number": "04",
+      "icon": "database",
+      "title": "Data governance",
+      "description": "Helps establish rules, criteria, responsibilities, and controls so business information is more organized, consistent, and reliable."
+    },
+    {
+      "number": "05",
+      "icon": "schema",
+      "title": "Quality and standardization",
+      "description": "Transforms information from different documents and applications into structured, normalized data ready for use."
+    },
+    {
+      "number": "06",
+      "icon": "route",
+      "title": "Traceability and auditability",
+      "description": "Makes it possible to see what happened, when it happened, which information was involved, and which status or stage of the process it occurred in."
+    },
+    {
+      "number": "07",
+      "icon": "manage_accounts",
+      "title": "Automation with control",
+      "description": "Automates tasks that can be resolved through rules while keeping people involved whenever review, approval, or a decision is required."
+    },
+    {
+      "number": "08",
+      "icon": "hub",
+      "title": "Connected information",
+      "description": "Reduces fragmentation across documents, data, and applications, allowing information to continue flowing between different systems."
+    },
+    {
+      "number": "09",
+      "icon": "report_problem",
+      "title": "Exception management",
+      "description": "Detects issues, discrepancies, or situations requiring intervention and routes them to the right people for resolution."
+    },
+    {
+      "number": "10",
+      "icon": "account_tree",
+      "title": "Cross-functional visibility",
+      "backTitle": "Visibilidad y control transversal",
+      "description": "Provides a more complete view of information and processes that span different business areas, documents, and applications."
+    },
+    {
+      "number": "11",
+      "icon": "monitoring",
+      "title": "Better decisions",
+      "description": "Turns operational information into KPIs, alerts, reports, and queries that help teams manage and make better-informed decisions."
+    },
+    {
+      "number": "12",
+      "icon": "device_hub",
+      "title": "Organizational scalability",
+      "description": "Lets you start with a specific process and progressively extend Kairós to new business areas, capabilities, automations, and integrations."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "centralizacion-documental-datos",
+      "number": "01",
+      "icon": "database",
+      "title": "Document and data centralization",
+      "microclaim": "All your company's information in one place.",
+      "paragraphs": [
+        "Kairós centralizes invoices, packing slips, contracts, work reports, bank receipts, and other documents, interprets their content, extracts and structures their data, and preserves the original files. It can also incorporate information from applications and make it easier to view, search, compare, and download through advanced views and search tools."
+      ],
+      "capabilities": [
+        "Intelligent digitization",
+        "Information and decision-making",
+        "Integrations"
+      ],
+      "slug": "casos-de-uso/centralizacion-documental-datos/index.html",
+      "ctaText": "View use case",
+      "description": "Kairós centralizes invoices, packing slips, contracts, work reports, bank receipts, and other documents, interprets their content, extracts and structures their data, and preserves the original files. It can also incorporate information from applications and make it easier to view, search, compare, and download through advanced views and search tools.",
+      "galleryItems": [
+        {
+          "slug": "consulta-digitalizaciones",
+          "title": "Digitized document lookup",
+          "subtitle": "Search, filter, and review the information extracted from your documents in one environment.",
+          "description": "Kairós centralizes processed digitizations and lets you view invoices, packing slips, receipts, and other documents from a single interface. Information remains structured and accessible so you can review statuses, locate specific documents, and quickly validate extracted data.",
+          "caption": "Unified access to digitized documents and data.",
+          "alt": "Kairós IA screen for digitized document lookup.",
+          "image": "assets/casos-de-uso/centralizacion-documental/consulta-digitalizaciones.png"
+        },
+        {
+          "slug": "dashboard",
+          "title": "Operational and control dashboard",
+          "subtitle": "Visualize activity, monitor the process, and turn day-to-day operations into useful information.",
+          "description": "The Kairós dashboard brings together key indicators for activity, processing status, issues, and queries related to managed information. It gives teams and management a clear view of operations, helps identify areas that need attention, and supports better-informed decisions.",
+          "caption": "Real-time indicators, control, and visibility.",
+          "alt": "Kairós IA screen for operational and control dashboard.",
+          "image": "assets/casos-de-uso/centralizacion-documental/dashboard-operativo-control.png"
+        },
+        {
+          "slug": "contratos",
+          "title": "Intelligent contract management",
+          "subtitle": "Centralize contracts and addenda, structure their information, and simplify follow-up.",
+          "description": "Kairós brings contracts, addenda, and related documentation together in one environment, interpreting their content and organizing key data for easy access and control. This makes it easier to locate contracts, review terms, access relevant information, and support both document and operational management.",
+          "caption": "Contracts centralized, organized, and ready to review.",
+          "alt": "Kairós IA screen for intelligent contract management.",
+          "image": "assets/casos-de-uso/centralizacion-documental/gestion-inteligente-contratos.png"
+        },
+        {
+          "slug": "logs-trazabilidad",
+          "title": "Logs and traceability",
+          "subtitle": "Track each document throughout its lifecycle and maintain control over the process.",
+          "description": "Kairós records the receipt, processing, and status of processed documents, creating traceability for the actions performed and the outcome of each workflow. This allows teams to monitor the process, review issues, identify errors, and maintain greater control over document operations.",
+          "caption": "Tracking and control throughout the document lifecycle.",
+          "alt": "Kairós IA screen for logs and traceability.",
+          "image": "assets/casos-de-uso/centralizacion-documental/logs-trazabilidad.png"
+        },
+        {
+          "slug": "centralizacion-documental",
+          "title": "Document and data centralization",
+          "subtitle": "All your company's information in one place.",
+          "description": "Kairós centralizes invoices, packing slips, contracts, work reports, receipts, and other documents, interprets their content, and structures their data to simplify access, search, and control. It can also incorporate information from applications, creating a practical layer for accessing documents and data through one unified view.",
+          "caption": "Documents and data connected within a single work layer.",
+          "alt": "Kairós IA screen for document and data centralization."
+        }
+      ],
+      "galleryEyebrow": "Document and data centralization",
+      "galleryTitle": "Document and data centralization"
+    },
+    {
+      "id": "automatizacion-facturas",
+      "number": "02",
+      "icon": "receipt_long",
+      "title": "Intelligent invoice management",
+      "microclaim": "Reads, validates, alerts, and routes invoices for review or approval.",
+      "paragraphs": [
+        "Kairós reads invoices and bank receipts, extracts their data, and checks it against the business rules defined by your company. It detects issues, generates alerts, and automates the handling of recurring invoices, while routing invoices that require review or approval to the Administration team before they are finally posted to the ERP."
+      ],
+      "capabilities": [
+        "Intelligent digitization",
+        "Administration",
+        "Integrations"
+      ],
+      "slug": "casos-de-uso/automatizacion-facturas/index.html",
+      "ctaText": "View use case",
+      "description": "Kairós reads invoices and bank receipts, extracts their data, and checks it against the business rules defined by your company. It detects issues, generates alerts, and automates the handling of recurring invoices, while routing invoices that require review or approval to the Administration team before they are finally posted to the ERP.",
+      "galleryEyebrow": "Intelligent invoice management",
+      "galleryTitle": "How Kairós works with your invoices",
+      "galleryIntro": "From document receipt through validation and ERP integration, Kairós turns invoice management into a faster, more structured, and more controlled process.",
+      "galleryItems": [
+        {
+          "title": "Invoice and status control",
+          "description": "Kairós organizes invoices within a clear, structured workflow, showing which documents are completed, under review, or affected by issues. This helps the team prioritize, monitor, and act quickly on each invoice.",
+          "alt": "Kairós IA screen for invoice and status control.",
+          "image": "assets/casos-de-uso/gestion-facturas/control-facturas-estados.png"
+        },
+        {
+          "title": "Invoice reading and extraction",
+          "description": "Kairós interprets the original invoice or bank receipt, identifies its content, and automatically extracts key header and line-item data. The information is structured and ready for review, consultation, or further processing.",
+          "alt": "Kairós IA screen for invoice reading and extraction.",
+          "image": "assets/casos-de-uso/gestion-facturas/lectura-extraccion-factura.png"
+        },
+        {
+          "title": "Validation and exception management",
+          "description": "When an invoice or bank receipt requires review, Kairós detects issues, applies rules, and shows the user what needs to be validated or corrected. This way, the team only intervenes where human judgment actually adds value.",
+          "alt": "Kairós IA screen for validation and exception management.",
+          "image": "assets/casos-de-uso/gestion-facturas/validacion-excepciones-factura.png"
+        },
+        {
+          "title": "Intra-invoice and a3ERP integration",
+          "description": "Once validated, Kairós generates the intra-invoice and prepares the information for ERP integration. This eliminates duplicate data entry and speeds up accounting entry with greater control and traceability.",
+          "alt": "Kairós IA screen for intra-invoice and a3erp integration.",
+          "image": "assets/casos-de-uso/gestion-facturas/intrafactura-integracion-a3erp.png"
+        }
+      ]
+    },
+    {
+      "id": "automatizacion-registro-albaranes",
+      "number": "03",
+      "icon": "inventory_2",
+      "title": "Intelligent Purchasing Doc Management",
+      "microclaim": "From document intake to registration in your management system.",
+      "paragraphs": [
+        "Kairós interprets and structures packing slip information, checks the data by applying process rules, and makes it easier to manage any issues detected. Once validated, the data can be automatically sent to the Purchase module, your ERP, or another connected application, reducing manual tasks and improving operational control."
+      ],
+      "capabilities": [
+        "Intelligent digitization",
+        "Purchasing",
+        "Integrations"
+      ],
+      "slug": "casos-de-uso/automatizacion-registro-albaranes/index.html",
+      "ctaText": "View use case",
+      "description": "Kairós interprets and structures packing slip information, checks the data by applying process rules, and makes it easier to manage any issues detected. Once validated, the data can be automatically sent to the Purchase module, your ERP, or another connected application, reducing manual tasks and improving operational control.",
+      "galleryEyebrow": "Intelligent Purchasing Doc Management",
+      "galleryTitle": "How Kairós manages your packing slips",
+      "galleryIntro": "From document intake to registration in the management system, Kairós helps turn packing slips into structured, validated information ready to continue through the Purchase process.",
+      "galleryItems": [
+        {
+          "title": "Packing slip tracking",
+          "subtitle": "Kairós centralizes received packing slips and lets you see their status within the process at any time.",
+          "description": "Users can quickly identify which documents were processed correctly, which require review, and where unresolved issues remain. This enables more orderly management of document volume and lets teams focus their attention on the cases that actually require intervention.",
+          "alt": "Kairós IA screen for packing slip tracking.",
+          "image": "assets/casos-de-uso/gestion-albaranes/seguimiento-de-albaranes.png",
+          "caption": "Visual tracking of processed packing slip status.",
+          "imageClass": "is-kairos-highlight-shot"
+        },
+        {
+          "title": "Packing slip interpretation",
+          "subtitle": "Kairós analyzes the packing slip and identifies the information needed to work with it.",
+          "description": "It identifies the supplier, document number, dates, references, items, units, quantities, prices, and other relevant data. The extracted information is structured and linked to the original document, making it easy to review and use in subsequent stages of the process.",
+          "alt": "Kairós IA screen for packing slip interpretation.",
+          "image": "assets/casos-de-uso/gestion-albaranes/interpretacion-del-albaran.png",
+          "caption": "Packing slip reading and extraction of relevant data.",
+          "imageClass": "is-kairos-highlight-shot"
+        },
+        {
+          "title": "Validation and issue management",
+          "subtitle": "Before continuing the process, Kairós checks the information using the criteria and rules defined by the organization.",
+          "description": "If it detects incomplete data, inconsistencies, or situations that require validation, it flags the packing slip for review and gives the user the information needed to resolve the issue. This keeps human intervention focused primarily on exceptions.",
+          "alt": "Kairós IA screen for validation and issue management.",
+          "image": "assets/casos-de-uso/gestion-albaranes/comprobacion-gestion-incidencias.png",
+          "caption": "Issue review before continuing the process.",
+          "imageClass": "is-kairos-highlight-shot"
+        },
+        {
+          "title": "Posting to Purchase or ERP",
+          "subtitle": "Once the packing slip has been correctly processed and validated, Kairós can prepare and transfer its information.",
+          "description": "The information can be sent to the Purchase module, ERP, or corresponding management application. The goal is to eliminate repeated manual data entry and allow the packing slip to continue through the company's normal operations while respecting the rules and workflows defined for each integration.",
+          "alt": "Kairós IA screen for posting to purchase or erp.",
+          "image": "assets/casos-de-uso/gestion-albaranes/registro-compras-erp.png",
+          "caption": "Information prepared for posting to Purchase or ERP.",
+          "imageClass": "is-kairos-highlight-shot"
+        }
+      ]
+    },
+    {
+      "id": "conciliacion",
+      "number": "04",
+      "icon": "compare_arrows",
+      "title": "Document reconciliation",
+      "microclaim": "Compare, validate, and detect differences before continuing the process.",
+      "paragraphs": [
+        "Kairós supports document reconciliation across packing slips, purchase orders, and invoices by automatically comparing the information available in each document and connected application. The system can compare references, items, quantities, prices, taxes, totals, and other relevant process data, helping verify that the information matches before moving to the next stage."
+      ],
+      "capabilities": [
+        "Intelligent digitization",
+        "Purchasing",
+        "Integrations"
+      ],
+      "slug": "casos-de-uso/conciliacion/index.html",
+      "ctaText": "View use case",
+      "description": "Kairós supports document reconciliation across packing slips, purchase orders, and invoices by automatically comparing the information available in each document and connected application. The system can compare references, items, quantities, prices, taxes, totals, and other relevant process data, helping verify that the information matches before moving to the next stage.",
+      "galleryEyebrow": "Document reconciliation",
+      "galleryTitle": "Greater control before validating and moving forward.",
+      "galleryIntro": "Instead of manually reviewing every document, users can focus directly on the items that require attention.",
+      "galleryItems": [
+        {
+          "title": "Match and discrepancy identification",
+          "description": "Kairós analyzes the elements involved in document reconciliation and clearly indicates which information matches, differs, or requires review. This helps quickly identify quantity differences, price changes, mismatched items, different references, or any other exception defined within the process."
+        },
+        {
+          "title": "Reconciliation adapted to your business process",
+          "description": "Document reconciliation is not limited to a rigid document-to-document comparison. Kairós can apply rules and criteria defined by the organization, taking into account how each process actually works and which conditions must be met before a transaction is considered fully reconciled."
+        },
+        {
+          "title": "Exception management",
+          "description": "When Kairós detects a discrepancy, it can classify it as an exception and make it available to the responsible user for review. This allows teams to work by exception instead of manually reviewing every document."
+        },
+        {
+          "title": "Greater control before validation",
+          "description": "Kairós helps verify that received information is consistent before subsequent actions are taken, such as validating a document, posting information to an application, or continuing an administrative or purchase workflow. This helps detect errors earlier, reduce rework, and improve traceability across validation activities."
+        },
+        {
+          "title": "Integrated with other Kairós capabilities",
+          "description": "Document reconciliation can work together with other capabilities of the business assistant. Kairós can receive and digitize documents, extract information, query data from connected applications, perform reconciliation, and, once the defined conditions are met, continue the process through its integrations."
+        }
+      ]
+    },
+    {
+      "id": "gestion-contratos",
+      "number": "05",
+      "icon": "contract",
+      "title": "Intelligent contract management",
+      "microclaim": "From scattered contracts to structured, accessible information under control.",
+      "paragraphs": [
+        "Kairós Contracts centralizes contract documentation, interprets its content, and transforms the relevant data from each contract into structured information for easier access, tracking, and control."
+      ],
+      "capabilities": [
+        "Intelligent digitization",
+        "Contract management",
+        "Information and decision-making"
+      ],
+      "slug": "casos-de-uso/gestion-contratos/index.html",
+      "ctaText": "View use case",
+      "description": "Kairós Contracts centralizes contract documentation, interprets its content, and transforms the relevant data from each contract into structured information for easier access, tracking, and control.",
+      "galleryEyebrow": "Intelligent contract management",
+      "galleryTitle": "From scattered contracts to structured, accessible information under control.",
+      "galleryIntro": "Kairós Contracts centralizes contract documentation, interprets its content, and transforms the relevant data from each contract into structured information for easier access, tracking, and control.",
+      "galleryItems": [
+        {
+          "title": "Contract centralization",
+          "subtitle": "All your contracts and addenda in one environment.",
+          "description": "Kairós brings the organization's contract documentation together and lets you manage it from a centralized location, eliminating fragmentation across folders, emails, and different storage locations.",
+          "caption": "Contracts and addenda centralized in a single view.",
+          "alt": "Kairós IA screen for contract centralization.",
+          "image": "assets/casos-de-uso/gestion-contratos/centralizacion-contractual.png"
+        },
+        {
+          "title": "Intelligent reading and extraction",
+          "subtitle": "From the original contract to information ready to work with.",
+          "description": "Kairós interprets the document and automatically extracts relevant information such as supplier or counterparty, contract type and number, dates, amounts, expiration dates, renewals, and other data defined by the organization.",
+          "image": "assets/casos-de-uso/gestion-contratos/lectura-extraccion-inteligente.png",
+          "caption": "Key data extracted from the original contract for review and reference.",
+          "alt": "Kairós IA screen for intelligent reading and extraction."
+        },
+        {
+          "title": "Automatic classification",
+          "subtitle": "Every contract connected to its business context.",
+          "description": "Information can be organized by legal entity, property, department, business unit, supplier, and cost center, creating an orderly, cross-functional view of contractual information.",
+          "image": "assets/casos-de-uso/gestion-contratos/clasificacion-automatica-tipo-contrato.png",
+          "caption": "Contract classification based on criteria defined by the organization.",
+          "alt": "Kairós IA screen for automatic classification.",
+          "imageClass": "is-contracts-classification-view"
+        },
+        {
+          "title": "Expiration and renewal control",
+          "subtitle": "Stay ahead of important dates.",
+          "description": "Kairós structures start dates, expiration dates, renewal dates, and notice periods to simplify contract lifecycle tracking and reduce the risk of missing an important deadline.",
+          "image": "assets/casos-de-uso/gestion-contratos/control-vencimientos-renovaciones.png",
+          "caption": "Tracking contract dates, renewals, and notice periods.",
+          "alt": "Kairós IA screen for expiration and renewal control."
+        },
+        {
+          "title": "Alerts and follow-up",
+          "subtitle": "The right information reaches the people who need to act.",
+          "description": "Kairós can generate alerts for expirations, renewals, and other contractual conditions, helping responsible users take action when needed.",
+          "image": "assets/casos-de-uso/gestion-contratos/alertas-seguimiento.png",
+          "caption": "Alerts related to contract expirations, renewals, and conditions.",
+          "alt": "Kairós IA screen for alerts and follow-up."
+        },
+        {
+          "title": "Contract and data in one view",
+          "subtitle": "Access structured information without losing sight of the original document.",
+          "description": "The digitized record displays extracted data alongside the original contract, making it easier to review, validate, and access the information.",
+          "image": "assets/casos-de-uso/gestion-contratos/contratos-digitalizados-misma-vista.png",
+          "caption": "Digitized contracts ready to review in an organized view.",
+          "alt": "Kairós IA screen for contract and data in one view.",
+          "imageClass": "is-contracts-list-view"
+        },
+        {
+          "title": "Search, filters, and statuses",
+          "subtitle": "Find and manage your contracts faster.",
+          "description": "Kairós lets you search and classify contract documentation and work with different views and statuses, making it easier to track completed contracts, contracts pending review, and other situations defined within the process.",
+          "image": "assets/casos-de-uso/gestion-contratos/busqueda-filtros-estados.png",
+          "caption": "Contract lookup using filters, statuses, and control views.",
+          "alt": "Kairós IA screen for search, filters, and statuses."
+        },
+        {
+          "title": "Structured, exportable data",
+          "subtitle": "Contract information is no longer locked inside a PDF.",
+          "description": "Extracted data remains structured so it can be reviewed, analyzed, and exported, turning contracts into a usable source of business information.",
+          "image": "assets/casos-de-uso/gestion-contratos/datos-estructurados-exportables-menu-hq.png",
+          "caption": "Data prepared for review, analysis, import, and export.",
+          "alt": "Kairós IA screen for structured, exportable data.",
+          "imageClass": "is-contracts-hq-shot"
+        },
+        {
+          "title": "Adapted to your contract management process",
+          "subtitle": "Kairós interprets and organizes the information each company actually needs.",
+          "description": "You can define which information Kairós should interpret, automate organizational assignments, and process contracts, addenda, and other contract documentation simultaneously.",
+          "image": "assets/casos-de-uso/gestion-contratos/adaptado-gestion-contractual.png",
+          "caption": "Fields, criteria, and processes adapted to the way each company works.",
+          "alt": "Kairós IA screen for adapted to your contract management process."
+        },
+        {
+          "title": "Turn your contracts into useful management information",
+          "subtitle": "Less manual work, better organization, and greater traceability.",
+          "description": "Kairós Contracts helps reduce manual work, improve document organization and traceability, and provide structured data to better manage expirations, renewals, and contractual terms.",
+          "image": "assets/casos-de-uso/gestion-contratos/contratos-informacion-util-gestionar-hq.png",
+          "caption": "Filters, groupings, and views that turn contracts into actionable information.",
+          "alt": "Kairós IA screen for turn your contracts into useful management information.",
+          "imageClass": "is-contracts-hq-shot"
+        }
+      ]
+    },
+    {
+      "id": "informacion-decision",
+      "number": "06",
+      "icon": "query_stats",
+      "title": "AI, information and decision-making",
+      "microclaim": "Turn your company's information into useful knowledge for better decisions.",
+      "paragraphs": [
+        "Kairós combines the information it generates from documents and processes with data from connected applications, creating a cross-functional information layer accessible throughout the organization."
+      ],
+      "capabilities": [
+        "Information and decision-making",
+        "Intelligent digitization"
+      ],
+      "slug": "casos-de-uso/informacion-decision/index.html",
+      "ctaText": "View use case",
+      "description": "Kairós combines the information it generates from documents and processes with data from connected applications, creating a cross-functional information layer accessible throughout the organization.",
+      "galleryEyebrow": "AI, information and decision-making",
+      "galleryTitle": "Turn your company's information into useful knowledge for better decisions.",
+      "galleryIntro": "",
+      "galleryItems": [
+        {
+          "title": "PGD · Data Governance Platform",
+          "subtitle": "An integrated layer to centralize, structure, and govern information.",
+          "description": "Kairós includes PGD, its Data Governance Platform, as part of its AI, Information and Decision Making capability. PGD centralizes, structures, and governs information while also supporting control, monitoring, data cleansing, and analysis. It is more than a data repository: it provides a more complete view of your data and helps ensure information can be used consistently and cross-functionally across the organization.",
+          "image": "assets/casos-de-uso/informacion-decision/pgd-plataforma-gobernanza-datos.png",
+          "caption": "Governance, structure, and control of business information.",
+          "alt": "Kairós IA screen for pgd · data governance platform.",
+          "imageClass": "is-kairos-highlight-shot"
+        },
+        {
+          "title": "Dashboards and KPIs",
+          "description": "Kairós presents information through dashboards, KPIs, and management views tailored to the needs of each organization and business area.",
+          "image": "assets/casos-de-uso/informacion-decision/paneles-e-indicadores.png",
+          "caption": "KPIs and dashboards for operational monitoring.",
+          "alt": "Kairós IA screen for dashboards and kpis.",
+          "imageClass": "is-kairos-highlight-shot"
+        },
+        {
+          "title": "Natural language queries",
+          "description": "Users can ask Kairós questions directly about available information using natural language and receive contextualized answers without relying solely on filters or predefined reports.",
+          "image": "assets/casos-de-uso/informacion-decision/consultas-lenguaje-natural.png",
+          "caption": "Information queries through natural language questions.",
+          "alt": "Kairós IA screen for natural language queries.",
+          "imageClass": "is-kairos-highlight-shot"
+        },
+        {
+          "title": "Reports and analysis",
+          "description": "Kairós can generate reports, analyses, and comparisons, as well as populate reporting templates already used by the customer with the available information.",
+          "image": "assets/casos-de-uso/informacion-decision/informes-y-reportes.png",
+          "caption": "Reports and analyses generated from available information.",
+          "alt": "Kairós IA screen for reports and analysis.",
+          "imageClass": "is-kairos-highlight-shot"
+        },
+        {
+          "title": "Alerts and follow-up",
+          "description": "Kairós can detect issues, exceptions, deviations, or upcoming deadlines and automatically notify the responsible users to support follow-up and action.",
+          "image": "assets/casos-de-uso/informacion-decision/alertas-y-seguimiento.png",
+          "caption": "Alerts and follow-up to act on issues or deviations.",
+          "alt": "Kairós IA screen for alerts and follow-up.",
+          "imageClass": "is-kairos-highlight-shot"
+        },
+        {
+          "title": "Cross-functional information",
+          "description": "Information can be adapted to the needs of Administration, Purchase, Operations, Finance, Sales, and Management while maintaining a shared, coordinated view across the organization.",
+          "image": "assets/casos-de-uso/informacion-decision/informacion-transversal.png",
+          "caption": "A shared view of information across business areas.",
+          "alt": "Kairós IA screen for cross-functional information.",
+          "imageClass": "is-kairos-highlight-shot"
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "metaTitle": "Request a demo | Kairós IA",
+    "eyebrow": "Request a demo",
+    "title": "Tell us what you need and we'll show you how Kairós can help.",
+    "lead": "Complete the form and we'll prepare a meeting focused on your documents, processes, applications, and automation needs.",
+    "cardEyebrow": "Kairós IA Contact",
+    "cardText": "A business assistant built to understand your business information, automate processes, and help your teams work and make better decisions.",
+    "benefitsEyebrow": "Why choose Kairós IA",
+    "benefitsTitle": "Benefits that translate into day-to-day operations."
+  },
+  "ethic": {
+    "metaTitle": "Ethics by Design | Kairós IA",
+    "navLabel": "Ethics by Design",
+    "eyebrow": "ETHICS BY DESIGN",
+    "title": "Business AI designed to operate with control, sound judgment, and responsibility.",
+    "lead": "Kairós incorporates ethical principles into both its design and its purpose. It is built to help organizations digitize, automate, and improve their processes while keeping people in control, maintaining human oversight, and preserving human decision-making.",
+    "introTitle": "AI designed responsibly from the ground up",
+    "introText": "Kairós was created as an augmentative, collaborative AI designed to connect people, processes, documents, and data while respecting each organization's operations and technology ecosystem.",
+    "introText2": "Su arquitectura transversal y flexible permite ampliar progresivamente sus capacidades y trabajar con diferentes motores de IA, cloud o locales, ofreciendo a la empresa mayor control, independencia y capacidad de adaptación.",
+    "homeEyebrow": "Ethics by Design",
+    "homeTitle": "Responsible AI from the ground up",
+    "homeText": "Kairós IA incorporates ethical principles into its design and purpose, prioritizing collaborative AI that enhances the capabilities of teams and individuals.",
+    "homeButton": "Explore our ethical approach",
+    "principlesTitle": "Collaborative AI that integrates into your processes with your teams and people in mind.",
+    "principles": [
+      {
+        "icon": "verified_user",
+        "title": "Human control",
+        "text": "Review and approval whenever the process requires it.",
+        "image": "assets/ethics/ethic-1.png"
+      },
+      {
+        "icon": "history",
+        "title": "Traceability",
+        "text": "Tracking of documents, data, statuses, and actions.",
+        "image": "assets/ethics/ethic-2.png"
+      },
+      {
+        "icon": "groups",
+        "title": "People first",
+        "text": "Technology designed to enhance teams' ability to work and make decisions.",
+        "image": "assets/ethics/ethic-3.png"
+      },
+      {
+        "icon": "rule",
+        "title": "Explicit rules",
+        "text": "Automation based on criteria defined by the organization.",
+        "image": "assets/ethics/ethic-4.png"
+      },
+      {
+        "icon": "hub",
+        "title": "Technology flexibility",
+        "text": "Kairós integrates with your existing ecosystem and can work with different technologies and AI engines.",
+        "image": "assets/ethics/ethic-5.png"
+      },
+      {
+        "icon": "visibility",
+        "title": "Understandable AI",
+        "text": "Users maintain visibility into the information and how the process works.",
+        "image": "assets/ethics/ethic-6.png"
+      }
+    ],
+    "middleTitle": "Understands. Acts. Informs.",
+    "middleText": "Kairós connects information with processes and people to help organizations work with greater productivity, more control, and stronger decision-making capabilities.",
+    "governanceEyebrow": "Principles",
+    "governanceTitle": "Una IA colaborativa que se integra en los procesos teniendo en cuenta los equipos, y las personas.",
+    "governanceText": "Technology with purpose. Intelligence with responsibility.",
+    "finalText": "We designed Kairós to help organizations move toward the new AI paradigm progressively and flexibly, in a way that aligns with their own needs.",
+    "finalButton": "Request a demo",
+    "heroImage": "assets/ethics/ethic-7-explanation.png",
+    "heroImageZoom": "1",
+    "heroImageOffsetX": "0px",
+    "heroImageOffsetY": "0px",
+    "heroImagePadding": "18px"
+  },
+  "capabilities": {
+    "digitalizacion": {
+      "number": "01",
+      "slug": "digitalizacion-inteligente",
+      "title": "Intelligent digitization",
+      "short": "Kairós receives, interprets, and transforms documents into structured information.",
+      "cardText": "Kairós receives documents by email, manual upload, or from other applications, identifies their type, extracts the relevant information, and transforms it into structured data ready for review, consultation, or integration.",
+      "subtitle": "Convierte documentos de distintos formatos en datos útiles, trazables y listos para trabajar con ellos dentro de la empresa.",
+      "icon": "document_scanner",
+      "image": "assets/capacidades/capacidad-digitalizacion-inteligente-web.png",
+      "role": "Recepción y comprensión documental",
+      "features": [
+        {
+          "icon": "move_to_inbox",
+          "title": "Recepción documental",
+          "text": "Recoge documentos e información mediante correo electrónico, carga manual o conexiones con otras aplicaciones."
+        },
+        {
+          "icon": "find_in_page",
+          "title": "Comprensión y extracción",
+          "text": "Identifica el tipo de documento y extrae cabecera, líneas, conceptos, fechas, importes, referencias y otros datos relevantes."
+        },
+        {
+          "icon": "file_copy",
+          "title": "Tipologías y formatos",
+          "text": "Trabaja con facturas, albaranes, recibos, contratos, pedidos, correos y otros documentos de negocio."
+        },
+        {
+          "icon": "folder_data",
+          "title": "Organización y disponibilidad",
+          "text": "Clasifica la información, conserva el documento original y deja los datos listos para consultar, validar, exportar o continuar el proceso."
+        }
+      ],
+      "outcomes": [
+        "Less manual data entry",
+        "Information available sooner",
+        "Original document and structured data connected",
+        "Data ready for validation or integration"
+      ],
+      "description": "Kairós receives documents by email or manual upload, identifies their type, extracts the relevant information, and transforms it into structured data ready to review, consult, or integrate.",
+      "heroText": "Transform scattered documents into structured, accessible, and ready-to-use information.",
+      "howItWorks": [
+        {
+          "icon": "mail",
+          "title": "Document intake",
+          "text": "Receives files by email, manual upload, or connected channels."
+        },
+        {
+          "icon": "category",
+          "title": "Type identification",
+          "text": "Recognizes whether the document is an invoice, packing slip, contract, receipt, or another type."
+        },
+        {
+          "icon": "data_object",
+          "title": "Data extraction",
+          "text": "Extracts the fields and lines required by each business process."
+        },
+        {
+          "icon": "dataset",
+          "title": "Structured output",
+          "text": "Converts information into data ready for review, search, integration, or reporting."
+        }
+      ]
+    },
+    "administracion": {
+      "number": "02",
+      "slug": "administracion",
+      "title": "Administration",
+      "short": "Kairós organizes administrative document workflows with validation, statuses, permissions, and traceability.",
+      "cardText": "Kairós automates the receipt, validation, review, and handling of administrative documents while managing statuses, traceability, users, permissions, approval cycles, and process rules.",
+      "subtitle": "Kairós trabaja junto al equipo de administración, asume tareas repetitivas y facilita que las personas dediquen su tiempo al análisis, la supervisión y actividades de mayor valor.",
+      "icon": "admin_panel_settings",
+      "image": "assets/capacidades/capacidad-administracion-web.png",
+      "role": "Área administrativa",
+      "features": [
+        {
+          "icon": "folder_managed",
+          "title": "Centralización y digitalización documental",
+          "text": "Recibe, centraliza y digitaliza facturas, recibos bancarios, contratos y otros documentos administrativos."
+        },
+        {
+          "icon": "fact_check",
+          "title": "Validación y control de la información",
+          "text": "Comprueba y compara datos conforme a las reglas de negocio definidas por la empresa."
+        },
+        {
+          "icon": "approval",
+          "title": "Ciclo de aprobación",
+          "text": "Gestiona flujos de revisión y aprobación por usuario, rol, importe, sociedad o regla de negocio, manteniendo estados y trazabilidad del proceso."
+        },
+        {
+          "icon": "notifications_active",
+          "title": "Notificación e información a usuarios",
+          "text": "Genera avisos y comunica incidencias, excepciones o situaciones que requieren revisión o intervención."
+        },
+        {
+          "icon": "desktop_windows",
+          "title": "Automatización del registro de datos",
+          "text": "Ejecuta tareas administrativas relacionadas con la introducción, inyección y registro de información en aplicaciones como el ERP."
+        }
+      ],
+      "outcomes": [
+        "Clearer administrative workflows",
+        "Reduced repetitive work",
+        "Controlled approvals and reviews",
+        "Greater traceability across the process"
+      ],
+      "description": "Kairós automates the receipt, validation, review, and handling of administrative documents, controlling statuses, traceability, users, permissions, approval cycles, and process rules.",
+      "heroText": "Coordinate administrative work with clear rules, status control, approvals, and traceability.",
+      "howItWorks": [
+        {
+          "icon": "rule",
+          "title": "Process rules",
+          "text": "Applies administrative criteria defined by the organization."
+        },
+        {
+          "icon": "task_alt",
+          "title": "Validation",
+          "text": "Checks data and routes cases that require review."
+        },
+        {
+          "icon": "approval",
+          "title": "Approval cycle",
+          "text": "Supports review and approval flows when the process requires them."
+        },
+        {
+          "icon": "manage_accounts",
+          "title": "Users and permissions",
+          "text": "Controls who can review, approve, or act at each step."
+        }
+      ]
+    },
+    "compras": {
+      "number": "03",
+      "slug": "compras",
+      "title": "Purchasing",
+      "short": "Kairós helps process packing slips, invoices, and orders while controlling discrepancies.",
+      "cardText": "Kairós digitizes packing slips, invoices, and purchase orders, identifies suppliers, items, quantities, and prices, and helps control discrepancies and prepare information for purchasing processes.",
+      "subtitle": "Kairós ayuda al área de compras a digitalizar y centralizar documentación, validar información frente a pedidos, facturas y condiciones pactadas, y notificar discrepancias.",
+      "icon": "shopping_cart_checkout",
+      "image": "assets/capacidades/capacidad-compras-web.png",
+      "role": "Área de compras",
+      "features": [
+        {
+          "icon": "inventory_2",
+          "title": "Centralización documental",
+          "text": "Recibe, centraliza y digitaliza albaranes, facturas, pedidos, contratos operativos y otros documentos relacionados con compras."
+        },
+        {
+          "icon": "rule",
+          "title": "Validación y control",
+          "text": "Compara datos entre pedidos y albaranes, realiza conciliaciones con facturas y controla variaciones de precio por artículo y proveedor."
+        },
+        {
+          "icon": "notification_important",
+          "title": "Avisos de discrepancias",
+          "text": "Comunica variaciones de precio, inconsistencias en cantidades y otras excepciones que requieren revisión."
+        },
+        {
+          "icon": "app_registration",
+          "title": "Registro automatizado",
+          "text": "Ejecuta tareas administrativas relacionadas con la introducción, inyección y registro de información en programas de compras."
+        }
+      ],
+      "outcomes": [
+        "Faster packing slip processing",
+        "Greater control over differences",
+        "Less duplicate data entry",
+        "Purchasing information ready for integration"
+      ],
+      "description": "Kairós digitizes packing slips, invoices, and orders, identifies suppliers, items, quantities, and prices, and helps control discrepancies and prepare information for purchasing processes.",
+      "heroText": "Turn purchasing documents into validated information ready to continue through the process.",
+      "howItWorks": [
+        {
+          "icon": "inventory_2",
+          "title": "Document reading",
+          "text": "Extracts suppliers, references, items, quantities, prices, and totals."
+        },
+        {
+          "icon": "compare_arrows",
+          "title": "Comparison",
+          "text": "Compares information across packing slips, orders, invoices, or connected applications."
+        },
+        {
+          "icon": "warning",
+          "title": "Discrepancies",
+          "text": "Detects differences, inconsistencies, and exceptions that require attention."
+        },
+        {
+          "icon": "sync_alt",
+          "title": "Purchasing flow",
+          "text": "Prepares information for Purchasing, ERP, or other management systems."
+        }
+      ]
+    },
+    "contratos": {
+      "number": "04",
+      "slug": "gestion-contractual",
+      "title": "Contract management",
+      "short": "Kairós centralizes contracts, extracts key data, and supports expiration and renewal control.",
+      "cardText": "Kairós centralizes contracts and addenda, extracts key data, organizes information by company, supplier, or cost center, and makes it easier to control expiration dates, renewals, and conditions.",
+      "subtitle": "Kairós centraliza y estructura la documentación contractual, controla vencimientos, renovaciones y condiciones clave, y notifica avisos e incidencias.",
+      "icon": "contract_edit",
+      "image": "assets/capacidades/capacidad-gestion-contractual-web.png",
+      "role": "Gestión contractual",
+      "features": [
+        {
+          "icon": "contract",
+          "title": "Centralización contractual",
+          "text": "Todos tus contratos y anexos en un único entorno, evitando la dispersión entre carpetas, correos y diferentes ubicaciones."
+        },
+        {
+          "icon": "find_in_page",
+          "title": "Lectura y extracción inteligente",
+          "text": "Extrae proveedor o contraparte, tipo y número de contrato, fechas, importes, vencimientos, renovaciones y otros datos definidos por la organización."
+        },
+        {
+          "icon": "rule",
+          "title": "Clasificación y control",
+          "text": "Organiza la información por sociedad, establecimiento, departamento, unidad de negocio, proveedor y centro de coste."
+        },
+        {
+          "icon": "notifications",
+          "title": "Vencimientos y alertas",
+          "text": "Estructura fechas de inicio, vencimiento, renovación y preaviso y genera avisos para los usuarios responsables."
+        }
+      ],
+      "outcomes": [
+        "Contracts easier to find and review",
+        "Structured data for management",
+        "Better control of expiration dates",
+        "Improved document traceability"
+      ],
+      "description": "Kairós centralizes contracts and addenda, extracts their key data, organizes information by company, supplier, or cost center, and makes it easier to control expiration dates, renewals, and conditions.",
+      "heroText": "Move from scattered contracts to structured, accessible, and traceable contract information.",
+      "howItWorks": [
+        {
+          "icon": "folder_copy",
+          "title": "Centralization",
+          "text": "Brings contracts, addenda, and related documentation into one environment."
+        },
+        {
+          "icon": "contract",
+          "title": "Key data",
+          "text": "Extracts suppliers, dates, amounts, conditions, renewals, and other relevant fields."
+        },
+        {
+          "icon": "account_tree",
+          "title": "Classification",
+          "text": "Organizes information by entity, supplier, department, cost center, or business criteria."
+        },
+        {
+          "icon": "event_available",
+          "title": "Follow-up",
+          "text": "Supports expiration, renewal, notice-period, and alert management."
+        }
+      ]
+    },
+    "integraciones": {
+      "number": "05",
+      "slug": "integraciones",
+      "title": "Integrations",
+      "short": "Kairós connects processed information with ERP, accounting, purchasing, databases, and other applications.",
+      "cardText": "Kairós connects processed information with ERP, purchasing systems, accounting, databases, and other applications, allowing data exchange and task automation across systems.",
+      "subtitle": "La tecnología existente se mantiene. Kairós añade la capa inteligente que permite conectarla y hacer que la información fluya entre los procesos.",
+      "icon": "extension",
+      "image": "assets/capacidades/capacidad-integraciones-web.png",
+      "role": "Capa inteligente de integración",
+      "features": [
+        {
+          "icon": "hub",
+          "title": "Integraciones orientadas al proceso",
+          "text": "Cada integración se diseña a partir de cómo trabaja realmente la organización, qué información necesita el proceso y hacia qué aplicaciones debe continuar."
+        },
+        {
+          "icon": "database",
+          "title": "Ecosistema tecnológico",
+          "text": "Conecta ERP, contabilidad, compras, PMS, inventario, tareas, proyectos, activos, aplicaciones corporativas y soluciones a medida."
+        },
+        {
+          "icon": "sync",
+          "title": "Integraciones evolutivas",
+          "text": "La base de integraciones crece con Kairós y con las necesidades de cada cliente, ampliándose a nuevas aplicaciones, departamentos y flujos."
+        },
+        {
+          "icon": "settings_input_component",
+          "title": "Capa inteligente",
+          "text": "Kairós actúa entre documentos, datos, aplicaciones, procesos y personas, manteniendo el ecosistema tecnológico existente."
+        }
+      ],
+      "outcomes": [
+        "Applications connected through one intelligent layer",
+        "Less manual transfer between systems",
+        "Processes adapted to each organization",
+        "Scalable integration model"
+      ],
+      "description": "Kairós connects processed information with ERP, purchasing systems, accounting, databases, and other applications, enabling data exchange and task automation between systems.",
+      "heroText": "Connect your applications without replacing your existing technology ecosystem.",
+      "howItWorks": [
+        {
+          "icon": "lan",
+          "title": "System connection",
+          "text": "Connects ERP, accounting, purchasing, databases, PMS, and other applications."
+        },
+        {
+          "icon": "swap_horiz",
+          "title": "Data exchange",
+          "text": "Retrieves, transforms, and sends information between systems."
+        },
+        {
+          "icon": "schema",
+          "title": "Process logic",
+          "text": "Designs integrations around how each organization actually works."
+        },
+        {
+          "icon": "autorenew",
+          "title": "Automation",
+          "text": "Allows information to continue through the workflow with less manual transfer."
+        }
+      ]
+    },
+    "decision": {
+      "number": "06",
+      "slug": "informacion-decision",
+      "title": "Information and decision-making",
+      "short": "Kairós organizes data, creates KPIs, reports, alerts, and business queries.",
+      "cardText": "Kairós organizes generated data, creates indicators, alerts, and reports, and makes business information available for operational supervision and better decision-making.",
+      "subtitle": "Documentos, procesos y aplicaciones conectadas para consultar, analizar, supervisar y decidir desde una información gobernada.",
+      "icon": "monitoring",
+      "image": "assets/capacidades/capacidad-informacion-decision-web.png",
+      "role": "Análisis, control y seguimiento",
+      "features": [
+        {
+          "icon": "database",
+          "title": "PGD · Plataforma de Gobernanza de Datos",
+          "text": "Centraliza, estructura y gobierna la información, permitiendo su control, monitorización, sanitación y explotación."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Paneles e indicadores",
+          "text": "Presenta la información mediante paneles, indicadores y cuadros de mando adaptados a cada organización y área."
+        },
+        {
+          "icon": "forum",
+          "title": "Consultas en lenguaje natural",
+          "text": "Permite preguntar directamente sobre la información disponible y obtener respuestas contextualizadas."
+        },
+        {
+          "icon": "add_alert",
+          "title": "Alertas, informes y seguimiento",
+          "text": "Genera informes, análisis, comparativas y avisos sobre incidencias, excepciones, desviaciones o vencimientos."
+        }
+      ],
+      "outcomes": [
+        "More accessible business information",
+        "Operational visibility",
+        "Better-informed decisions",
+        "Shared view across business areas"
+      ],
+      "description": "Kairós organizes generated data, creates indicators, alerts, and reports, and makes business information available to supervise operations and make better decisions.",
+      "heroText": "Convert operational information into indicators, alerts, queries, and management insight.",
+      "howItWorks": [
+        {
+          "icon": "query_stats",
+          "title": "Indicators",
+          "text": "Creates KPIs and dashboards adapted to each area."
+        },
+        {
+          "icon": "notifications_active",
+          "title": "Alerts",
+          "text": "Detects deviations, issues, and deadlines that require action."
+        },
+        {
+          "icon": "summarize",
+          "title": "Reports",
+          "text": "Generates reports and analyses from available information."
+        },
+        {
+          "icon": "psychology_alt",
+          "title": "Queries",
+          "text": "Lets users ask questions about business information in natural language."
+        }
+      ]
+    }
+  },
+  "about": {
+    "metaTitle": "About Us | Kairós IA",
+    "eyebrow": "About Us",
+    "title": "Technology, business expertise, and development capabilities working together.",
+    "lead": "Serra-tech Europe and Homotec Servicios Informáticos SLU have been working together for some time under a Joint Venture model, combining business expertise, technological know-how, and development capabilities to create joint solutions.\n\nOne of the main spin-offs resulting from this collaboration is Kairós IA, the first back-office business AI agent designed to adapt to the processes, applications, and real operational needs of each organization.",
+    "cards": [
+      {
+        "number": "01",
+        "title": "We understand the business before applying technology",
+        "paragraphs": [
+          "Our approach begins by understanding how each company works, which processes need to improve, and which results it wants to achieve. Technology only makes sense when it addresses a specific need and creates real impact.",
+          "We work with Management, business, IT, Administration, Operations, Finance, and Sales teams, connecting functional needs with the technology required to solve them."
+        ]
+      },
+      {
+        "number": "02",
+        "title": "A partnership built to evolve",
+        "paragraphs": [
+          "The Joint Venture expands our ability to take on software development, systems integration, data governance, automation, and Artificial Intelligence projects, from focused solutions to cross-functional initiatives.",
+          "This framework has enabled us to evolve solutions such as Kairós IA and other Serra-tech technology initiatives around a shared philosophy: creating scalable, sustainable solutions that can grow with each customer."
+        ]
+      },
+      {
+        "number": "03",
+        "title": "Our goal",
+        "paragraphs": [
+          "To turn business needs and challenges into useful, measurable, and sustainable technology solutions. We combine technology, business expertise, industry experience, and development capabilities.",
+          "We help our customers optimize processes, reduce costs, make better use of their data, and advance their digital transformation with a practical, progressive, long-term approach."
+        ]
+      }
+    ],
+    "claimBrand": "Serra-tech Europe + Homotec",
+    "claimText": "Two capabilities. One vision: make technology work for your business."
+  },
+  "ui": {
+    "nav": {
+      "home": "Home",
+      "what": "What is Kairós",
+      "does": "What Kairós does",
+      "benefits": "Benefits",
+      "ethic": "Ethics by Design",
+      "demo": "Request a demo"
+    },
+    "footer": {
+      "about": "About Us",
+      "terms": "Terms",
+      "privacy": "Privacy"
+    },
+    "useCaseEyebrowSuffix": "Kairós IA use case",
+    "form": {
+      "eyebrow": "Form",
+      "title": "Request a demo",
+      "ref": "REF: DEMO-FORM-01",
+      "name": "Name",
+      "namePlaceholder": "Full name",
+      "email": "Email",
+      "company": "Company",
+      "companyPlaceholder": "Company name",
+      "category": "Category",
+      "message": "Message",
+      "messagePlaceholder": "Describe the specific system requirements...",
+      "privacy": "By submitting this request, I confirm that I accept the privacy policy.",
+      "submit": "Submit request",
+      "status": "Request registered on the website. We will contact you to coordinate the demo.",
+      "options": [
+        "Request a technical demo",
+        "Intelligent digitization",
+        "Administration and approvals",
+        "Purchasing and reconciliation",
+        "Contracts",
+        "Integrations",
+        "Information and decision-making"
+      ]
+    }
+  }
+}
