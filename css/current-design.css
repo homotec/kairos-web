@@ -11,8 +11,8 @@
   --surface: #ffffff;
   --line: #e2e8f0;
   --line-strong: #cbd5e1;
-  --accent: #0ea5e9;
-  --accent-strong: #0ea5e9;
+  --accent: #677c8f;
+  --accent-strong: #50687b;
   --navy: #020617;
   --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
   --radius: 2px;
@@ -58,6 +58,23 @@ body {
 .brand img {
   width: auto;
   height: 58px;
+}
+
+/*
+ * Las ilustraciones conservan su detalle y sus blancos, pero el azul eléctrico
+ * se lleva a la gama acero del logotipo original (#50687b / #677c8f).
+ */
+.pillar-image,
+.capability-card-image,
+.what-diagram img,
+.flow-step-image {
+  filter: saturate(0.3) hue-rotate(-8deg);
+}
+
+#que-es-kairos,
+#casos-de-uso,
+#beneficios {
+  scroll-margin-top: 96px;
 }
 
 .nav-links {
@@ -293,6 +310,12 @@ button {
     height: 50px;
   }
 
+  #que-es-kairos,
+  #casos-de-uso,
+  #beneficios {
+    scroll-margin-top: 82px;
+  }
+
   .mobile-menu-toggle {
     display: inline-flex;
   }
@@ -352,6 +375,12 @@ button {
 
   .ethic-hero .cap-layout {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
