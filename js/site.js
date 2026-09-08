@@ -1791,7 +1791,7 @@ function normalizePagePath(pathname) {
   return normalized.replace(/\/index\.html$/, "");
 }
 
-function scrollToHash(hash, behavior = "smooth") {
+function scrollToHash(hash, behavior = "instant") {
   if (!hash || hash === "#") return false;
   const target = document.getElementById(decodeURIComponent(hash.slice(1)));
   if (!target) return false;
@@ -1799,8 +1799,15 @@ function scrollToHash(hash, behavior = "smooth") {
   const header = document.querySelector(".site-header");
   const headerHeight = header ? header.getBoundingClientRect().height : 0;
   const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerHeight - 16);
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  window.scrollTo({ top, behavior: reducedMotion ? "auto" : behavior });
+  const requestedBehavior = behavior === "smooth" ? "smooth" : "auto";
+  const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+  if (requestedBehavior === "auto") document.documentElement.style.scrollBehavior = "auto";
+  window.scrollTo({ top, behavior: requestedBehavior });
+  if (requestedBehavior === "auto") {
+    requestAnimationFrame(() => {
+      document.documentElement.style.scrollBehavior = previousScrollBehavior;
+    });
+  }
   return true;
 }
 
