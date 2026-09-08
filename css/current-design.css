@@ -23,6 +23,10 @@ body {
   background-color: var(--soft);
 }
 
+.page-shell {
+  overflow: clip;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -355,6 +359,10 @@ button {
   .nav {
     width: 100%;
     padding: 7px 18px;
+  }
+
+  .hero-visual {
+    min-height: 0;
   }
 
   h1 {
