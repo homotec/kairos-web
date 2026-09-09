@@ -1604,7 +1604,6 @@ function ensureWhatDoesMenuStyles() {
       .nav-dropdown-toggle { position: relative; justify-content: space-between; width: 100%; min-height: 44px; padding: 12px 0; text-align: left; }
       .nav-dropdown-toggle::after { display: none; }
       .nav-dropdown-panel { position: static; width: 100%; padding: 4px 0 12px; border: 0; box-shadow: none; transform: none; }
-      .nav-dropdown:hover .nav-dropdown-panel:not(:focus-within) { display: none; }
       .nav-dropdown.is-open .nav-dropdown-panel, .nav-dropdown:focus-within .nav-dropdown-panel { display: block; }
       .nav-dropdown-cases { grid-template-columns: 1fr; }
       .nav-dropdown-panel a { padding: 10px 12px; }
