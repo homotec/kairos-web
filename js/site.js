@@ -1540,6 +1540,7 @@ function renderAll() {
   renderEthic();
   renderAbout();
   initLanguageSwitcher();
+  initWhatDoesMenu();
   initFloatingHeader();
   initMobileNavigation();
   initIntroVideo();
@@ -1577,6 +1578,90 @@ function renderLegalPage() {
   if (description) {
     description.content = targetLanguage === "en" ? translation.description : main.__kairosSpanishDescription;
   }
+}
+
+function ensureWhatDoesMenuStyles() {
+  if (document.getElementById("kairos-what-does-menu-styles")) return;
+  const style = document.createElement("style");
+  style.id = "kairos-what-does-menu-styles";
+  style.textContent = `
+    .nav-dropdown { position: relative; display: flex; align-items: center; }
+    .nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 6px; min-height: auto; padding: 8px 0; border: 0; background: transparent; color: var(--muted); font-family: inherit; font-size: 12px; font-weight: 500; white-space: nowrap; cursor: pointer; }
+    .nav-dropdown-toggle::after { content: ""; position: absolute; right: 0; bottom: 2px; left: 0; height: 1px; background: var(--primary); transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; }
+    .nav-dropdown-toggle:hover, .nav-dropdown.is-open .nav-dropdown-toggle, .nav-dropdown:has(.nav-dropdown-panel a.active) .nav-dropdown-toggle { color: var(--primary); }
+    .nav-dropdown-toggle:hover::after, .nav-dropdown.is-open .nav-dropdown-toggle::after, .nav-dropdown:has(.nav-dropdown-panel a.active) .nav-dropdown-toggle::after { transform: scaleX(1); }
+    .nav-dropdown-caret { font-size: 15px; line-height: 1; transition: transform 180ms ease; }
+    .nav-dropdown.is-open .nav-dropdown-caret { transform: rotate(180deg); }
+    .nav-dropdown-panel { position: absolute; z-index: 30; top: calc(100% + 8px); left: 50%; display: none; width: min(390px, calc(100vw - 32px)); padding: 12px; border: 1px solid var(--line); border-radius: 2px; background: #fff; box-shadow: 0 16px 36px rgba(15, 23, 42, 0.14); transform: translateX(-50%); }
+    .nav-dropdown:hover .nav-dropdown-panel, .nav-dropdown:focus-within .nav-dropdown-panel, .nav-dropdown.is-open .nav-dropdown-panel { display: block; }
+    .nav-dropdown-panel a { display: block; padding: 10px 12px; border-radius: 2px; color: var(--muted); font-size: 12px; line-height: 1.35; text-decoration: none; }
+    .nav-dropdown-panel a:hover, .nav-dropdown-panel a.active { background: var(--soft); color: var(--primary); }
+    .nav-dropdown-primary { margin-bottom: 8px; border: 1px solid var(--line); color: var(--primary) !important; font-weight: 600; }
+    .nav-dropdown-heading { display: block; padding: 9px 12px 5px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .nav-dropdown-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    @media (max-width: 900px) {
+      .nav-dropdown { display: block; width: 100%; border-bottom: 1px solid var(--line); }
+      .nav-dropdown-toggle { position: relative; justify-content: space-between; width: 100%; min-height: 44px; padding: 12px 0; text-align: left; }
+      .nav-dropdown-toggle::after { display: none; }
+      .nav-dropdown-panel { position: static; width: 100%; padding: 4px 0 12px; border: 0; box-shadow: none; transform: none; }
+      .nav-dropdown:hover .nav-dropdown-panel:not(:focus-within) { display: none; }
+      .nav-dropdown.is-open .nav-dropdown-panel, .nav-dropdown:focus-within .nav-dropdown-panel { display: block; }
+      .nav-dropdown-cases { grid-template-columns: 1fr; }
+      .nav-dropdown-panel a { padding: 10px 12px; }
+      .nav-dropdown-primary { margin: 0 0 6px; }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+function initWhatDoesMenu() {
+  ensureWhatDoesMenuStyles();
+  document.querySelectorAll(".nav-links").forEach((navLinks, navIndex) => {
+    let menu = navLinks.querySelector("[data-what-does-menu]");
+    if (!menu) {
+      const sourceLink = Array.from(navLinks.querySelectorAll("a")).find((link) => (link.getAttribute("href") || "").includes("#casos-de-uso"));
+      if (!sourceLink) return;
+      menu = document.createElement("div");
+      menu.className = "nav-dropdown";
+      menu.setAttribute("data-what-does-menu", "");
+      menu.innerHTML = `<button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="what-does-menu-panel-${navIndex}"><span data-does-label></span><span class="nav-dropdown-caret" aria-hidden="true">⌄</span></button><div class="nav-dropdown-panel" id="what-does-menu-panel-${navIndex}"><a class="nav-dropdown-primary" data-assistant-link></a><span class="nav-dropdown-heading" data-cases-label></span><div class="nav-dropdown-cases" data-case-links></div></div>`;
+      sourceLink.replaceWith(menu);
+    }
+
+    const toggle = menu.querySelector(".nav-dropdown-toggle");
+    const panel = menu.querySelector(".nav-dropdown-panel");
+    const assistantLink = menu.querySelector("[data-assistant-link]");
+    const caseLinks = menu.querySelector("[data-case-links]");
+    menu.querySelector("[data-does-label]").textContent = uiText().nav.does;
+    menu.querySelector("[data-cases-label]").textContent = currentLanguage === "en" ? "Use cases" : "Casos de uso";
+    assistantLink.textContent = currentLanguage === "en" ? "Business Assistant" : "Asistente Empresarial";
+    assistantLink.href = `${rootPath()}/index.html#casos-de-uso`;
+    caseLinks.innerHTML = (siteTexts.useCases || []).map((item) => `<a href="${rootPath()}/${pageHref(item.slug)}">${escapeHtml(item.title)}</a>`).join("");
+
+    if (menu.dataset.ready === "true") return;
+    menu.dataset.ready = "true";
+    const setOpen = (isOpen) => {
+      menu.classList.toggle("is-open", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    };
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setOpen(!menu.classList.contains("is-open"));
+    });
+    panel.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setOpen(false);
+    });
+    menu.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if (!menu.contains(event.target)) setOpen(false);
+    });
+    window.addEventListener("resize", () => setOpen(false));
+  });
 }
 
 function initMobileNavigation() {
