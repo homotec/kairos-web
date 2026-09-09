@@ -1599,6 +1599,9 @@ function ensureWhatDoesMenuStyles() {
     .nav-dropdown-primary { margin-bottom: 8px; border: 1px solid var(--line); color: var(--primary) !important; font-weight: 600; }
     .nav-dropdown-heading { display: block; padding: 9px 12px 5px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .nav-dropdown-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    @media (min-width: 901px) and (hover: hover) and (pointer: fine) {
+      .nav-dropdown::after { content: ""; position: absolute; top: 100%; right: -10px; left: -10px; height: 12px; }
+    }
     @media (max-width: 900px) {
       .nav-dropdown { display: block; width: 100%; border-bottom: 1px solid var(--line); }
       .nav-dropdown-toggle { position: relative; justify-content: space-between; width: 100%; min-height: 44px; padding: 12px 0; text-align: left; }
@@ -1643,6 +1646,13 @@ function initWhatDoesMenu() {
       menu.classList.toggle("is-open", isOpen);
       toggle.setAttribute("aria-expanded", String(isOpen));
     };
+    const desktopHover = window.matchMedia("(min-width: 901px) and (hover: hover) and (pointer: fine)");
+    menu.addEventListener("pointerenter", () => {
+      if (desktopHover.matches) setOpen(true);
+    });
+    menu.addEventListener("pointerleave", () => {
+      if (desktopHover.matches) setOpen(false);
+    });
     toggle.addEventListener("click", (event) => {
       event.stopPropagation();
       setOpen(!menu.classList.contains("is-open"));
