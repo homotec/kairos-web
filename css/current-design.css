@@ -78,7 +78,7 @@ body {
 }
 
 .nav-links {
-  gap: 30px;
+  gap: 18px;
   flex-wrap: nowrap;
 }
 
@@ -287,7 +287,7 @@ button {
   }
 
   .nav-links {
-    gap: 18px;
+    gap: 14px;
   }
 }
 

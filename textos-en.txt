@@ -1058,6 +1058,7 @@
       "does": "What Kairós does",
       "benefits": "Benefits",
       "ethic": "Ethics by Design",
+      "blog": "Blog",
       "demo": "Request a demo"
     },
     "footer": {

@@ -891,6 +891,7 @@ const DEFAULT_UI = {
     does: "Qué hace Kairós",
     benefits: "Beneficios",
     ethic: "Ethic by design",
+    blog: "Blog",
     demo: "Solicitar demo"
   },
   footer: {
@@ -1809,12 +1810,13 @@ function renderStaticText() {
     const links = Array.from(nav.querySelectorAll("a"));
     links.forEach((link) => {
       const href = link.getAttribute("href") || "";
-      if (href.includes("index.html") && !href.includes("#")) link.textContent = labels.nav.home;
-      if (href.includes("#que-es-kairos")) link.textContent = labels.nav.what;
-      if (href.includes("#casos-de-uso")) link.textContent = labels.nav.does;
-      if (href.includes("#beneficios")) link.textContent = labels.nav.benefits;
-      if (href.includes("ethic-by-design.html")) link.textContent = labels.nav.ethic;
-      if (href.includes("contacto.html")) link.textContent = labels.nav.demo;
+      if (link.hasAttribute("data-nav-blog")) link.textContent = labels.nav.blog;
+      else if (href.includes("index.html") && !href.includes("#")) link.textContent = labels.nav.home;
+      else if (href.includes("#que-es-kairos")) link.textContent = labels.nav.what;
+      else if (href.includes("#casos-de-uso")) link.textContent = labels.nav.does;
+      else if (href.includes("#beneficios")) link.textContent = labels.nav.benefits;
+      else if (href.includes("ethic-by-design.html")) link.textContent = labels.nav.ethic;
+      else if (href.includes("contacto.html")) link.textContent = labels.nav.demo;
     });
   });
 
@@ -1962,14 +1964,16 @@ function initHashNavigation() {
 
 function markActiveNavigation(activeHash = location.hash) {
   const currentUrl = new URL(location.href);
+  const currentIsBlog = currentUrl.pathname.includes("/blog/");
   document.querySelectorAll(".nav-links a").forEach((link) => {
     const href = link.getAttribute("href") || "";
     const destination = new URL(href, currentUrl);
     const samePage = destination.origin === currentUrl.origin
       && normalizePagePath(destination.pathname) === normalizePagePath(currentUrl.pathname);
-    const isActive = samePage && (destination.hash
+    const isBlogLink = link.hasAttribute("data-nav-blog");
+    const isActive = (isBlogLink && currentIsBlog) || (!isBlogLink && samePage && (destination.hash
       ? destination.hash === activeHash
-      : !activeHash);
+      : !activeHash));
     link.classList.toggle("active", isActive);
     if (isActive) link.setAttribute("aria-current", destination.hash ? "location" : "page");
     else link.removeAttribute("aria-current");
