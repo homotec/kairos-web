@@ -4,9 +4,10 @@
   const posts = Array.isArray(window.KAIROS_BLOG_POSTS)
     ? window.KAIROS_BLOG_POSTS.filter((post) => post.published === true)
     : [];
-  const tagOrder = ["casos-de-uso", "modelos-agenticos", "ia-aplicada", "automatizacion", "kairos-ia", "procesos", "documentos", "datos"];
+  const tagOrder = ["hoteles-y-cadenas", "casos-de-uso", "modelos-agenticos", "ia-aplicada", "automatizacion", "kairos-ia", "procesos", "documentos", "datos"];
   const tagLabels = {
     es: {
+      "hoteles-y-cadenas": "Hoteles y cadenas",
       "casos-de-uso": "Casos de uso",
       "modelos-agenticos": "Modelos agénticos",
       "ia-aplicada": "IA aplicada",
@@ -17,6 +18,7 @@
       datos: "Datos"
     },
     en: {
+      "hoteles-y-cadenas": "Hotels and hotel groups",
       "casos-de-uso": "Use cases",
       "modelos-agenticos": "Agentic models",
       "ia-aplicada": "Applied AI",
@@ -178,6 +180,7 @@
     const labels = copy();
     return `
       <article class="blog-card${post.featured ? " is-featured" : ""}">
+        ${post.coverImage ? `<figure class="blog-card-visual"><img src="${escapeHtml(post.coverImage)}" alt="${escapeHtml(content.coverAlt || content.title)}" loading="lazy"></figure>` : ""}
         <div class="blog-card-topline">
           <span class="blog-category">${escapeHtml(tagLabel(post.category))}</span>
           ${post.comingSoon
@@ -358,6 +361,12 @@
     return sections.map((section) => `
       <section class="blog-article-section">
         <h2>${escapeHtml(section.heading)}</h2>
+        ${section.image ? `
+          <figure class="blog-article-figure">
+            <img src="${escapeHtml(section.image)}" alt="${escapeHtml(section.imageAlt || section.heading)}" loading="lazy">
+            ${section.imageCaption ? `<figcaption>${escapeHtml(section.imageCaption)}</figcaption>` : ""}
+          </figure>
+        ` : ""}
         ${(section.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
         ${section.bullets ? `<ul>${section.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}
       </section>
