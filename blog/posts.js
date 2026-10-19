@@ -1,7 +1,7 @@
 window.KAIROS_BLOG_POSTS = [
   {
     slug: "base-informacion-conectada-ia-procesos-reales",
-    publishedAt: "2026-10-19",
+    publishedAt: "2026-10-14",
     published: true,
     category: "kairos-ia",
     tags: ["kairos-ia", "ia-aplicada", "documentos", "datos", "automatizacion", "procesos"],
