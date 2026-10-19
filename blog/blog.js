@@ -132,6 +132,38 @@
       .trim();
   }
 
+  function plainText(value) {
+    if (typeof value === "string") return value;
+    const parts = Array.isArray(value) ? value : value?.parts;
+    if (!Array.isArray(parts)) return "";
+    return parts.map((part) => typeof part === "string" ? part : String(part?.text || "")).join("");
+  }
+
+  function safeHref(value) {
+    const href = String(value || "").trim();
+    if (/^https?:\/\//i.test(href) || /^(?:\.\.?\/|#)/.test(href)) return href;
+    return "#";
+  }
+
+  function richTextMarkup(value) {
+    if (typeof value === "string") return escapeHtml(value);
+    const parts = Array.isArray(value) ? value : value?.parts;
+    if (!Array.isArray(parts)) return "";
+
+    return parts.map((part) => {
+      if (typeof part === "string") return escapeHtml(part);
+      let markup = escapeHtml(part?.text || "");
+      if (part?.em) markup = `<em>${markup}</em>`;
+      if (part?.strong) markup = `<strong>${markup}</strong>`;
+      if (part?.href) {
+        const href = safeHref(part.href);
+        const external = /^https?:\/\//i.test(href);
+        markup = `<a href="${escapeHtml(href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}>${markup}</a>`;
+      }
+      return markup;
+    }).join("");
+  }
+
   function postContent(post) {
     return post.content[language()] || post.content.es;
   }
@@ -152,8 +184,8 @@
     const content = postContent(post);
     const sections = content.sections.flatMap((section) => [
       section.heading,
-      ...(section.paragraphs || []),
-      ...(section.bullets || [])
+      ...(section.paragraphs || []).map(plainText),
+      ...(section.bullets || []).map(plainText)
     ]);
     return normalized([
       content.title,
@@ -180,7 +212,7 @@
     const labels = copy();
     return `
       <article class="blog-card${post.featured ? " is-featured" : ""}">
-        ${post.coverImage ? `<figure class="blog-card-visual"><img src="${escapeHtml(post.coverImage)}" alt="${escapeHtml(content.coverAlt || content.title)}" loading="lazy"></figure>` : ""}
+        ${post.coverImage ? `<figure class="blog-card-visual${post.coverImageFit === "contain" ? " is-contain" : ""}"><img src="${escapeHtml(post.coverImage)}" alt="${escapeHtml(content.coverAlt || content.title)}" loading="lazy"></figure>` : ""}
         <div class="blog-card-topline">
           <span class="blog-category">${escapeHtml(tagLabel(post.category))}</span>
           ${post.comingSoon
@@ -360,15 +392,15 @@
   function articleSectionsMarkup(sections) {
     return sections.map((section) => `
       <section class="blog-article-section">
-        <h2>${escapeHtml(section.heading)}</h2>
+        ${section.heading ? `<h2>${escapeHtml(section.heading)}</h2>` : ""}
         ${section.image ? `
           <figure class="blog-article-figure">
             <img src="${escapeHtml(section.image)}" alt="${escapeHtml(section.imageAlt || section.heading)}" loading="lazy">
             ${section.imageCaption ? `<figcaption>${escapeHtml(section.imageCaption)}</figcaption>` : ""}
           </figure>
         ` : ""}
-        ${(section.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-        ${section.bullets ? `<ul>${section.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}
+        ${(section.paragraphs || []).map((paragraph) => `<p>${richTextMarkup(paragraph)}</p>`).join("")}
+        ${section.bullets ? `<ul>${section.bullets.map((item) => `<li>${richTextMarkup(item)}</li>`).join("")}</ul>` : ""}
       </section>
     `).join("");
   }

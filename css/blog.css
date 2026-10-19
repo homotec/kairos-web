@@ -232,6 +232,14 @@
   object-fit: cover;
 }
 
+.blog-card-visual.is-contain {
+  background: #ffffff;
+}
+
+.blog-card-visual.is-contain img {
+  object-fit: contain;
+}
+
 .blog-card::before {
   content: "";
   position: absolute;
@@ -460,6 +468,19 @@ a.blog-tag:focus-visible {
 
 .blog-article-section p + p {
   margin-top: 18px;
+}
+
+.blog-article-section p a,
+.blog-article-section li a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.blog-article-section p a:hover,
+.blog-article-section li a:hover {
+  color: var(--ink);
 }
 
 .blog-article-section ul {

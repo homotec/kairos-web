@@ -1,5 +1,188 @@
 window.KAIROS_BLOG_POSTS = [
   {
+    slug: "base-informacion-conectada-ia-procesos-reales",
+    publishedAt: "2026-10-19",
+    published: true,
+    category: "kairos-ia",
+    tags: ["kairos-ia", "ia-aplicada", "documentos", "datos", "automatizacion", "procesos"],
+    featured: true,
+    coverImage: "../assets/blog/base-informacion-conectada/kairos-ia-hype-cycle-2026.png",
+    coverImageFit: "contain",
+    content: {
+      es: {
+        title: "Kairós IA: una base de información conectada para llevar la inteligencia artificial a los procesos reales",
+        excerpt: "La inteligencia artificial adquiere valor en las empresas cuando ayuda a resolver situaciones concretas, conectando documentos, datos, aplicaciones y personas.",
+        coverAlt: "Kairós IA en la transición hacia la pendiente de consolidación del Hype Cycle for the Future of Work 2026",
+        readingTime: "7 min de lectura",
+        sections: [
+          {
+            paragraphs: [
+              "La inteligencia artificial adquiere valor en las empresas cuando ayuda a resolver situaciones concretas: revisar un albarán o una factura, conciliar información, localizar las condiciones y vencimientos de un contrato, detectar diferencias de precios o preparar información para tomar una decisión.",
+              {
+                parts: [
+                  { text: "En ese terreno trabaja Kairós IA. " },
+                  { text: "Como agente empresarial, actúa como una capa inteligente que conecta documentos, datos, aplicaciones y personas para facilitar el trabajo diario y mejorar la productividad.", strong: true },
+                  { text: " Por su enfoque y sus capacidades, su propuesta funcional se encuentra dentro de la categoría " },
+                  { text: "GenAI Virtual Assistants", strong: true },
+                  { text: ", o asistentes virtuales basados en inteligencia artificial generativa. Su utilidad parte de una base fundamental: disponer de documentos y datos organizados y conectados que aporten el contexto necesario para interpretar información, preparar respuestas, facilitar revisiones y automatizar tareas, siguiendo los criterios y manteniendo la supervisión de la empresa." }
+                ]
+              }
+            ]
+          },
+          {
+            image: "../assets/blog/base-informacion-conectada/kairos-ia-hype-cycle-2026.png",
+            imageAlt: "Gráfico del Hype Cycle for the Future of Work 2026 con Kairós IA situado junto a GenAI Virtual Assistants",
+            imageCaption: "Posicionamiento funcional de Kairós IA en la categoría GenAI Virtual Assistants del Hype Cycle for the Future of Work 2026.",
+            paragraphs: [
+              {
+                parts: [
+                  { text: "Como hemos indicado anteriormente, esta categoría es una de las más avanzadas a día de hoy, y aparece en el " },
+                  { text: "Hype Cycle for the Future of Work 2026", em: true },
+                  { text: " de Gartner cerca de la salida del valle de desilusión, en la transición hacia una etapa de mayor comprensión de sus aplicaciones prácticas." }
+                ]
+              }
+            ]
+          },
+          {
+            heading: "De las expectativas a la aplicación práctica",
+            paragraphs: [
+              { parts: [{ text: "Este momento plantea una pregunta fundamental para las empresas: " }, { text: "¿qué necesitamos para incorporar la IA a nuestros procesos y conseguir que aporte valor?", strong: true }] },
+              "La respuesta comienza por la información. Para revisar una factura, contrastar un precio o comprobar una condición contractual, es necesario disponer de los documentos y datos relevantes, relacionarlos y establecer los criterios que deben aplicarse.",
+              "La madurez tecnológica y la disposición de las empresas a adoptar una solución avanzan a ritmos diferentes. Por eso, cada implantación requiere identificar una necesidad concreta, conocer los sistemas existentes y definir cómo participarán las personas en el proceso."
+            ]
+          },
+          {
+            heading: "Centralizar documentos y datos: la base para aplicar la IA",
+            paragraphs: [
+              "Cuando la información está dispersa entre correos, carpetas, hojas de cálculo y aplicaciones, resulta más difícil localizarla, comprobar su coherencia y utilizarla de forma fiable. Organizar y conectar esa información es el primer paso para aplicar la IA con contexto y control.",
+              {
+                parts: [
+                  { text: "Por eso, la " },
+                  { text: "centralización documental y de datos", href: "https://www.kairosia.digital/casos-de-uso/centralizacion-documental-datos/index.html", strong: true },
+                  { text: " es una capacidad fundamental de Kairós IA y la base sobre la que se apoyan sus demás aplicaciones y capacidades.", strong: true },
+                  { text: " Permite reunir y estructurar información de distintas fuentes, vincularla con proveedores, contratos y operaciones, y conservar su trazabilidad." }
+                ]
+              },
+              { parts: [{ text: "Esta centralización puede construirse conectando los sistemas existentes, sin necesidad de sustituirlos ni trasladar toda la información a una única aplicación.", strong: true }, { text: " El objetivo es disponer de una base accesible, organizada y coherente que pueda utilizarse en los distintos procesos de la empresa." }] },
+              "Sobre ella es posible incorporar validaciones, conciliaciones, controles contractuales, indicadores y otras aplicaciones de IA. Su utilidad depende, en buena medida, de la calidad y disponibilidad de los datos que las alimentan."
+            ]
+          },
+          {
+            heading: "Del documento aislado al contexto de negocio",
+            paragraphs: [
+              "El importe de una factura es un dato. Relacionarlo con una entrega, un proveedor y unas condiciones acordadas permite comprender qué representa y qué conviene revisar.",
+              "Esa relación entre documentos y procesos es una parte central del enfoque de Kairós. Según las capacidades y conexiones implantadas, la información puede utilizarse para contrastar operaciones, identificar discrepancias y facilitar la intervención de la persona responsable.",
+              "La supervisión forma parte del proceso: los equipos definen criterios, revisan excepciones y mantienen las decisiones que requieren conocimiento del negocio. Este planteamiento conecta con uno de los mensajes del artículo de Gartner sobre el futuro del trabajo: aprovechar la IA para ampliar la capacidad de las personas, preservar el contexto y reforzar su criterio."
+            ]
+          },
+          {
+            heading: "Dónde se aplica Kairós IA",
+            paragraphs: ["Nuestra propuesta se organiza en seis ámbitos que pueden combinarse según las necesidades de cada empresa:"],
+            bullets: [
+              { parts: [{ text: "Centralización documental y de datos.", href: "https://www.kairosia.digital/casos-de-uso/centralizacion-documental-datos/index.html", strong: true }, { text: " Reunir, estructurar y relacionar información procedente de documentos y aplicaciones para facilitar su consulta y utilización en otros procesos." }] },
+              { parts: [{ text: "Gestión inteligente de albaranes.", href: "https://www.kairosia.digital/casos-de-uso/automatizacion-registro-albaranes/index.html", strong: true }, { text: " Interpretar la información recibida, organizar artículos y precios, aplicar criterios de validación y señalar diferencias que requieren revisión." }] },
+              { parts: [{ text: "Gestión inteligente de facturas.", href: "https://www.kairosia.digital/casos-de-uso/automatizacion-facturas/index.html", strong: true }, { text: " Extraer y estructurar datos, realizar comprobaciones y preparar su incorporación al sistema de gestión según el circuito acordado." }] },
+              { parts: [{ text: "Conciliación de información.", href: "https://www.kairosia.digital/casos-de-uso/conciliacion/index.html", strong: true }, { text: " Contrastar datos de documentos y registros relacionados, como pedidos, albaranes y facturas, para detectar discrepancias antes de continuar el proceso." }] },
+              { parts: [{ text: "Gestión inteligente de contratos.", href: "https://www.kairosia.digital/casos-de-uso/gestion-contratos/index.html", strong: true }, { text: " Organizar contratos, anexos y listas de precios, facilitar la consulta de sus condiciones y realizar el seguimiento de vencimientos y compromisos." }] },
+              { parts: [{ text: "Información para la toma de decisiones.", href: "https://www.kairosia.digital/casos-de-uso/informacion-decision/index.html", strong: true }, { text: " Aprovechar los datos organizados para elaborar indicadores e informes que aporten visibilidad sobre la actividad de la empresa." }] }
+            ]
+          },
+          {
+            paragraphs: [
+              "En el sector hotelero, por ejemplo, el control de compras y proveedores ofrece aplicaciones especialmente claras. En construcción, este enfoque puede aplicarse a la documentación de suministros, facturas y acuerdos con proveedores, adaptándolo a la organización de cada empresa.",
+              "Los proyectos tienen distintos alcances y grados de avance: existen procesos operativos junto a pilotos, integraciones y ampliaciones en desarrollo. Cada implantación se concreta según las necesidades, los sistemas y las prioridades del cliente."
+            ]
+          },
+          {
+            heading: "Empezar por una necesidad y construir una base que permita avanzar",
+            paragraphs: [
+              "Este trabajo puede abordarse progresivamente. Una empresa puede comenzar por un tipo de documento, un circuito de revisión o una necesidad de control, organizando y conectando la información necesaria para ese primer caso de uso.",
+              "A partir de ahí, puede comprobar cuánto trabajo manual se reduce, qué incidencias se detectan y qué ajustes necesita el equipo. Los datos, las reglas y las conexiones preparados pueden aprovecharse después para incorporar nuevas capacidades y extender el alcance a otros procesos.",
+              { parts: [{ text: "Ahí situamos el trabajo de Kairós IA: " }, { text: "construir una base de información conectada que permita llevar la inteligencia artificial a la operativa diaria", strong: true }, { text: ", con implantaciones progresivas, supervisión humana y resultados que puedan comprobarse." }] },
+              { parts: [{ text: "¿Qué proceso de tu empresa necesita más tiempo de revisión, más control o información mejor conectada? ", strong: true }, { text: "Cuéntanos tu caso", href: "https://www.kairosia.digital/contacto.html", strong: true }, { text: " y analizaremos cómo puede ayudarte Kairós IA.", strong: true }] },
+              { parts: [{ text: "Fuente de referencia: " }, { text: "Gartner identifica cuatro cambios que marcarán el futuro del trabajo, 9 de septiembre de 2026.", href: "https://www.gartner.com/en/newsroom/press-releases/2026-09-09-gartner-identifies-four-shifts-shaping-the-future-of-work" }] }
+            ]
+          }
+        ]
+      },
+      en: {
+        title: "Kairós IA: a connected information foundation for bringing artificial intelligence into real-world processes",
+        excerpt: "Artificial intelligence creates value for businesses when it helps solve concrete situations by connecting documents, data, applications, and people.",
+        coverAlt: "Kairós IA moving towards the Slope of Enlightenment in the Hype Cycle for the Future of Work 2026",
+        readingTime: "7 min read",
+        sections: [
+          {
+            paragraphs: [
+              "Artificial intelligence creates value for businesses when it helps solve concrete situations: reviewing a delivery note or invoice, reconciling information, finding contractual terms and expiry dates, identifying price differences, or preparing information for a decision.",
+              { parts: [{ text: "This is the space where Kairós IA operates. " }, { text: "As a business agent, it acts as an intelligent layer connecting documents, data, applications, and people to make everyday work easier and improve productivity.", strong: true }, { text: " Its approach and capabilities place its functional proposition in the " }, { text: "GenAI Virtual Assistants", strong: true }, { text: " category. Its value starts with a fundamental requirement: organised, connected documents and data that provide the context needed to interpret information, prepare responses, support reviews, and automate tasks while following company criteria and maintaining human oversight." }] }
+            ]
+          },
+          {
+            image: "../assets/blog/base-informacion-conectada/kairos-ia-hype-cycle-2026.png",
+            imageAlt: "Hype Cycle for the Future of Work 2026 chart with Kairós IA positioned next to GenAI Virtual Assistants",
+            imageCaption: "Kairós IA's functional position in the GenAI Virtual Assistants category of the Hype Cycle for the Future of Work 2026.",
+            paragraphs: [
+              { parts: [{ text: "As noted previously, this is one of the most advanced categories today. In Gartner's " }, { text: "Hype Cycle for the Future of Work 2026", em: true }, { text: ", it appears near the end of the Trough of Disillusionment, transitioning towards a stage in which its practical applications are better understood." }] }
+            ]
+          },
+          {
+            heading: "From expectations to practical application",
+            paragraphs: [
+              { parts: [{ text: "This moment raises a fundamental question for businesses: " }, { text: "what do we need to bring AI into our processes and ensure that it creates value?", strong: true }] },
+              "The answer begins with information. Reviewing an invoice, checking a price, or verifying a contractual term requires access to the relevant documents and data, the ability to connect them, and clear criteria to apply.",
+              "Technology maturity and a company's readiness to adopt a solution progress at different rates. Each implementation must therefore identify a specific need, understand the existing systems, and define how people will participate in the process."
+            ]
+          },
+          {
+            heading: "Centralising documents and data: the foundation for applying AI",
+            paragraphs: [
+              "When information is scattered across emails, folders, spreadsheets, and applications, it becomes harder to find, check for consistency, and use reliably. Organising and connecting that information is the first step towards applying AI with context and control.",
+              { parts: [{ text: "That is why " }, { text: "document and data centralisation", href: "https://www.kairosia.digital/casos-de-uso/centralizacion-documental-datos/index.html", strong: true }, { text: " is a core Kairós IA capability and the foundation for its other applications and capabilities.", strong: true }, { text: " It brings together and structures information from different sources, links it to suppliers, contracts, and operations, and preserves traceability." }] },
+              { parts: [{ text: "This centralised foundation can be built by connecting existing systems, without replacing them or moving all information into a single application.", strong: true }, { text: " The objective is an accessible, organised, and consistent information base that can support the company's different processes." }] },
+              "Validations, reconciliations, contract controls, indicators, and other AI applications can then be added on top. Their usefulness depends substantially on the quality and availability of the data that feeds them."
+            ]
+          },
+          {
+            heading: "From an isolated document to business context",
+            paragraphs: [
+              "An invoice amount is a data point. Connecting it with a delivery, a supplier, and agreed terms makes it possible to understand what it represents and what should be reviewed.",
+              "This relationship between documents and processes is central to the Kairós approach. Depending on the capabilities and connections implemented, information can be used to check transactions, identify discrepancies, and support the responsible person's intervention.",
+              "Oversight is part of the process: teams define criteria, review exceptions, and retain decisions that require business knowledge. This approach reflects one of the messages in Gartner's article about the future of work: using AI to extend people's capabilities, preserve context, and strengthen their judgement."
+            ]
+          },
+          {
+            heading: "Where Kairós IA is applied",
+            paragraphs: ["Our proposition is organised into six areas that can be combined according to each company's needs:"],
+            bullets: [
+              { parts: [{ text: "Document and data centralisation.", href: "https://www.kairosia.digital/casos-de-uso/centralizacion-documental-datos/index.html", strong: true }, { text: " Bring together, structure, and connect information from documents and applications so it can be consulted and used in other processes." }] },
+              { parts: [{ text: "Intelligent delivery note management.", href: "https://www.kairosia.digital/casos-de-uso/automatizacion-registro-albaranes/index.html", strong: true }, { text: " Interpret incoming information, organise items and prices, apply validation criteria, and flag differences that require review." }] },
+              { parts: [{ text: "Intelligent invoice management.", href: "https://www.kairosia.digital/casos-de-uso/automatizacion-facturas/index.html", strong: true }, { text: " Extract and structure data, perform checks, and prepare it for entry into the management system through the agreed workflow." }] },
+              { parts: [{ text: "Information reconciliation.", href: "https://www.kairosia.digital/casos-de-uso/conciliacion/index.html", strong: true }, { text: " Compare data from related documents and records, such as orders, delivery notes, and invoices, to identify discrepancies before the process continues." }] },
+              { parts: [{ text: "Intelligent contract management.", href: "https://www.kairosia.digital/casos-de-uso/gestion-contratos/index.html", strong: true }, { text: " Organise contracts, appendices, and price lists, make their terms easier to consult, and track expiry dates and commitments." }] },
+              { parts: [{ text: "Information for decision-making.", href: "https://www.kairosia.digital/casos-de-uso/informacion-decision/index.html", strong: true }, { text: " Use organised data to produce indicators and reports that make the company's activity more visible." }] }
+            ]
+          },
+          {
+            paragraphs: [
+              "In hospitality, for example, purchasing and supplier control offer particularly clear applications. In construction, the same approach can support documentation for supplies, invoices, and supplier agreements, adapted to each company's organisation.",
+              "Projects vary in scope and maturity: operational processes coexist with pilots, integrations, and extensions still in development. Each implementation is defined around the client's needs, systems, and priorities."
+            ]
+          },
+          {
+            heading: "Start with one need and build a foundation for progress",
+            paragraphs: [
+              "This work can be approached progressively. A company can begin with one document type, review workflow, or control requirement, organising and connecting the information needed for that first use case.",
+              "It can then measure how much manual work is reduced, which issues are identified, and what adjustments the team needs. The data, rules, and connections already prepared can later support new capabilities and extend the approach to other processes.",
+              { parts: [{ text: "This is where we position Kairós IA's work: " }, { text: "building a connected information foundation that brings artificial intelligence into everyday operations", strong: true }, { text: ", through progressive implementations, human oversight, and measurable results." }] },
+              { parts: [{ text: "Which process in your company needs more review time, stronger control, or better-connected information? ", strong: true }, { text: "Tell us about your case", href: "https://www.kairosia.digital/contacto.html", strong: true }, { text: " and we will explore how Kairós IA can help.", strong: true }] },
+              { parts: [{ text: "Reference: " }, { text: "Gartner identifies four shifts shaping the future of work, 9 September 2026.", href: "https://www.gartner.com/en/newsroom/press-releases/2026-09-09-gartner-identifies-four-shifts-shaping-the-future-of-work" }] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
     slug: "ia-back-office-hotelero-6-procesos-automatizables-2026",
     publishedAt: "2026-09-22",
     published: true,
