@@ -65,7 +65,7 @@ Highlights:
       Texto: Kairós interpreta la factura o recibo bancario original, identifica su contenido y extrae automáticamente los datos clave de cabecera y líneas. La información queda estructurada y lista para su revisión, consulta o tratamiento posterior.
   03. Validación y gestión de excepciones
       Texto: Cuando una factura o recibo bancario requiere revisión, Kairós detecta incidencias, aplica reglas y señala al usuario qué debe validarse o corregirse. De esta forma, el equipo interviene solo donde realmente aporta valor.
-  04. Intra-factura e integración con a3ERP
+  04. Intra-factura e integración con ERP
       Texto: Una vez validada, Kairós genera la intra-factura y prepara la información para su integración en el ERP. Así se evita volver a introducir los datos y se acelera el registro contable con mayor control y trazabilidad.
 
 03 · Gestión inteligente de albaranes

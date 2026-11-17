@@ -7,12 +7,17 @@
     "Para ajustar la imagen del hero de Ethics by Design, cambia heroImageZoom, heroImageOffsetX, heroImageOffsetY y heroImagePadding."
   ],
   "home": {
-    "metaTitle": "Kairós IA | Asistente empresarial de inteligencia artificial",
-    "heroEyebrow": "Asistente-IA para procesos empresariales",
-    "heroTitle": "El Asistente Empresarial de IA que comprende tus procesos y trabaja contigo.",
-    "heroLead": "Kairós IA organiza tu información, automatiza tareas, conecta tus aplicaciones y ayuda a tus equipos a trabajar y decidir mejor.",
+    "metaTitle": "Kairós IA y Kaito | Plataforma inteligente y agente empresarial",
+    "metaDescription": "Kairós IA centraliza documentos y datos, automatiza procesos y conecta aplicaciones. Kaito permite consultar, preparar informes y programar tareas automatizadas en lenguaje natural.",
+    "heroEyebrow": "Plataforma inteligente + agente empresarial",
+    "heroTitleLine1": "Tus documentos, tus datos y tus aplicaciones, conectados con Kaito",
+    "heroTitleLine2": "",
+    "heroStatement": "",
+    "heroLead": "Kairós IA es nuestra plataforma inteligente que centraliza tus documentos y datos, valida operaciones y automatiza procesos. A través del Conector Inteligente®, Kaito accede a esa información y a la de tus aplicaciones corporativas como tu agente empresarial de IA.",
+    "heroExample": "Pregúntale a Kaito cómo evoluciona la producción, pídele un informe de compras por proveedor o solicita que cruce información entre distintas aplicaciones. Ahora puedes controlar las distintas áreas de negocio desde una plataforma 100 % segura y transversal, utilizando lenguaje natural.",
+    "heroExampleEmphasis": "",
     "primaryButton": "Ver qué hace Kairós",
-    "secondaryButton": "Solicitar demo",
+    "secondaryButton": "Ver qué hace Kaito",
     "hudOneLabel": "Comprende",
     "hudOneTitle": "Documentos y otros Datos",
     "hudOneItems": [
@@ -26,9 +31,20 @@
       "Integra los datos en aplicaciones",
       "Alerta, notifica y permite realizar consultas"
     ],
-    "whatEyebrow": "Qué es Kairós IA",
-    "whatTitle": "La capa inteligente que conecta información, procesos y personas.",
-    "whatLead": "Kairós no es un OCR, un gestor documental o un chatbot. Es una capa inteligente de IA que comprende los documentos y datos de tu empresa, organiza la información y automatiza tareas y procesos. Trabaja conectada con tus aplicaciones y con tus equipos, reduciendo el trabajo manual y ayudando a las personas a trabajar mejor, con más información, control y capacidad de decisión.",
+    "whatEyebrow": "Cómo trabajan juntos",
+    "whatTitle": "Del documento a la respuesta",
+    "whatLead": "Kairós IA gobierna la información y ejecuta el proceso. Kaito convierte esa base conectada en una conversación útil para consultar, analizar y encargar seguimientos.",
+    "togetherExampleLabel": "Ejemplo de compras",
+    "togetherSteps": [
+      { "title": "Kairós IA detecta la diferencia.", "text": "La plataforma compara los precios del albarán con la tarifa pactada e identifica las líneas que requieren revisión." },
+      { "title": "El responsable de compras consulta a Kaito.", "text": "Kaito analiza la información disponible a través del Conector Inteligente de Kairós IA y presenta la diferencia por proveedor." },
+      { "title": "El equipo decide el seguimiento.", "text": "La persona responsable puede pedir una alerta y una tarea de revisión sin salir de la conversación." }
+    ],
+    "conversationLabel": "Ejemplo de consulta",
+    "conversationPrompt": "¿Qué proveedores nos han cobrado por encima del precio pactado este mes? Muéstrame la diferencia por proveedor.",
+    "conversationReply": "He encontrado diferencias en tres proveedores. La mayor desviación corresponde a Distribuciones Norte: 1.240 € sobre la tarifa pactada.",
+    "conversationFollowUp": "Avísame cuando vuelva a ocurrir y crea una tarea para que Compras lo revise.",
+    "conversationStatus": "Seguimiento preparado · Pendiente de confirmación",
     "whatDiagramTitle": "Kairós actúa como una capa inteligente entre tus aplicaciones, tus procesos y tus equipos.",
     "pillars": [
       {
@@ -57,19 +73,77 @@
     "capabilitiesIntro": "Combina las capacidades que necesitas para resolver cada proceso.",
     "capabilitiesCtaText": "Descubre cómo se combinan estas capacidades para resolver procesos empresariales reales.",
     "capabilitiesCtaButton": "Ver casos de uso",
-    "useCasesEyebrow": "Qué hace Kairós",
-    "useCasesTitle": "Kairós IA, un asistente empresarial que se adapta a tus procesos, tus tareas y al ritmo de tu empresa.",
-    "useCasesIntroTitle": "Kairós puede incorporarse progresivamente a distintas áreas del negocio, desde la gestión documental hasta la automatización de procesos, integraciones y capacidades de análisis y decisión. Su arquitectura modular permite ampliar su alcance conforme evolucionan las necesidades de la organización.",
-    "useCasesIntroText": "Estas son algunas de las formas en las que Kairós puede aplicar y combinar sus capacidades para centralizar información, gestionar documentos, automatizar procesos y facilitar la toma de decisiones.",
+    "useCasesEyebrow": "Plataforma inteligente",
+    "useCasesTitle": "Qué hace Kairós",
+    "useCasesIntroTitle": "",
+    "useCasesIntroText": "Kairós IA digitaliza y centraliza todos los documentos de tu empresa (contratos, presupuestos, albaranes, facturas, partes de trabajo, recibos bancarios...) junto con los datos de tus aplicaciones de negocio. A partir de esa información, su capa inteligente aplica tus reglas de control para validar, por ejemplo, precios y cantidades, conciliar documentos y registrar los datos en tus sistemas de forma segura y transparente. Además, Kairós se adapta a tus procesos y evoluciona al ritmo que necesite tu negocio.",
     "useCasesSubtitle": "",
     "useCasesClaim": "",
+    "kaitoSectionEyebrow": "Agente empresarial transversal",
+    "kaitoSectionTitle": "Qué hace Kaito",
+    "kaitoSectionLead": "Kaito es el agente empresarial de IA que, a través de su conexión con Kairós, te permite consultar y analizar los datos de la plataforma y de tus aplicaciones corporativas, generar informes y programar tareas automatizadas, todo en lenguaje natural.",
+    "kaitoSectionButton": "Descubrir Kaito",
     "benefitsEyebrow": "Beneficios",
     "benefitsTitle": "Más control, más productividad y más capacidad de decisión.",
     "ctaEyebrow": "Contacto",
-    "ctaTitle": "Cuéntanos qué necesitas y te mostramos como puede ayudarte Kairós.",
-    "ctaButton": "Solicita una reunión",
+    "ctaTitle": "¿Qué proceso te gustaría ver en una demo?",
+    "ctaText": "Cuéntanos qué documentos utilizas y con qué aplicaciones trabajas. Te mostraremos cómo encajan Kairós IA y Kaito en tu operativa.",
+    "ctaButton": "Solicitar demo",
     "whatDiagramImage": "assets/que-es/imagen-kairos-que-es-2.png",
     "whatDiagramAlt": "Kairós IA como capa inteligente entre aplicaciones, procesos, documentos y equipos."
+  },
+  "kaito": {
+    "metaTitle": "Kaito | El agente empresarial de Kairós IA",
+    "metaDescription": "Consulta datos, prepara informes y programa tareas automatizadas con Kaito, el agente empresarial conectado a la plataforma Kairós IA.",
+    "eyebrow": "Agente empresarial de inteligencia artificial",
+    "title": "Kaito, el agente empresarial de Kairós IA",
+    "lead": "Pregunta por tus datos, prepara informes y programa tareas automatizadas desde una conversación. Kaito trabaja con la información de tu organización a través del Conector Inteligente de Kairós IA.",
+    "heroImageAlt": "Panel corporativo de Kaito con un briefing financiero, indicadores y análisis de deuda por sociedad.",
+    "primaryButton": "Ver Kaito en una demo",
+    "connectionEyebrow": "Arquitectura conectada",
+    "connectionTitle": "Cómo trabaja con Kairós",
+    "connectionText": "Kaito se conecta a Kairós para trabajar con los documentos y datos de la plataforma y con la información de las aplicaciones corporativas integradas.",
+    "architectureAudienceTitle": "Agente empresarial de IA · 100 % transversal",
+    "architectureAreas": [
+      { "title": "Administración", "icon": "receipt_long" },
+      { "title": "Compras", "icon": "inventory_2" },
+      { "title": "Comercial y Marketing", "icon": "trending_up" },
+      { "title": "Dirección", "icon": "query_stats" }
+    ],
+    "architectureKaitoTitle": "Kaito",
+    "architectureKaitoSubtitle": "Agente empresarial",
+    "architectureKairosTitle": "Kairós IA",
+    "architectureDataTitle": "Gestión documental y de datos",
+    "architectureCapabilitiesTitle": "Capacidades inteligentes",
+    "architectureCapabilities": ["Automatizaciones", "Conciliaciones", "Validaciones"],
+    "architectureAppsTitle": "Aplicaciones conectadas",
+    "architecturePrimaryApps": "ERP · PMS · CRM",
+    "architectureOtherApps": "Otras aplicaciones",
+    "connectionNodes": [
+      { "title": "Kairós IA", "label": "Plataforma inteligente", "text": "Centraliza documentos y datos, valida operaciones y automatiza procesos.", "icon": "database" },
+      { "title": "Kaito", "label": "Agente empresarial", "text": "Se conecta a Kairós permitiendo consultar, preparar informes y programar tareas automatizadas en lenguaje natural.", "icon": "psychology" }
+    ],
+    "examplesEyebrow": "Conversaciones que activan el trabajo",
+    "examplesTitle": "Qué puedes pedirle a Kaito",
+    "examplesLead": "Tres ejemplos de cómo una conversación se apoya en información gobernada y puede continuar en forma de informe, alerta o tarea.",
+    "examples": [
+      { "title": "Consultar y profundizar", "prompts": ["¿Qué contratos se renuevan el próximo trimestre?", "¿En cuáles tenemos que dar preaviso este mes?"], "text": "Kaito mantiene el contexto para profundizar en la respuesta sin reconstruir la consulta." },
+      { "title": "Preparar un informe reutilizable", "prompts": ["Créame un reporte de compras de este mes comparado con el anterior y desglósalo por centro productivo y sociedad.", "Complétame el reporte basado en USALI con los datos del ERP y el PMS."], "text": "El usuario puede guardar la consulta para reutilizarla en el siguiente cierre y mantener el mismo criterio de análisis." },
+      { "title": "Programar tareas automatizadas", "prompts": ["Cuando Kairós IA detecte una diferencia entre el precio facturado y el pactado, avisa al responsable de compras y crea una tarea de revisión."], "text": "Kaito programa la tarea y mantiene su ejecución sujeta a las reglas, permisos y controles definidos por la organización." }
+    ],
+    "governanceEyebrow": "Gobernabilidad de la IA",
+    "governanceTitle": "Kaito: gobernabilidad de la IA",
+    "governanceLead": "La IA empresarial necesita una gobernabilidad real: segura, trazable y 100 % controlable. Kaito permite definir qué modelos pueden utilizarse, qué información puede consultar cada uno y bajo qué permisos, reglas y supervisión humana.",
+    "governanceFreedom": "Su arquitectura preserva la libertad tecnológica de cada empresa: permite trabajar con motores de IA de pago mediante API y, próximamente, con modelos locales dentro de la propia infraestructura.",
+    "governanceControls": ["Permisos y acceso", "Trazabilidad", "Supervisión humana", "Libertad de motor"],
+    "governanceOptions": [
+      { "title": "Motores de IA de pago (API)", "status": "Disponible", "text": "Conecta Kaito con Kairós y selecciona el motor más adecuado para el negocio según criterios económicos o de preferencia, manteniendo centralizados los permisos, los criterios de uso y la trazabilidad.", "icon": "hub" },
+      { "title": "Motores de IA locales", "status": "Próximamente", "text": "Ejecuta modelos dentro de la infraestructura de la organización para escenarios que requieren mayor soberanía, privacidad o control operativo.", "icon": "database" }
+    ],
+    "ctaEyebrow": "Kairós IA + Kaito",
+    "ctaTitle": "Ver Kaito en una demo",
+    "ctaText": "Muéstranos un proceso real y te enseñaremos cómo Kairós IA organiza la información y cómo Kaito ayuda a trabajar con ella.",
+    "ctaButton": "Solicitar demo"
   },
   "common": {
     "brand": "Kairós IA",
@@ -108,8 +182,8 @@
     {
       "number": "04",
       "icon": "database",
-      "title": "Gobernanza del dato",
-      "description": "Ayuda a establecer reglas, criterios, responsabilidades y controles para disponer de información empresarial más ordenada, consistente y fiable."
+      "title": "Gobernanza del dato y de la IA",
+      "description": "Establece reglas, permisos, responsabilidades, trazabilidad y supervisión tanto para los datos como para el uso de la IA, favoreciendo una gestión fiable, transparente y controlada."
     },
     {
       "number": "05",
@@ -268,10 +342,10 @@
           "image": "assets/casos-de-uso/gestion-facturas/validacion-excepciones-factura.png"
         },
         {
-          "title": "Intra-factura e integración con a3ERP",
+          "title": "Intra-factura e integración con ERP",
           "description": "Una vez validada, Kairós genera la intra-factura y prepara la información para su integración en el ERP. Así se evita volver a introducir los datos y se acelera el registro contable con mayor control y trazabilidad.",
-          "alt": "Pantalla de intra-factura validada e integrada con a3ERP, mostrando datos estructurados y estado de integración.",
-          "image": "assets/casos-de-uso/gestion-facturas/intrafactura-integracion-a3erp.png"
+          "alt": "Pantalla de intra-factura validada e integrada con ERP, mostrando datos estructurados y estado de integración.",
+          "image": "assets/casos-de-uso/gestion-facturas/intrafactura-integracion-erp.png"
         }
       ]
     },
