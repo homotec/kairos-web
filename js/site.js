@@ -7,12 +7,17 @@ const DEFAULT_TEXTS = {
     "Para ajustar la imagen del hero de Ethics by Design, cambia heroImageZoom, heroImageOffsetX, heroImageOffsetY y heroImagePadding."
   ],
   "home": {
-    "metaTitle": "Kairós IA | Asistente empresarial de inteligencia artificial",
-    "heroEyebrow": "Asistente-IA para procesos empresariales",
-    "heroTitle": "El Asistente Empresarial de IA que comprende tus procesos y trabaja contigo.",
-    "heroLead": "Kairós IA organiza tu información, automatiza tareas, conecta tus aplicaciones y ayuda a tus equipos a trabajar y decidir mejor.",
+    "metaTitle": "Kairós IA y Kaito | Plataforma inteligente y agente empresarial",
+    "metaDescription": "Kairós IA centraliza documentos y datos, automatiza procesos y conecta aplicaciones. Kaito permite consultar, preparar informes y programar tareas automatizadas en lenguaje natural.",
+    "heroEyebrow": "Plataforma inteligente + agente empresarial",
+    "heroTitleLine1": "Tus documentos, tus datos y tus aplicaciones, conectados con Kaito",
+    "heroTitleLine2": "",
+    "heroStatement": "",
+    "heroLead": "Kairós IA es nuestra plataforma inteligente que centraliza tus documentos y datos, valida operaciones y automatiza procesos. A través del Conector Inteligente®, Kaito accede a esa información y a la de tus aplicaciones corporativas como tu agente empresarial de IA.",
+    "heroExample": "Pregúntale a Kaito cómo evoluciona la producción, pídele un informe de compras por proveedor o solicita que cruce información entre distintas aplicaciones. Ahora puedes controlar las distintas áreas de negocio desde una plataforma 100 % segura y transversal, utilizando lenguaje natural.",
+    "heroExampleEmphasis": "",
     "primaryButton": "Ver qué hace Kairós",
-    "secondaryButton": "Solicitar demo",
+    "secondaryButton": "Ver qué hace Kaito",
     "hudOneLabel": "Comprende",
     "hudOneTitle": "Documentos y otros Datos",
     "hudOneItems": [
@@ -26,9 +31,20 @@ const DEFAULT_TEXTS = {
       "Integra los datos en aplicaciones",
       "Alerta, notifica y permite realizar consultas"
     ],
-    "whatEyebrow": "Qué es Kairós IA",
-    "whatTitle": "La capa inteligente que conecta información, procesos y personas.",
-    "whatLead": "Kairós no es un OCR, un gestor documental o un chatbot. Es una capa inteligente de IA que comprende los documentos y datos de tu empresa, organiza la información y automatiza tareas y procesos. Trabaja conectada con tus aplicaciones y con tus equipos, reduciendo el trabajo manual y ayudando a las personas a trabajar mejor, con más información, control y capacidad de decisión.",
+    "whatEyebrow": "Cómo trabajan juntos",
+    "whatTitle": "Del documento a la respuesta",
+    "whatLead": "Kairós IA gobierna la información y ejecuta el proceso. Kaito convierte esa base conectada en una conversación útil para consultar, analizar y encargar seguimientos.",
+    "togetherExampleLabel": "Ejemplo de compras",
+    "togetherSteps": [
+      { "title": "Kairós IA detecta la diferencia.", "text": "La plataforma compara los precios del albarán con la tarifa pactada e identifica las líneas que requieren revisión." },
+      { "title": "El responsable de compras consulta a Kaito.", "text": "Kaito analiza la información disponible a través del Conector Inteligente de Kairós IA y presenta la diferencia por proveedor." },
+      { "title": "El equipo decide el seguimiento.", "text": "La persona responsable puede pedir una alerta y una tarea de revisión sin salir de la conversación." }
+    ],
+    "conversationLabel": "Ejemplo de consulta",
+    "conversationPrompt": "¿Qué proveedores nos han cobrado por encima del precio pactado este mes? Muéstrame la diferencia por proveedor.",
+    "conversationReply": "He encontrado diferencias en tres proveedores. La mayor desviación corresponde a Distribuciones Norte: 1.240 € sobre la tarifa pactada.",
+    "conversationFollowUp": "Avísame cuando vuelva a ocurrir y crea una tarea para que Compras lo revise.",
+    "conversationStatus": "Seguimiento preparado · Pendiente de confirmación",
     "whatDiagramTitle": "Kairós actúa como una capa inteligente entre tus aplicaciones, tus procesos y tus equipos.",
     "pillars": [
       {
@@ -57,17 +73,75 @@ const DEFAULT_TEXTS = {
     "capabilitiesIntro": "Combina las capacidades que necesitas para resolver cada proceso.",
     "capabilitiesCtaText": "Descubre cómo se combinan estas capacidades para resolver procesos empresariales reales.",
     "capabilitiesCtaButton": "Ver casos de uso",
-    "useCasesEyebrow": "Qué hace Kairós",
-    "useCasesTitle": "Kairós IA, un asistente empresarial que se adapta a tus procesos, tus tareas y al ritmo de tu empresa.",
-    "useCasesIntroTitle": "Kairós puede incorporarse progresivamente a distintas áreas del negocio, desde la gestión documental hasta la automatización de procesos, integraciones y capacidades de análisis y decisión. Su arquitectura modular permite ampliar su alcance conforme evolucionan las necesidades de la organización.",
-    "useCasesIntroText": "Estas son algunas de las formas en las que Kairós puede aplicar y combinar sus capacidades para centralizar información, gestionar documentos, automatizar procesos y facilitar la toma de decisiones.",
+    "useCasesEyebrow": "Plataforma inteligente",
+    "useCasesTitle": "Qué hace Kairós",
+    "useCasesIntroTitle": "",
+    "useCasesIntroText": "Kairós IA digitaliza y centraliza todos los documentos de tu empresa (contratos, presupuestos, albaranes, facturas, partes de trabajo, recibos bancarios...) junto con los datos de tus aplicaciones de negocio. A partir de esa información, su capa inteligente aplica tus reglas de control para validar, por ejemplo, precios y cantidades, conciliar documentos y registrar los datos en tus sistemas de forma segura y transparente. Además, Kairós se adapta a tus procesos y evoluciona al ritmo que necesite tu negocio.",
     "useCasesSubtitle": "",
     "useCasesClaim": "",
+    "kaitoSectionEyebrow": "Agente empresarial transversal",
+    "kaitoSectionTitle": "Qué hace Kaito",
+    "kaitoSectionLead": "Kaito es el agente empresarial de IA que, a través de su conexión con Kairós, te permite consultar y analizar los datos de la plataforma y de tus aplicaciones corporativas, generar informes y programar tareas automatizadas, todo en lenguaje natural.",
+    "kaitoSectionButton": "Descubrir Kaito",
     "benefitsEyebrow": "Beneficios",
     "benefitsTitle": "Más control, más productividad y más capacidad de decisión.",
     "ctaEyebrow": "Contacto",
-    "ctaTitle": "Cuéntanos qué necesitas y te mostramos como puede ayudarte Kairós.",
-    "ctaButton": "Solicita una reunión"
+    "ctaTitle": "¿Qué proceso te gustaría ver en una demo?",
+    "ctaText": "Cuéntanos qué documentos utilizas y con qué aplicaciones trabajas. Te mostraremos cómo encajan Kairós IA y Kaito en tu operativa.",
+    "ctaButton": "Solicitar demo"
+  },
+  "kaito": {
+    "metaTitle": "Kaito | El agente empresarial de Kairós IA",
+    "metaDescription": "Consulta datos, prepara informes y programa tareas automatizadas con Kaito, el agente empresarial conectado a la plataforma Kairós IA.",
+    "eyebrow": "Agente empresarial de inteligencia artificial",
+    "title": "Kaito, el agente empresarial de Kairós IA",
+    "lead": "Pregunta por tus datos, prepara informes y programa tareas automatizadas desde una conversación. Kaito trabaja con la información de tu organización a través del Conector Inteligente de Kairós IA.",
+    "heroImageAlt": "Panel corporativo de Kaito con un briefing financiero, indicadores y análisis de deuda por sociedad.",
+    "primaryButton": "Ver Kaito en una demo",
+    "connectionEyebrow": "Arquitectura conectada",
+    "connectionTitle": "Cómo trabaja con Kairós",
+    "connectionText": "Kaito se conecta a Kairós para trabajar con los documentos y datos de la plataforma y con la información de las aplicaciones corporativas integradas.",
+    "architectureAudienceTitle": "Agente empresarial de IA · 100 % transversal",
+    "architectureAreas": [
+      { "title": "Administración", "icon": "receipt_long" },
+      { "title": "Compras", "icon": "inventory_2" },
+      { "title": "Comercial y Marketing", "icon": "trending_up" },
+      { "title": "Dirección", "icon": "query_stats" }
+    ],
+    "architectureKaitoTitle": "Kaito",
+    "architectureKaitoSubtitle": "Agente empresarial",
+    "architectureKairosTitle": "Kairós IA",
+    "architectureDataTitle": "Gestión documental y de datos",
+    "architectureCapabilitiesTitle": "Capacidades inteligentes",
+    "architectureCapabilities": ["Automatizaciones", "Conciliaciones", "Validaciones"],
+    "architectureAppsTitle": "Aplicaciones conectadas",
+    "architecturePrimaryApps": "ERP · PMS · CRM",
+    "architectureOtherApps": "Otras aplicaciones",
+    "connectionNodes": [
+      { "title": "Kairós IA", "label": "Plataforma inteligente", "text": "Centraliza documentos y datos, valida operaciones y automatiza procesos.", "icon": "database" },
+      { "title": "Kaito", "label": "Agente empresarial", "text": "Se conecta a Kairós permitiendo consultar, preparar informes y programar tareas automatizadas en lenguaje natural.", "icon": "psychology" }
+    ],
+    "examplesEyebrow": "Conversaciones que activan el trabajo",
+    "examplesTitle": "Qué puedes pedirle a Kaito",
+    "examplesLead": "Tres ejemplos de cómo una conversación se apoya en información gobernada y puede continuar en forma de informe, alerta o tarea.",
+    "examples": [
+      { "title": "Consultar y profundizar", "prompts": ["¿Qué contratos se renuevan el próximo trimestre?", "¿En cuáles tenemos que dar preaviso este mes?"], "text": "Kaito mantiene el contexto para profundizar en la respuesta sin reconstruir la consulta." },
+      { "title": "Preparar un informe reutilizable", "prompts": ["Créame un reporte de compras de este mes comparado con el anterior y desglósalo por centro productivo y sociedad.", "Complétame el reporte basado en USALI con los datos del ERP y el PMS."], "text": "El usuario puede guardar la consulta para reutilizarla en el siguiente cierre y mantener el mismo criterio de análisis." },
+      { "title": "Programar tareas automatizadas", "prompts": ["Cuando Kairós IA detecte una diferencia entre el precio facturado y el pactado, avisa al responsable de compras y crea una tarea de revisión."], "text": "Kaito programa la tarea y mantiene su ejecución sujeta a las reglas, permisos y controles definidos por la organización." }
+    ],
+    "governanceEyebrow": "Gobernabilidad de la IA",
+    "governanceTitle": "Kaito: gobernabilidad de la IA",
+    "governanceLead": "La IA empresarial necesita una gobernabilidad real: segura, trazable y 100 % controlable. Kaito permite definir qué modelos pueden utilizarse, qué información puede consultar cada uno y bajo qué permisos, reglas y supervisión humana.",
+    "governanceFreedom": "Su arquitectura preserva la libertad tecnológica de cada empresa: permite trabajar con motores de IA de pago mediante API y, próximamente, con modelos locales dentro de la propia infraestructura.",
+    "governanceControls": ["Permisos y acceso", "Trazabilidad", "Supervisión humana", "Libertad de motor"],
+    "governanceOptions": [
+      { "title": "Motores de IA de pago (API)", "status": "Disponible", "text": "Conecta Kaito con Kairós y selecciona el motor más adecuado para el negocio según criterios económicos o de preferencia, manteniendo centralizados los permisos, los criterios de uso y la trazabilidad.", "icon": "hub" },
+      { "title": "Motores de IA locales", "status": "Próximamente", "text": "Ejecuta modelos dentro de la infraestructura de la organización para escenarios que requieren mayor soberanía, privacidad o control operativo.", "icon": "database" }
+    ],
+    "ctaEyebrow": "Kairós IA + Kaito",
+    "ctaTitle": "Ver Kaito en una demo",
+    "ctaText": "Muéstranos un proceso real y te enseñaremos cómo Kairós IA organiza la información y cómo Kaito ayuda a trabajar con ella.",
+    "ctaButton": "Solicitar demo"
   },
   "common": {
     "brand": "Kairós IA",
@@ -106,8 +180,8 @@ const DEFAULT_TEXTS = {
     {
       "number": "04",
       "icon": "database",
-      "title": "Gobernanza del dato",
-      "description": "Ayuda a establecer reglas, criterios, responsabilidades y controles para disponer de información empresarial más ordenada, consistente y fiable."
+      "title": "Gobernanza del dato y de la IA",
+      "description": "Establece reglas, permisos, responsabilidades, trazabilidad y supervisión tanto para los datos como para el uso de la IA, favoreciendo una gestión fiable, transparente y controlada."
     },
     {
       "number": "05",
@@ -266,10 +340,10 @@ const DEFAULT_TEXTS = {
           "image": "assets/casos-de-uso/gestion-facturas/validacion-excepciones-factura.png"
         },
         {
-          "title": "Intra-factura e integración con a3ERP",
+          "title": "Intra-factura e integración con ERP",
           "description": "Una vez validada, Kairós genera la intra-factura y prepara la información para su integración en el ERP. Así se evita volver a introducir los datos y se acelera el registro contable con mayor control y trazabilidad.",
-          "alt": "Pantalla de intra-factura validada e integrada con a3ERP, mostrando datos estructurados y estado de integración.",
-          "image": "assets/casos-de-uso/gestion-facturas/intrafactura-integracion-a3erp.png"
+          "alt": "Pantalla de intra-factura validada e integrada con ERP, mostrando datos estructurados y estado de integración.",
+          "image": "assets/casos-de-uso/gestion-facturas/intrafactura-integracion-erp.png"
         }
       ]
     },
@@ -888,7 +962,8 @@ const DEFAULT_UI = {
   nav: {
     home: "Home",
     what: "Qué es Kairós",
-    does: "Qué hace Kairós",
+    does: "Conoce Kairós",
+    kaito: "Conoce Kaito",
     benefits: "Beneficios",
     ethic: "Ethic by design",
     blog: "Blog",
@@ -988,6 +1063,18 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function emphasizeLeadingBrand(value, brand) {
+  const text = String(value ?? "");
+  if (!text.startsWith(brand)) return escapeHtml(text);
+  return `<strong>${escapeHtml(brand)}</strong>${escapeHtml(text.slice(brand.length))}`;
+}
+
+function emphasizeBrands(value) {
+  return escapeHtml(value)
+    .replaceAll("Kairós IA", "<strong>Kairós IA</strong>")
+    .replaceAll("Kaito", "<strong>Kaito</strong>");
 }
 
 function cssNumber(value, fallback, min, max) {
@@ -1151,22 +1238,34 @@ function useCaseCard(item) {
   `;
 }
 
+function visibleUseCases() {
+  return (siteTexts.useCases || []).filter((item) => item.id !== "informacion-decision");
+}
+
 function renderHome() {
   const mount = document.querySelector('[data-page="home"]');
   if (!mount) return;
   const h = siteTexts.home;
+  const k = siteTexts.kaito || DEFAULT_TEXTS.kaito;
   document.title = h.metaTitle || DEFAULT_TEXTS.home.metaTitle;
+  const description = document.querySelector('meta[name="description"]');
+  if (description && h.metaDescription) description.content = h.metaDescription;
 
   mount.innerHTML = `
     <section id="producto" class="hero">
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">${escapeHtml(h.heroEyebrow)}</span>
-          <h1>${escapeHtml(h.heroTitle)}</h1>
-          <p class="lead">${escapeHtml(h.heroLead)}</p>
+          <h1 class="joint-hero-title">
+            <span>${escapeHtml(h.heroTitleLine1 || h.heroTitle)}</span>
+            ${h.heroTitleLine2 ? `<span>${escapeHtml(h.heroTitleLine2)}</span>` : ""}
+          </h1>
+          ${h.heroStatement ? `<p class="hero-statement"><strong>${escapeHtml(h.heroStatement)}</strong></p>` : ""}
+          <p class="lead">${emphasizeBrands(h.heroLead)}</p>
+          ${h.heroExample ? `<p class="lead hero-example"><strong><em>“${escapeHtml(h.heroExample)}${h.heroExampleEmphasis ? ` ${escapeHtml(h.heroExampleEmphasis)}` : ""}”</em></strong></p>` : ""}
           <div class="button-row">
-            <a class="btn" href="#casos-de-uso">${icon("apps")}${escapeHtml(h.primaryButton)}</a>
-            <a class="btn secondary" href="contacto.html">${icon("calendar_month")}${escapeHtml(h.secondaryButton)}</a>
+            <a class="btn" href="#que-es-kairos">${icon("database")}${escapeHtml(h.primaryButton)}</a>
+            <a class="btn secondary" href="#que-hace-kaito">${icon("psychology")}${escapeHtml(h.secondaryButton)}</a>
           </div>
         </div>
         <div class="hero-visual" aria-label="Panel visual Kairós IA">
@@ -1182,44 +1281,45 @@ function renderHome() {
       </div>
     </section>
 
-    <section id="que-es-kairos" class="section-tight">
+    <section id="que-es-kairos" class="section">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">${escapeHtml(h.whatEyebrow)}</span>
-          <h2>${escapeHtml(h.whatTitle)}</h2>
-          <p class="lead">${escapeHtml(h.whatLead)}</p>
-        </div>
-        <div class="grid-3">
-          ${(h.pillars || []).map((pillar) => `
-            <article class="info-card">
-              ${pillar.image ? `
-                <div class="pillar-visual">
-                  <img src="${assetUrl(pillar.image)}" alt="${escapeHtml(pillar.title)}" loading="lazy" class="pillar-image">
-                </div>
-              ` : `<div class="icon">${icon(pillar.icon)}</div>`}
-              <h3>${escapeHtml(pillar.title)}</h3>
-              <p>${escapeHtml(pillar.text)}</p>
-            </article>
-          `).join("")}
-        </div>
-        <div class="what-diagram">
-          <h3>${escapeHtml(h.whatDiagramTitle)}</h3>
-          <img src="${assetUrl(h.whatDiagramImage || "assets/que-es/imagen-kairos-que-es-2.png")}" alt="${escapeHtml(h.whatDiagramAlt || "Kairós IA como capa inteligente entre aplicaciones, procesos, documentos y equipos.")}" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section id="casos-de-uso" class="section">
-      <div class="container">
+        <span id="casos-de-uso" class="section-anchor" aria-hidden="true"></span>
         <div class="section-head">
           <span class="eyebrow">${escapeHtml(h.useCasesEyebrow)}</span>
           <h2>${escapeHtml(h.useCasesTitle)}</h2>
-          <p class="section-copy use-cases-intro-copy">${escapeHtml(h.useCasesIntroTitle)}</p>
-          <p class="section-copy use-cases-intro-copy">${escapeHtml(h.useCasesIntroText)}</p>
+          ${h.useCasesIntroTitle ? `<p class="section-copy use-cases-intro-copy">${escapeHtml(h.useCasesIntroTitle)}</p>` : ""}
+          ${h.useCasesIntroText ? `<p class="section-copy use-cases-intro-copy">${escapeHtml(h.useCasesIntroText)}</p>` : ""}
           ${h.useCasesSubtitle ? `<p class="section-copy">${escapeHtml(h.useCasesSubtitle)}</p>` : ""}
           ${h.useCasesClaim ? `<p class="section-claim">${escapeHtml(h.useCasesClaim)}</p>` : ""}
         </div>
-        <div class="use-case-grid">${(siteTexts.useCases || []).map(useCaseCard).join("")}</div>
+        <div class="use-case-grid">${visibleUseCases().map(useCaseCard).join("")}</div>
+      </div>
+    </section>
+
+    <section id="que-hace-kaito" class="section kaito-home-section">
+      <div class="container">
+        <div class="section-head kaito-home-head">
+          <span class="eyebrow">${escapeHtml(h.kaitoSectionEyebrow)}</span>
+          <h2>${escapeHtml(h.kaitoSectionTitle)}</h2>
+          <p class="lead">${emphasizeLeadingBrand(h.kaitoSectionLead, "Kaito")}</p>
+        </div>
+        <div class="use-case-grid">
+          ${(k.examples || []).map((example, index) => `
+            <article class="use-case-card">
+              <span class="num">${String(index + 1).padStart(2, "0")}</span>
+              <div class="use-case-icon">${icon(["query_stats", "monitoring", "timer"][index] || "psychology")}</div>
+              <h3>${escapeHtml(example.title)}</h3>
+              <p class="use-case-microclaim">${escapeHtml(example.prompts?.[0] || example.text)}</p>
+              <a class="use-case-link" href="kaito/index.html">
+                <span>${escapeHtml(h.kaitoSectionButton)}</span>
+                ${icon("arrow_forward")}
+              </a>
+            </article>
+          `).join("")}
+        </div>
+        <div class="kaito-home-actions">
+          <a class="btn secondary" href="kaito/index.html">${icon("arrow_forward")}${escapeHtml(h.kaitoSectionButton)}</a>
+        </div>
       </div>
     </section>
 
@@ -1234,12 +1334,153 @@ function renderHome() {
     </section>
 
     <section class="section-tight">
-      <div class="container cta-band">
+        <div class="container cta-band">
         <div>
           <span class="eyebrow">${escapeHtml(h.ctaEyebrow)}</span>
           <h2>${escapeHtml(h.ctaTitle)}</h2>
+          ${h.ctaText ? `<p class="cta-copy">${escapeHtml(h.ctaText)}</p>` : ""}
         </div>
         <a class="btn" href="contacto.html">${icon("arrow_forward")}${escapeHtml(h.ctaButton)}</a>
+      </div>
+    </section>
+  `;
+}
+
+function renderKaitoPage() {
+  const mount = document.querySelector("[data-kaito-page]");
+  if (!mount) return;
+
+  const k = siteTexts.kaito || DEFAULT_TEXTS.kaito;
+  const root = rootPath();
+  document.title = k.metaTitle;
+  const description = document.querySelector('meta[name="description"]');
+  if (description) description.content = k.metaDescription;
+
+  mount.innerHTML = `
+    <section class="cap-hero kaito-page-hero">
+      <div class="container cap-layout kaito-hero-layout">
+        <div class="section-head">
+          <span class="eyebrow">${escapeHtml(k.eyebrow)}</span>
+          <h1>${escapeHtml(k.title)}</h1>
+          <p class="lead">${escapeHtml(k.lead)}</p>
+          <div class="button-row">
+            <a class="btn" href="${root}/contacto.html">${icon("calendar_month")}${escapeHtml(k.primaryButton)}</a>
+            <a class="btn secondary" href="${root}/index.html#que-hace-kaito">${icon("arrow_back")}${escapeHtml(siteTexts.home.secondaryButton)}</a>
+          </div>
+        </div>
+        <figure class="kaito-hero-visual">
+          <img src="${root}/assets/kaito/kaito-dashboard-grupo-nevaro.png" alt="${escapeHtml(k.heroImageAlt)}" width="1672" height="941" loading="eager" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section kaito-connection-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">${escapeHtml(k.connectionEyebrow)}</span>
+          <h2>${escapeHtml(k.connectionTitle)}</h2>
+          <p class="section-copy">${escapeHtml(k.connectionText)}</p>
+        </div>
+        <div class="kaito-architecture" aria-label="${escapeHtml(k.connectionTitle)}">
+          <aside class="kaito-audience-panel">
+            <span class="kaito-architecture-kicker">${escapeHtml(k.architectureAudienceTitle)}</span>
+            <div class="kaito-audience-grid">
+              ${(k.architectureAreas || []).map((area) => `
+                <article class="kaito-audience-item">
+                  <span class="kaito-audience-icon">${icon(area.icon)}</span>
+                  <strong>${escapeHtml(area.title)}</strong>
+                </article>
+              `).join("")}
+            </div>
+          </aside>
+          <div class="kaito-system-map">
+            <div class="kaito-agent-bar">
+              <span class="kaito-agent-symbol">${icon("psychology")}</span>
+              <div>
+                <strong>${escapeHtml(k.architectureKaitoTitle)}</strong>
+                <span>${escapeHtml(k.architectureKaitoSubtitle)}</span>
+              </div>
+            </div>
+            <article class="kaito-core-card">
+              <span class="kaito-core-label">${escapeHtml(k.architectureDataTitle)}</span>
+              <h3>${escapeHtml(k.architectureKairosTitle)}</h3>
+              <strong>${escapeHtml(k.architectureCapabilitiesTitle)}</strong>
+              <div class="kaito-capability-row">
+                ${(k.architectureCapabilities || []).map((capability) => `<span>${escapeHtml(capability)}</span>`).join("")}
+              </div>
+            </article>
+            <div class="kaito-data-flow" aria-hidden="true"><span></span><span></span></div>
+            <span class="kaito-apps-label">${escapeHtml(k.architectureAppsTitle)}</span>
+            <div class="kaito-apps-grid">
+              <article>${icon("apps")}<strong>${escapeHtml(k.architecturePrimaryApps)}</strong></article>
+              <article>${icon("device_hub")}<strong>${escapeHtml(k.architectureOtherApps)}</strong></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight kaito-examples-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">${escapeHtml(k.examplesEyebrow)}</span>
+          <h2>${escapeHtml(k.examplesTitle)}</h2>
+          <p class="lead">${escapeHtml(k.examplesLead)}</p>
+        </div>
+        <div class="kaito-example-grid">
+          ${(k.examples || []).map((example, index) => `
+            <article class="kaito-example-card">
+              <span class="num">${String(index + 1).padStart(2, "0")}</span>
+              <h3>${escapeHtml(example.title)}</h3>
+              <div class="kaito-example-prompts">
+                ${(example.prompts || []).map((prompt) => `<div class="chat-message user"><span>${escapeHtml(prompt)}</span></div>`).join("")}
+              </div>
+              <p>${escapeHtml(example.text)}</p>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+    </section>
+
+    <section class="section kaito-governance-section">
+      <div class="container">
+        <div class="section-head kaito-governance-head">
+          <span class="eyebrow">${escapeHtml(k.governanceEyebrow)}</span>
+          <h2>${escapeHtml(k.governanceTitle)}</h2>
+          <p class="lead">${escapeHtml(k.governanceLead)}</p>
+        </div>
+        <div class="kaito-governance-panel">
+          <div class="kaito-governance-summary">
+            <span class="kaito-governance-symbol">${icon("verified_user")}</span>
+            <p>${escapeHtml(k.governanceFreedom)}</p>
+            <div class="kaito-governance-controls">
+              ${(k.governanceControls || []).map((control) => `<span>${icon("check_circle")}${escapeHtml(control)}</span>`).join("")}
+            </div>
+          </div>
+          <div class="kaito-engine-grid">
+            ${(k.governanceOptions || []).map((option, index) => `
+              <article class="kaito-engine-card${index === 1 ? " is-coming-soon" : ""}">
+                <div class="kaito-engine-card-head">
+                  <span class="kaito-engine-icon">${icon(option.icon)}</span>
+                  <span class="kaito-engine-status">${escapeHtml(option.status)}</span>
+                </div>
+                <h3>${escapeHtml(option.title)}</h3>
+                <p>${escapeHtml(option.text)}</p>
+              </article>
+            `).join("")}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container cta-band">
+        <div>
+          <span class="eyebrow">${escapeHtml(k.ctaEyebrow)}</span>
+          <h2>${escapeHtml(k.ctaTitle)}</h2>
+          <p class="cta-copy">${escapeHtml(k.ctaText)}</p>
+        </div>
+        <a class="btn" href="${root}/contacto.html">${icon("arrow_forward")}${escapeHtml(k.ctaButton)}</a>
       </div>
     </section>
   `;
@@ -1536,12 +1777,14 @@ function renderAll() {
   renderStaticText();
   renderLegalPage();
   renderHome();
+  renderKaitoPage();
   renderUseCasePage();
   renderContact();
   renderEthic();
   renderAbout();
   initLanguageSwitcher();
   initWhatDoesMenu();
+  initKaitoNavigation();
   initFloatingHeader();
   initMobileNavigation();
   initIntroVideo();
@@ -1637,9 +1880,9 @@ function initWhatDoesMenu() {
     const caseLinks = menu.querySelector("[data-case-links]");
     menu.querySelector("[data-does-label]").textContent = uiText().nav.does;
     menu.querySelector("[data-cases-label]").textContent = currentLanguage === "en" ? "Use cases" : "Casos de uso";
-    assistantLink.textContent = currentLanguage === "en" ? "Business Assistant" : "Asistente Empresarial";
+    assistantLink.textContent = currentLanguage === "en" ? "Intelligent Platform" : "Plataforma Inteligente";
     assistantLink.href = `${rootPath()}/index.html#casos-de-uso`;
-    caseLinks.innerHTML = (siteTexts.useCases || []).map((item) => `<a href="${rootPath()}/${pageHref(item.slug)}">${escapeHtml(item.title)}</a>`).join("");
+    caseLinks.innerHTML = visibleUseCases().map((item) => `<a href="${rootPath()}/${pageHref(item.slug)}">${escapeHtml(item.title)}</a>`).join("");
 
     if (menu.dataset.ready === "true") return;
     menu.dataset.ready = "true";
@@ -1671,6 +1914,23 @@ function initWhatDoesMenu() {
       if (!menu.contains(event.target)) setOpen(false);
     });
     window.addEventListener("resize", () => setOpen(false));
+  });
+}
+
+function initKaitoNavigation() {
+  document.querySelectorAll(".nav-links").forEach((navLinks) => {
+    let link = navLinks.querySelector("[data-nav-kaito]");
+    if (!link) {
+      link = document.createElement("a");
+      link.setAttribute("data-nav-kaito", "");
+      const menu = navLinks.querySelector("[data-what-does-menu]");
+      const benefits = Array.from(navLinks.querySelectorAll("a")).find((item) => (item.getAttribute("href") || "").includes("#beneficios"));
+      if (menu) menu.insertAdjacentElement("afterend", link);
+      else if (benefits) benefits.insertAdjacentElement("beforebegin", link);
+      else navLinks.prepend(link);
+    }
+    link.href = `${rootPath()}/kaito/index.html`;
+    link.textContent = uiText().nav.kaito;
   });
 }
 
@@ -1811,6 +2071,7 @@ function renderStaticText() {
     links.forEach((link) => {
       const href = link.getAttribute("href") || "";
       if (link.hasAttribute("data-nav-blog")) link.textContent = labels.nav.blog;
+      else if (link.hasAttribute("data-nav-kaito")) link.textContent = labels.nav.kaito;
       else if (href.includes("index.html") && !href.includes("#")) link.textContent = labels.nav.home;
       else if (href.includes("#que-es-kairos")) link.textContent = labels.nav.what;
       else if (href.includes("#casos-de-uso")) link.textContent = labels.nav.does;
