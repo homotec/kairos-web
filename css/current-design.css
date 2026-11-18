@@ -811,10 +811,24 @@ button {
   box-shadow: 0 20px 58px rgba(15, 23, 42, 0.14);
 }
 
-.kaito-hero-visual img {
+.kaito-hero-visual img,
+.kaito-hero-video {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.kaito-hero-video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #0f172a;
+}
+
+.kaito-video-cta {
+  margin: 0;
+  padding: 16px 18px;
+  border-top: 1px solid var(--line);
+  background: #fff;
 }
 
 .kaito-connection-section {
