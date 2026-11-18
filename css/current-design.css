@@ -478,6 +478,33 @@ button {
   font-style: italic;
 }
 
+.hero-video-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 0;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.hero-video-cta::before {
+  content: "▶";
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  padding-left: 2px;
+  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.16);
+}
+
 .hero-statement ~ .button-row {
   margin-top: 18px;
 }
