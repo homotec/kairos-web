@@ -97,7 +97,8 @@ const DEFAULT_TEXTS = {
     "eyebrow": "Agente empresarial de inteligencia artificial",
     "title": "Kaito, el agente empresarial de Kairós IA",
     "lead": "Pregunta por tus datos, prepara informes y programa tareas automatizadas desde una conversación. Kaito trabaja con la información de tu organización a través del Conector Inteligente de Kairós IA.",
-    "heroImageAlt": "Panel corporativo de Kaito con un briefing financiero, indicadores y análisis de deuda por sociedad.",
+    "heroVideoAlt": "Vídeo corporativo de Kaito, el agente empresarial de inteligencia artificial conectado a Kairós IA.",
+    "heroVideoCta": "Dale al play y descubre, en menos de dos minutos, cómo Kaito convierte tus datos en respuestas, informes y tareas automatizadas.",
     "primaryButton": "Ver Kaito en una demo",
     "connectionEyebrow": "Arquitectura conectada",
     "connectionTitle": "Cómo trabaja con Kairós",
@@ -1056,7 +1057,9 @@ function assetUrl(path) {
   const assetPath = String(path || "");
   const assetVersion = assetPath === "assets/videos/video-home-kairos.mp4"
     ? "20261118-video-corporativo-es"
-    : "20260812-1549";
+    : assetPath === "assets/kaito/video-kaito-agente-ia-16x9.mp4"
+      ? "20261118-kaito-video"
+      : "20260812-1549";
   return INLINE_ASSETS[assetPath] || `${rootPath()}/${escapeHtml(assetPath)}?v=${assetVersion}`;
 }
 
@@ -1374,7 +1377,10 @@ function renderKaitoPage() {
           </div>
         </div>
         <figure class="kaito-hero-visual">
-          <img src="${root}/assets/kaito/kaito-dashboard-grupo-nevaro.png" alt="${escapeHtml(k.heroImageAlt)}" width="1672" height="941" loading="eager" fetchpriority="high">
+          <video class="kaito-hero-video" data-intro-video controls playsinline preload="metadata" controlslist="nodownload" aria-label="${escapeHtml(k.heroVideoAlt)}">
+            <source src="${assetUrl("assets/kaito/video-kaito-agente-ia-16x9.mp4")}" type="video/mp4">
+          </video>
+          ${k.heroVideoCta ? `<figcaption class="hero-video-cta kaito-video-cta">${escapeHtml(k.heroVideoCta)}</figcaption>` : ""}
         </figure>
       </div>
     </section>
