@@ -1275,7 +1275,7 @@ function renderHome() {
           <div class="tech-card assistant-panel">
             <span class="corner-b"></span><span class="corner-c"></span>
             <div class="assistant-screen video-screen">
-              <video class="hero-video" data-intro-video controls playsinline preload="metadata" controlslist="nodownload" poster="${assetUrl("assets/hero-principal.png")}" aria-label="Vídeo corporativo de Kairós IA con controles de reproducción, volumen y pantalla completa">
+              <video class="hero-video" data-intro-video autoplay muted controls playsinline preload="metadata" controlslist="nodownload" poster="${assetUrl("assets/hero-principal.png")}" aria-label="Vídeo corporativo de Kairós IA con reproducción automática y controles de volumen y pantalla completa">
                 <source src="${assetUrl("assets/videos/video-home-kairos.mp4")}" type="video/mp4">
               </video>
             </div>
@@ -2029,11 +2029,15 @@ function initIntroVideo() {
   if (!video) return;
 
   video.controls = true;
-  video.muted = false;
-  video.defaultMuted = false;
+  video.muted = true;
+  video.defaultMuted = true;
   video.loop = false;
-  video.removeAttribute("autoplay");
-  video.removeAttribute("muted");
+  video.setAttribute("autoplay", "");
+  video.setAttribute("muted", "");
+  const playPromise = video.play();
+  if (playPromise && typeof playPromise.catch === "function") {
+    playPromise.catch(() => {});
+  }
 }
 
 function setBenefitCardState(card, isFlipped) {
