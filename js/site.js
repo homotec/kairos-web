@@ -1053,7 +1053,10 @@ function rootPath() {
 
 function assetUrl(path) {
   const assetPath = String(path || "");
-  return INLINE_ASSETS[assetPath] || `${rootPath()}/${escapeHtml(assetPath)}?v=20260812-1549`;
+  const assetVersion = assetPath === "assets/videos/video-home-kairos.mp4"
+    ? "20261118-video-corporativo-es"
+    : "20260812-1549";
+  return INLINE_ASSETS[assetPath] || `${rootPath()}/${escapeHtml(assetPath)}?v=${assetVersion}`;
 }
 
 function escapeHtml(value) {
