@@ -16,6 +16,7 @@
     "heroLead": "Kairós IA is our intelligent platform that centralizes your documents and data, validates operations and automates processes. Through the Intelligent Connector®, Kaito accesses that information and data from your corporate applications as your AI business agent.",
     "heroExample": "Ask Kaito how production is progressing, request a purchasing report by supplier, or have it cross-reference information across different applications. You can now oversee every business area from a 100% secure, cross-functional platform using natural language.",
     "heroExampleEmphasis": "",
+    "heroVideoCta": "Press play and discover, in under two minutes, what Kairós IA and Kaito can do for your business.",
     "primaryButton": "See what Kairós does",
     "secondaryButton": "See what Kaito does",
     "hudOneLabel": "Understands",

@@ -16,6 +16,7 @@ const DEFAULT_TEXTS = {
     "heroLead": "Kairós IA es nuestra plataforma inteligente que centraliza tus documentos y datos, valida operaciones y automatiza procesos. A través del Conector Inteligente®, Kaito accede a esa información y a la de tus aplicaciones corporativas como tu agente empresarial de IA.",
     "heroExample": "Pregúntale a Kaito cómo evoluciona la producción, pídele un informe de compras por proveedor o solicita que cruce información entre distintas aplicaciones. Ahora puedes controlar las distintas áreas de negocio desde una plataforma 100 % segura y transversal, utilizando lenguaje natural.",
     "heroExampleEmphasis": "",
+    "heroVideoCta": "Dale al play y descubre, en menos de dos minutos, qué hacen Kairós IA y Kaito por tu empresa.",
     "primaryButton": "Ver qué hace Kairós",
     "secondaryButton": "Ver qué hace Kaito",
     "hudOneLabel": "Comprende",
@@ -1275,10 +1276,11 @@ function renderHome() {
           <div class="tech-card assistant-panel">
             <span class="corner-b"></span><span class="corner-c"></span>
             <div class="assistant-screen video-screen">
-              <video class="hero-video" data-intro-video autoplay muted controls playsinline preload="metadata" controlslist="nodownload" poster="${assetUrl("assets/hero-principal.png")}" aria-label="Vídeo corporativo de Kairós IA con reproducción automática y controles de volumen y pantalla completa">
+              <video class="hero-video" data-intro-video controls playsinline preload="metadata" controlslist="nodownload" poster="${assetUrl("assets/hero-principal.png")}" aria-label="Vídeo corporativo de Kairós IA con controles de reproducción, volumen y pantalla completa">
                 <source src="${assetUrl("assets/videos/video-home-kairos.mp4")}" type="video/mp4">
               </video>
             </div>
+            ${h.heroVideoCta ? `<p class="hero-video-cta">${escapeHtml(h.heroVideoCta)}</p>` : ""}
           </div>
         </div>
       </div>
@@ -2029,15 +2031,11 @@ function initIntroVideo() {
   if (!video) return;
 
   video.controls = true;
-  video.muted = true;
-  video.defaultMuted = true;
+  video.muted = false;
+  video.defaultMuted = false;
   video.loop = false;
-  video.setAttribute("autoplay", "");
-  video.setAttribute("muted", "");
-  const playPromise = video.play();
-  if (playPromise && typeof playPromise.catch === "function") {
-    playPromise.catch(() => {});
-  }
+  video.removeAttribute("autoplay");
+  video.removeAttribute("muted");
 }
 
 function setBenefitCardState(card, isFlipped) {
